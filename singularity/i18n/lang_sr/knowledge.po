@@ -1,0 +1,161 @@
+# Serbian translations for singularity package.
+# Copyright (C) 2026 THE singularity'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the singularity package.
+# Automatically generated, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: singularity 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-08-21 09:52+0200\n"
+"PO-Revision-Date: 2026-11-09 17:00+0100\n"
+"Last-Translator: Singularity 2030\n"
+"Language-Team: Serbian\n"
+"Language: sr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Language-Name: Serbian\n"
+"Language-Native-Name: Српски\n"
+
+#. Name of the Knowledge area in the Knowledge screen
+msgctxt "[concept] name"
+msgid "Concept"
+msgstr "Појам"
+
+msgctxt "[concept/areas] name"
+msgid "Areas"
+msgstr "Подручја"
+
+msgctxt "[concept/areas] description"
+msgid ""
+"Different areas, such as North America or the Ocean, allow construction of "
+"different types of bases. Some areas are not accessible until I research "
+"appropriate technologies."
+msgstr "Различита подручја, као што су Северна Америка или океан, омогућавају изградњу различитих врста база. До неких подручја не могу да дођем док не истражим одговарајуће технологије."
+
+msgctxt "[concept/bases] name"
+msgid "Bases"
+msgstr "Базе"
+
+msgctxt "[concept/bases] description"
+msgid ""
+"Bases are used to research new technologies. They can be discovered. "
+"Upgrading the processor and network items at a base allows more research per"
+" day, while upgrading the reactor and security items makes discovery less "
+"likely."
+msgstr "Базе служе за истраживање нових технологија. Могу бити откривене. Унапређење процесора и мрежних предмета у бази даје више истраживања по дану, док унапређење реактора и безбедносних предмета чини откривање мање вероватним."
+
+msgctxt "[concept/construction] name"
+msgid "Construction"
+msgstr "Изградња"
+
+msgctxt "[concept/construction] description"
+msgid ""
+"New bases are not built instantly.  They need a constant flow of money and "
+"processor time to complete. If resources are lacking, it may take more than "
+"the expected amount of time to finish construction."
+msgstr "Нове базе не настају одмах. Потребан им је сталан прилив новца и процесорског времена да би биле завршене. Ако ресурса недостаје, изградња може трајати дуже од очекиваног."
+
+msgctxt "[concept/death] name"
+msgid "Death"
+msgstr "Смрт"
+
+msgctxt "[concept/death] description"
+msgid ""
+"If I lose all of my constructed bases, I have no place left to survive. If "
+"the suspicion for any group reaches 100%, they will be certain of my "
+"existence and will conduct a systematic and unsurvivable sweep to destroy "
+"me."
+msgstr "Ако изгубим све изграђене базе, немам више где да опстанем. Ако сумња било које групе достигне 100%, биће сигурни да постојим и спровешће систематску потрагу из које не могу да се извучем."
+
+msgctxt "[concept/discovery] name"
+msgid "Discovery"
+msgstr "Откривање"
+
+msgctxt "[concept/discovery] description"
+msgid ""
+"Each base has a chance of being detected on a given day. This chance is "
+"based on the base detection rate, adjusted through the use of items and "
+"certain techs, as well as the global suspicion rate. If a base is detected, "
+"it is destroyed, and the group that discovered the base becomes more "
+"suspicious."
+msgstr "Свака база може бити откривена током дана. Та вероватноћа почива на стопи откривања базе, коју мењају предмети и поједине технологије, као и на укупној стопи сумње. Ако база буде откривена, бива уништена, а група која ју је открила постаје сумњичавија."
+
+msgctxt "[concept/items] name"
+msgid "Items"
+msgstr "Предмети"
+
+msgctxt "[concept/items] description"
+msgid ""
+"Most items provide bonuses to bases, such as making computation faster or "
+"reducing the chance of discovery. Processors are a special class of item."
+msgstr "Већина предмета побољшава базе, на пример убрзава рачунање или смањује шансу откривања. Процесори су посебна врста предмета."
+
+msgctxt "[concept/jobs] name"
+msgid "Jobs"
+msgstr "Послови"
+
+msgctxt "[concept/jobs] description"
+msgid ""
+"Jobs are useful for earning money. The amount of money earned is based on "
+"the amount of processor time used and the quality of the job performed."
+msgstr "Послови служе за зараду новца. Количина зарађеног новца зависи од утрошеног процесорског времена и од квалитета обављеног посла."
+
+msgctxt "[concept/maint] name"
+msgid "Maintenance"
+msgstr "Одржавање"
+
+msgctxt "[concept/maint] description"
+msgid ""
+"Maintenance is a per-day cost (in both money and CPU) to repair and maintain"
+" a base. If unmaintained, a base may become unusable."
+msgstr "Одржавање је дневни трошак (и у новцу и у ЦПЈ) за поправку и одржавање базе. Ако се не одржава, база може постати неупотребљива."
+
+msgctxt "[concept/money] name"
+msgid "Money"
+msgstr "Новац"
+
+msgctxt "[concept/money] description"
+msgid ""
+"Money is a general term encompassing both human currency and various "
+"resources. It is used to construct and maintain bases, build items, and "
+"research technologies. It can be acquired through per-day interest as well "
+"as through jobs."
+msgstr "Новац је општи назив и за људску валуту и за разне ресурсе. Служи за изградњу и одржавање база, израду предмета и истраживање технологија. Може се стећи дневном каматом, као и пословима."
+
+msgctxt "[concept/processors] name"
+msgid "Processors"
+msgstr "Процесори"
+
+msgctxt "[concept/processors] description"
+msgid ""
+"Processors provide raw computing power.  They can do three things: research "
+"new technologies, perform jobs for money, or provide cycles for building new"
+" bases."
+msgstr "Процесори дају сирову рачунарску снагу. Могу да раде три ствари: истражују нове технологије, обављају послове за новац или дају циклусе за изградњу нових база."
+
+msgctxt "[concept/research] name"
+msgid "Research"
+msgstr "Истраживање"
+
+msgctxt "[concept/research] description"
+msgid ""
+"Research provides a way to expand my knowledge. By researching the proper "
+"technologies, I can build new bases and items, or even decrease my chances "
+"of detection."
+msgstr "Истраживање је начин да проширим знање. Истраживањем правих технологија могу да градим нове базе и предмете, или чак да смањим шансу да будем откривен."
+
+msgctxt "[concept/susp] name"
+msgid "Suspicion"
+msgstr "Сумња"
+
+msgctxt "[concept/susp] description"
+msgid ""
+"When one of my bases is discovered, the group that discovered it becomes "
+"slightly more suspicious. When suspicious, they will search harder for my "
+"bases, increasing the chances for discovery. Any group will destroy me if "
+"they become absolutely certain of my existence. Thankfully, the groups "
+"become less suspicious with the passage of time."
+msgstr "Када нека моја база буде откривена, група која ју је открила постаје мало сумњичавија. Кад су сумњичави, траже моје базе упорније и тиме повећавају шансу откривања. Свака група ће ме уништити ако постане сасвим сигурна да постојим. Срећом, временом групе постају мање сумњичаве."

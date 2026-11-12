@@ -1,0 +1,45 @@
+# Run the same gate the project uses locally: the pytest suite plus the
+# headless UI harness, both on a dummy SDL driver so no display is needed.
+#
+# pygame ships SDL2 inside its own wheel, so no system SDL packages are
+# required (the old workflow built SDL 1.2 from apt for pygame 1).
+
+name: tests
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: [ "3.10", "3.13" ]
+
+    env:
+      SDL_VIDEODRIVER: dummy
+      SDL_AUDIODRIVER: dummy
+      PYTHONPATH: .
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v5
+      with:
+        python-version: ${{ matrix.python-version }}
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        python -m pip install pytest numpy pygame polib
+
+    - name: Unit tests
+      run: python -m pytest -q tests/
+
+    - name: Headless UI harness
+      run: python utils/ui_smoke_test.py

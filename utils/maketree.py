@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 # file: make-tree.py
 # Copyright (C) 2008 aes and FunnyMan3595

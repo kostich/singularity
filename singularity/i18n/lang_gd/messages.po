@@ -210,8 +210,8 @@ msgid "&MENU"
 msgstr "CLÀR-TA&ICE"
 
 #: screens/map.py:571
-msgid "&RESEARCH/TASKS"
-msgstr "RANNSAICH/&SAOTHAIR"
+msgid "&RESEARCH"
+msgstr "&RANNSAICH"
 
 #: screens/map.py:714 screens/map.py:751 screens/message.py:35
 msgid "&CONTINUE"
@@ -1129,6 +1129,63 @@ msgstr[3] "{0} mionaid"
 #: g.py:264
 msgid "University Computer"
 msgstr "Coimpiutair oilthighe"
+
+
+#: screens/base.py
+msgid "BASE"
+msgstr "BUNAIT"
+
+#: graphics/dialog.py
+msgid "CONFIRM"
+msgstr "DEARBH"
+
+#: screens/log.py
+msgid "Double-click an entry to read it"
+msgstr "Dèan briogadh dùbailte air inntrigeadh airson a leughadh"
+
+#: screens/log.py
+msgid "FILTERS"
+msgstr "CRIATHRAGAN"
+
+#: graphics/dialog.py
+msgid "INPUT"
+msgstr "ION-CHUR"
+
+#: screens/knowledge.py
+msgid "KNOWLEDGE"
+msgstr "EÒLAS"
+
+#: screens/location.py
+msgid "LOCATION"
+msgstr "IONAD"
+
+#: screens/log.py
+msgid "LOG"
+msgstr "LOGA"
+
+#: screens/map.py
+msgid "DEFEAT"
+msgstr "CALL"
+
+#: screens/options.py
+msgid "OPTIONS"
+msgstr "ROGHAINNEAN"
+
+#: screens/report.py
+msgid "REPORTS"
+msgstr "AITHISGEAN"
+
+#: screens/research.py
+msgid "RESEARCH"
+msgstr "RANNSACHADH"
+
+#: screens/savegame.py
+msgid "SAVED GAMES"
+msgstr "GEAMAICHEAN SÀBHAILTE"
+
+#: screens/stat.py
+msgid "STATISTICS"
+msgstr "STADASTAIREACHD"
 
 #~ msgid "Has space for %d computers."
 #~ msgstr "Tha rùm airson %d coimpiutair(ean) ann."

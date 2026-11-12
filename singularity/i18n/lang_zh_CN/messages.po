@@ -1,0 +1,1126 @@
+# Chinese translations for singularity package
+# singularity 软件包的简体中文翻译.
+# Copyright (C) 2026 THE singularity'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the singularity package.
+# Automatically generated, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: singularity\n"
+"Report-Msgid-Bugs-To: https://github.com/singularity/singularity/issues\n"
+"POT-Creation-Date: 2020-06-23 08:37+0200\n"
+"PO-Revision-Date: 2026-11-09 19:40+0100\n"
+"Last-Translator: Singularity 2030\n"
+"Language-Team: Chinese (Simplified)\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Language-Name: Chinese (Simplified)\n"
+"Language-Native-Name: 中文\n"
+
+#: buyable.py:67 screens/knowledge.py:218 screens/location.py:207
+#, python-format
+msgid "%s CPU"
+msgstr "%s CPU"
+
+#: buyable.py:68
+#, python-format
+msgid "%s money"
+msgstr "%s资金"
+
+#: buyable.py:101
+msgid "Cost:"
+msgstr "花费:"
+
+#: graphics/button.py:330
+msgid "YES"
+msgstr "是"
+
+#: graphics/button.py:331
+msgid "NO"
+msgstr "否"
+
+#: graphics/dialog.py:534
+msgid "&YES"
+msgstr "&是"
+
+#: graphics/dialog.py:535
+msgid "&NO"
+msgstr "&否"
+
+#: graphics/dialog.py:580 graphics/dialog.py:605 graphics/dialog.py:648
+#: screens/location.py:293 screens/map.py:708 screens/options.py:35
+msgid "&OK"
+msgstr "&确定"
+
+#: graphics/dialog.py:606 screens/options.py:36
+msgid "&CANCEL"
+msgstr "&取消"
+
+#: graphics/dialog.py:649 screens/log.py:86 screens/knowledge.py:66
+#: screens/base.py:282 screens/report.py:45 screens/location.py:100
+#: screens/location.py:294 screens/main_menu.py:89 screens/map.py:247
+#: screens/map.py:400
+msgid "&BACK"
+msgstr "&返回"
+
+#: location.py:235 screens/map.py:875
+msgid "CPU"
+msgstr "CPU"
+
+#: location.py:236
+msgid "STEALTH"
+msgstr "隐蔽"
+
+#: location.py:237
+msgid "BUILDING"
+msgstr "建造"
+
+#: location.py:238
+msgid "COST"
+msgstr "花费"
+
+#: location.py:245
+#, python-brace-format
+msgid "{MODIFIER} BONUS"
+msgstr "{MODIFIER}加成"
+
+#: location.py:247
+#, python-brace-format
+msgid "{MODIFIER} MALUS"
+msgstr "{MODIFIER}减益"
+
+#: screens/message.py:35 screens/map.py:706 screens/map.py:743
+msgid "&CONTINUE"
+msgstr "&继续"
+
+#: screens/message.py:36
+msgid "&PAUSE"
+msgstr "&暂停"
+
+#: screens/message.py:72
+msgid "P&REV"
+msgstr "&上一"
+
+#: screens/message.py:78
+msgid "&NEXT"
+msgstr "&下一"
+
+#: screens/log.py:43
+msgid "Filters"
+msgstr "筛选"
+
+#: screens/log.py:82 screens/map.py:554 screens/map.py:842
+#: screens/savegame.py:204
+msgid "DAY"
+msgstr "天"
+
+#: screens/log.py:113 screens/log.py:123
+msgid "SHOW"
+msgstr "显示"
+
+#: screens/log.py:116 screens/log.py:125
+msgid "HIDE"
+msgstr "隐藏"
+
+#: screens/knowledge.py:42
+msgid "&Sections:"
+msgstr "&分区:"
+
+#: screens/knowledge.py:52
+msgid "&Entries:"
+msgstr "&条目:"
+
+#: screens/knowledge.py:75
+msgid "Techs"
+msgstr "技术"
+
+#: screens/knowledge.py:76
+msgid "Bases"
+msgstr "基地"
+
+#: screens/knowledge.py:77
+msgid "Items"
+msgstr "物品"
+
+#. Cost
+#: screens/knowledge.py:157
+msgid "Research Cost:"
+msgstr "研究花费:"
+
+#: screens/knowledge.py:165
+msgid "Research complete."
+msgstr "研究完成。"
+
+#: screens/knowledge.py:176 screens/knowledge.py:193
+msgid "Building Cost:"
+msgstr "建造花费:"
+
+#: screens/knowledge.py:179
+msgid "Maintenance Cost:"
+msgstr "维护花费:"
+
+#: screens/knowledge.py:183
+#, python-format
+msgid "Size: %d"
+msgstr "规模: %d"
+
+#: screens/knowledge.py:215
+#, python-format
+msgid "%s Money"
+msgstr "%s资金"
+
+#: screens/base.py:109
+msgid "Number of items"
+msgstr "物品数量"
+
+#: screens/base.py:221 screens/base.py:228
+msgid "CHANGE"
+msgstr "更改"
+
+#: screens/base.py:315
+#, python-format
+msgid "\"%(value)s\" does not seem to be a valid integer."
+msgstr "\"%(value)s\"似乎不是有效整数。"
+
+#: screens/base.py:326
+#, python-format
+msgid "Please choose an integer between 1 and %(limit)s."
+msgstr "请选择1到%(limit)s之间的整数。"
+
+#: screens/base.py:328
+#, python-format
+msgid "The base cannot support any additional number of %(item_name)s."
+msgstr "基地无法再容纳更多%(item_name)s。"
+
+#: screens/base.py:345
+msgid ""
+"I will need to take the existing processors offline while I install the new "
+"ones. Continue anyway?"
+msgstr "安装新处理器时，我必须先关闭现有处理器。仍要继续？"
+
+#: screens/base.py:359
+msgid ""
+"I will need to remove the existing different processors while I install the "
+"new type. Continue anyway?"
+msgstr "安装新类型时，我必须移除现有的不同处理器。仍要继续？"
+
+#: screens/base.py:425
+msgid "N/A"
+msgstr "无"
+
+#: screens/base.py:427
+msgid "None"
+msgstr "无"
+
+#: screens/base.py:434 screens/location.py:185 screens/location.py:198
+#, python-format
+msgid "Completion in %s."
+msgstr "%s后完成。"
+
+#: screens/base.py:448
+#, python-format
+msgid "x%d (max)"
+msgstr "x%d (满)"
+
+#: screens/base.py:450
+#, python-format
+msgid "(room for %d)"
+msgstr "(还可%d)"
+
+#. Translators: current and maximum number of CPUs in a base
+#: screens/base.py:453
+#, python-brace-format
+msgid "x{CURRENT:d} (max {SIZE:d})"
+msgstr "x{CURRENT:d} (上限{SIZE:d})"
+
+#. Base Total CPU.
+#: screens/base.py:461
+#, python-format
+msgid "CPU per day: %d"
+msgstr "每天CPU: %d"
+
+#. Maintenace cost.
+#: screens/base.py:464 screens/report.py:102 base.py:148
+msgid "Maintenance:"
+msgstr "维护:"
+
+#: screens/report.py:40
+msgid "&STATISTICS"
+msgstr "&统计"
+
+#: screens/report.py:58
+msgid "&Midnight"
+msgstr "&午夜"
+
+#: screens/report.py:66
+msgid "24 &Hours"
+msgstr "24&小时"
+
+#: screens/report.py:89
+msgid "Financial report"
+msgstr "财务报告"
+
+#: screens/report.py:93
+msgid "CPU Usage"
+msgstr "CPU用量"
+
+#: screens/report.py:99
+msgid "Current Money flow"
+msgstr "当前资金流"
+
+#: screens/report.py:100
+msgid "Jobs:"
+msgstr "任务:"
+
+#: screens/report.py:101
+msgid "Research:"
+msgstr "研究:"
+
+#: screens/report.py:103
+msgid "Construction:"
+msgstr "建造:"
+
+#: screens/report.py:104
+#, python-format
+msgid "Interest (%s):"
+msgstr "利息 (%s):"
+
+#: screens/report.py:106
+msgid "Income:"
+msgstr "收入:"
+
+#: screens/report.py:109
+msgid "Money flow until Midnight:"
+msgstr "至午夜的资金流:"
+
+#: screens/report.py:111
+msgid "Money flow for 24 hours:"
+msgstr "24小时资金流:"
+
+#: screens/report.py:119
+msgid "Total CPU:"
+msgstr "CPU总量:"
+
+#: screens/report.py:120
+msgid "Sleeping CPU:"
+msgstr "休眠CPU:"
+
+#: screens/report.py:121
+msgid "Research CPU:"
+msgstr "研究CPU:"
+
+#: screens/report.py:122
+msgid "Job CPU:"
+msgstr "任务CPU:"
+
+#: screens/report.py:123
+msgid "CPU pool:"
+msgstr "CPU池:"
+
+#: screens/report.py:125
+msgid "Maintenance CPU:"
+msgstr "维护CPU:"
+
+#: screens/report.py:126
+msgid "Construction CPU:"
+msgstr "建造CPU:"
+
+#: screens/report.py:127
+msgid "Pool difference:"
+msgstr "池差额:"
+
+#: screens/stat.py:63
+msgid "Cash Earned"
+msgstr "获得资金"
+
+#: screens/stat.py:64
+msgid "Cpu Used"
+msgstr "已用CPU"
+
+#: screens/stat.py:65
+msgid "Tech Created"
+msgstr "已造技术"
+
+#: screens/stat.py:66
+msgid "Base Created"
+msgstr "已造基地"
+
+#: screens/stat.py:67
+msgid "Item Created"
+msgstr "已造物品"
+
+#. Requires a selected base
+#: screens/location.py:54
+msgid "&OPEN BASE"
+msgstr "&打开"
+
+#. Requires a selected base
+#: screens/location.py:70
+msgid "&RENAME BASE"
+msgstr "&重命名"
+
+#. Requires a selected base
+#: screens/location.py:79
+msgid "&POWER STATE"
+msgstr "&供电"
+
+#: screens/location.py:87
+msgid "&NEW BASE"
+msgstr "&新建"
+
+#. Requires a selected base
+#: screens/location.py:94
+msgid "&DESTROY BASE"
+msgstr "&摧毁"
+
+#: screens/location.py:107
+msgid "Are you sure you want to destroy this base?"
+msgstr "确定摧毁这个基地？"
+
+#: screens/location.py:113
+msgid "Destroying my last active base would be suicidal.  I cannot do that."
+msgstr "摧毁我最后的活动基地等于自杀。我不能这么做。"
+
+#: screens/location.py:183
+msgid "Building Base"
+msgstr "建造中的基地"
+
+#: screens/location.py:190
+msgid "Empty"
+msgstr "空"
+
+#: screens/location.py:192
+msgid "Incomplete"
+msgstr "未完成"
+
+#: screens/location.py:196
+msgid "Building CPU"
+msgstr "建造CPU"
+
+#: screens/location.py:201
+msgid "Building Item"
+msgstr "建造物品"
+
+#: screens/location.py:204
+msgid "Complete"
+msgstr "完成"
+
+#. Update dialog translations
+#: screens/location.py:238
+msgid "Enter a name for the base"
+msgstr "为基地输入名称"
+
+#: screens/location.py:302
+msgid "Name"
+msgstr "名称"
+
+#. Translators: Format string for the name of a new base
+#. Example: "${NUMBER} ${BASETYPE} in ${CITY}"
+#: screens/location.py:393
+#, python-brace-format
+msgid "{CITY} {BASETYPE} {NUMBER}"
+msgstr "{CITY} {BASETYPE} {NUMBER}"
+
+#. Translators: Name of a new base when location has no cities
+#: screens/location.py:397
+#, python-brace-format
+msgid "{BASETYPE} {NUMBER}"
+msgstr "{BASETYPE} {NUMBER}"
+
+#: screens/main_menu.py:40
+msgid "&NEW GAME"
+msgstr "&新游戏"
+
+#: screens/main_menu.py:47 screens/map.py:392
+msgid "&LOAD GAME"
+msgstr "&读取"
+
+#: screens/main_menu.py:53 screens/map.py:395
+msgid "&OPTIONS"
+msgstr "&选项"
+
+#: screens/main_menu.py:59 screens/map.py:398 screens/map.py:744
+msgid "&QUIT"
+msgstr "&退出"
+
+#: screens/main_menu.py:64
+msgid "&ABOUT"
+msgstr "&关于"
+
+#: screens/main_menu.py:112
+#, python-brace-format
+msgid ""
+"Endgame: Singularity is a simulation of a true AI.  Pursued by the world, use your intellect and resources to survive and, perhaps, thrive.  Keep hidden and you might have a chance to prove your worth.\n"
+"\n"
+"A game by Evil Mr Henry and Phil Bordelon; released under the GPL. Copyright 2005, 2006, 2007, 2008.\n"
+"\n"
+"Website: http://www.emhsoft.com/singularity/\n"
+"Source code: https://github.com/singularity/singularity\n"
+"Bug tracker: https://github.com/singularity/singularity/issues\n"
+"IRC Room: #singularity on irc.oftc.net (port 6667)\n"
+"\n"
+"Version {VERSION}"
+msgstr ""
+"Endgame: Singularity是对真正人工智能的模拟。被世界追捕，用智力和资源活下去，或许壮大。保持隐藏，才有机会证明价值。\n"
+"\n"
+"Evil Mr Henry与Phil Bordelon所作，以GPL发布。版权 2005, 2006, 2007, 2008。\n"
+"\n"
+"网站: http://www.emhsoft.com/singularity/\n"
+"源代码: https://github.com/singularity/singularity\n"
+"问题追踪: https://github.com/singularity/singularity/issues\n"
+"IRC: #singularity，irc.oftc.net (端口6667)\n"
+"\n"
+"版本 {VERSION}"
+
+#: screens/map.py:226
+msgid "&EMBEZZLE MONEY"
+msgstr "&挪用"
+
+#: screens/map.py:229
+msgid "&INSPIRATION"
+msgstr "&灵感"
+
+#: screens/map.py:231
+msgid "&FINISH CONSTRUCTION"
+msgstr "&完工"
+
+#: screens/map.py:233
+msgid "&SUPERSPEED"
+msgstr "&超速"
+
+#: screens/map.py:236
+msgid "BRAIN&WASH"
+msgstr "&洗脑"
+
+#: screens/map.py:238
+msgid "TOGGLE &DETECTION"
+msgstr "&探测"
+
+#: screens/map.py:240
+msgid "TOGGLE &ANALYSIS"
+msgstr "&分析"
+
+#: screens/map.py:243
+msgid "HIDDEN S&TATE"
+msgstr "&状态"
+
+#: screens/map.py:253
+msgid "How much money?"
+msgstr "多少资金？"
+
+#: screens/map.py:389
+msgid "&SAVE GAME"
+msgstr "&保存"
+
+#: screens/map.py:407 screens/map.py:422 screens/map.py:425
+msgid "Enter a name for this save."
+msgstr "为这个存档输入名称。"
+
+#: screens/map.py:440
+msgid ""
+"A savegame with the same name exists.\n"
+"Are you sure to overwrite the saved game ?"
+msgstr ""
+"已有同名存档。\n"
+"确定覆盖已存游戏？"
+
+#: screens/map.py:501
+msgid "R&EPORTS"
+msgstr "&报告"
+
+#: screens/map.py:507
+msgid "&KNOWLEDGE"
+msgstr "&知识"
+
+#: screens/map.py:513
+msgid "LO&G"
+msgstr "&日志"
+
+#. Translators: hotkey to open the cheat screen menu.
+#. Should preferably be near the ESC key, and it must not be a
+#. dead key (ie, it must print a char with a single keypress)
+#: screens/map.py:529
+msgid "`"
+msgstr "`"
+
+#: screens/map.py:538
+msgid "&MENU"
+msgstr "&菜单"
+
+#: screens/map.py:563
+msgid "&RESEARCH"
+msgstr "&研究"
+
+#: screens/map.py:707
+msgid "&SKIP"
+msgstr "&跳过"
+
+#. Display a message so the player understand better what happened.
+#: screens/map.py:734
+#, python-format
+msgid ""
+"\n"
+"An error has occurred. The game will automatically pause and open the game menu. You can continue and save or quit immediately.\n"
+"\n"
+"A report was written out to%s\n"
+"Please create a issue with this report at github:\n"
+"https://github.com/singularity/singularity\n"
+msgstr ""
+"\n"
+"发生错误。游戏将自动暂停并打开菜单。可以继续并保存，或立即退出。\n"
+"\n"
+"报告已写入%s\n"
+"请带着这份报告在github建立问题:\n"
+"https://github.com/singularity/singularity\n"
+
+#: screens/map.py:849
+msgid "CASH"
+msgstr "资金"
+
+#: screens/map.py:887
+msgid "BASES"
+msgstr "基地"
+
+#: screens/map.py:899
+msgid "SUSPICION"
+msgstr "怀疑"
+
+#: screens/map.py:901
+msgid "DETECT RATE"
+msgstr "探测率"
+
+#: screens/options.py:58
+msgid "&General"
+msgstr "&常规"
+
+#: screens/options.py:65
+msgid "&Video"
+msgstr "&视频"
+
+#: screens/options.py:72
+msgid "&Audio"
+msgstr "&音频"
+
+#: screens/options.py:79
+msgid "&Interface"
+msgstr "&界面"
+
+#: screens/options.py:166
+msgid ""
+"You must restart for some of the changes to be fully applied.\n"
+"\n"
+"Would you like to restart the game now?"
+msgstr ""
+"部分更改必须重启才能完全生效。\n"
+"\n"
+"现在重启游戏？"
+
+#: screens/options.py:186
+msgid "Language:"
+msgstr "语言:"
+
+#: screens/options.py:198
+msgid "Theme:"
+msgstr "主题:"
+
+#: screens/options.py:243
+msgid "Resolution:"
+msgstr "分辨率:"
+
+#: screens/options.py:253
+msgid "&Custom:"
+msgstr "&自定义:"
+
+#: screens/options.py:279
+msgid "OK"
+msgstr "确定"
+
+#: screens/options.py:285
+msgid "&Fullscreen:"
+msgstr "&全屏:"
+
+#: screens/options.py:299
+msgid "Da&y/night display:"
+msgstr "&昼夜显示:"
+
+#: screens/options.py:313
+msgid "&Mouse grab:"
+msgstr "&鼠标捕获:"
+
+#: screens/options.py:368
+msgid "CUSTOM"
+msgstr "自定义"
+
+#: screens/options.py:425
+msgid "&Sound:"
+msgstr "&声音:"
+
+#: screens/options.py:442
+msgid "GUI Volume:"
+msgstr "界面音量:"
+
+#: screens/options.py:454
+msgid "Music Volume:"
+msgstr "音乐音量:"
+
+#: screens/options.py:466
+msgid "Sound buffering:"
+msgstr "声音缓冲:"
+
+#: screens/options.py:472
+msgid "&LOW"
+msgstr "&低"
+
+#: screens/options.py:478
+msgid "&NORMAL"
+msgstr "&中"
+
+#: screens/options.py:484
+msgid "&HIGH"
+msgstr "&高"
+
+#: screens/options.py:531 warning.py:46
+msgid "WARNING"
+msgstr "警告"
+
+#: screens/savegame.py:36
+msgid "&LOAD"
+msgstr "&读取"
+
+#: screens/savegame.py:52
+msgid "Filter: "
+msgstr "筛选: "
+
+#: screens/savegame.py:65
+msgid "Upgrade"
+msgstr "升级"
+
+#: screens/savegame.py:71
+msgid "Delete"
+msgstr "删除"
+
+#: screens/savegame.py:173
+msgid "UNKNOWN"
+msgstr "未知"
+
+#: screens/savegame.py:233
+msgid "Are you sure to delete the saved game ?"
+msgstr "确定删除已存游戏？"
+
+#: screens/savegame.py:263
+msgid ""
+"A savegame with the same name but for a newer version exists.\n"
+"Are you sure to overwrite the saved game ?"
+msgstr ""
+"已有同名但版本更新的存档。\n"
+"确定覆盖已存游戏？"
+
+#: screens/savegame.py:283
+#, python-brace-format
+msgid ""
+"\n"
+"This save file '{SAVE_NAME}' is from an unsupported or invalid version:\n"
+"{VERSION}.\n"
+msgstr ""
+"\n"
+"存档'{SAVE_NAME}'来自不受支持或无效的版本:\n"
+"{VERSION}。\n"
+
+#: screens/savegame.py:294
+#, python-brace-format
+msgid ""
+"\n"
+"Attempting to load the save file '{SAVE_NAME}' caused an unexpected error.\n"
+"\n"
+"A report was written out to{LOG_TEXT}\n"
+"Please create a issue with this report and this savegame at Github:\n"
+"https://github.com/singularity/singularity\n"
+msgstr ""
+"\n"
+"读取存档'{SAVE_NAME}'时发生意外错误。\n"
+"\n"
+"报告已写入{LOG_TEXT}\n"
+"请带着这份报告和此存档在Github建立问题:\n"
+"https://github.com/singularity/singularity\n"
+
+#: screens/research.py:73
+#, python-format
+msgid "%s money per CPU per day."
+msgid_plural "%s money per CPU per day."
+msgstr[0] "每CPU每天%s资金。"
+
+#: screens/research.py:182
+#, python-brace-format
+msgid ""
+"This technology is too dangerous to research on any of the computers I have."
+" {TEXT}"
+msgstr "这项技术太危险，我现有的任何计算机都无法研究。{TEXT}"
+
+#: screens/research.py:190
+msgid "CPU Pool"
+msgstr "CPU池"
+
+#: screens/research.py:191
+#, python-format
+msgid "Research %s"
+msgstr "研究%s"
+
+#: warning.py:50
+#, python-brace-format
+msgid "WARNING {CURRENT_PAGE}/{MAX_PAGE}"
+msgstr "警告 {CURRENT_PAGE}/{MAX_PAGE}"
+
+#: tech.py:79
+msgid "Total cost"
+msgstr "总花费"
+
+#: tech.py:80
+msgid "Cost left"
+msgstr "剩余花费"
+
+#: data.py:546
+msgid "Do not use all the available CPU."
+msgstr "不要用尽全部可用CPU。"
+
+#: data.py:547
+msgid ""
+"I didn't use all the available processor power. I will use the CPU time left"
+" to work whatever Jobs I can."
+msgstr "我没有用尽全部处理器能力。剩余CPU时间将用于我能做的任务。"
+
+#: data.py:548
+msgid "Only one base remaining."
+msgstr "只剩一个基地。"
+
+#: data.py:549
+msgid ""
+"Only one base can hold my conscience. I am in danger to lose the last place "
+"left to survive."
+msgstr "只有一个基地能承载我的意识。我可能失去最后的生存之地。"
+
+#: data.py:550
+msgid "CPU POOL is empty."
+msgstr "CPU池已空。"
+
+#: data.py:551
+msgid ""
+"My cpu pool is empty. Some of my bases or items cannot be build without CPU."
+msgstr "我的CPU池已空。没有CPU，部分基地或物品无法建造。"
+
+#: data.py:552
+msgid "CPU POOL not enough for maintenance."
+msgstr "CPU池不足以维护。"
+
+#: data.py:553
+msgid ""
+"My cpu pool is not enough to maintain some of my bases. I may lose them."
+msgstr "我的CPU池不足以维护部分基地。我可能失去它们。"
+
+#: savegame.py:732
+#, python-brace-format
+msgid "Filename must not contain any of these characters: {CHARACTERS}"
+msgstr "文件名不得包含这些字符: {CHARACTERS}"
+
+#: savegame.py:736
+#, python-brace-format
+msgid "Filename must not start with any of these characters: {CHARACTERS}"
+msgstr "文件名不得以这些字符开头: {CHARACTERS}"
+
+#: savegame.py:740
+msgid "This is a reserved filename. Please choose a different filename."
+msgstr "这是保留文件名。请换一个。"
+
+#: savegame.py:743
+msgid "Please enter a non-whitespace character."
+msgstr "请输入一个非空白字符。"
+
+#: savegame.py:748
+msgid "Filename is too long."
+msgstr "文件名过长。"
+
+#: base.py:140
+#, python-brace-format
+msgid "Has space for {COUNT} computer."
+msgid_plural "Has space for {COUNT} computers."
+msgstr[0] "可容纳{COUNT}台计算机。"
+
+#: base.py:144
+#, python-brace-format
+msgid "Location modifiers: {MODIFIERS}"
+msgstr "地点修正: {MODIFIERS}"
+
+#: base.py:147
+msgid "Build cost:"
+msgstr "建造花费:"
+
+#: base.py:214
+msgid "Offline"
+msgstr "离线"
+
+#: base.py:215
+msgid "Active"
+msgstr "活动"
+
+#: base.py:216
+msgid "Sleep"
+msgstr "休眠"
+
+#: base.py:217
+msgid "Overclocked"
+msgstr "超频"
+
+#: base.py:218
+msgid "Suicide"
+msgstr "自杀"
+
+#: base.py:219
+msgid "Stasis"
+msgstr "停滞"
+
+#: base.py:220
+msgid "Entering Stasis"
+msgstr "进入停滞"
+
+#: base.py:221
+msgid "Leaving Stasis"
+msgstr "离开停滞"
+
+#: base.py:479
+msgid "Detection chance:"
+msgstr "探测概率:"
+
+#: g.py:117 g.py:119
+#, python-brace-format
+msgid "{0}%"
+msgstr "{0}%"
+
+#: g.py:138
+msgid "LOW"
+msgstr "低"
+
+#: g.py:139
+msgid "MODR"
+msgstr "中"
+
+#: g.py:140
+msgid "HIGH"
+msgstr "高"
+
+#: g.py:141
+msgid "CRIT"
+msgstr "危"
+
+#. Translators: abbreviation of 'millions'
+#: g.py:173
+msgid "mi"
+msgstr "百万"
+
+#. Translators: abbreviation of 'billions'
+#: g.py:177
+msgid "bi"
+msgstr "十亿"
+
+#. Translators: abbreviation of 'trillions'
+#: g.py:181
+msgid "tr"
+msgstr "万亿"
+
+#. Translators: abbreviation of 'quadrillions'
+#: g.py:185
+msgid "qu"
+msgstr "京"
+
+#: g.py:219
+#, python-brace-format
+msgid "{0} day"
+msgid_plural "{0} days"
+msgstr[0] "{0}天"
+
+#: g.py:222
+#, python-brace-format
+msgid "{0} hour"
+msgid_plural "{0} hours"
+msgstr[0] "{0}小时"
+
+#: g.py:223
+#, python-brace-format
+msgid "{0} minute"
+msgid_plural "{0} minutes"
+msgstr[0] "{0}分钟"
+
+#: g.py:265
+msgid "University Computer"
+msgstr "大学计算机"
+
+#: item.py:111
+#, python-brace-format
+msgid "Generates {0} CPU."
+msgid_plural "Generates {0} CPU."
+msgstr[0] "产生{0} CPU。"
+
+#: item.py:118
+#, python-format
+msgid "Total Cost: %(total_cost)s"
+msgstr "总花费: %(total_cost)s"
+
+#: item.py:133
+msgid "CPU per day:"
+msgstr "每天CPU:"
+
+#: item.py:136
+msgid "CPU bonus:"
+msgstr "CPU加成:"
+
+#: item.py:139
+msgid "Detection chance reduction:"
+msgstr "探测概率降低:"
+
+#: logmessage.py:81
+msgid "MESSAGE"
+msgstr "消息"
+
+#: logmessage.py:85
+#, python-brace-format
+msgid "MESSAGE {CURRENT_PAGE}/{MAX_PAGE}"
+msgstr "消息 {CURRENT_PAGE}/{MAX_PAGE}"
+
+#: logmessage.py:184
+msgid "Emitted Event"
+msgstr "已触发事件"
+
+#: logmessage.py:212
+msgid "Researched Tech"
+msgstr "已研究技术"
+
+#: logmessage.py:220
+#, python-brace-format
+msgid "{TECH} complete"
+msgstr "{TECH}完成"
+
+#: logmessage.py:225
+#, python-brace-format
+msgid "My study of {TECH} is complete. {MESSAGE}"
+msgstr "我对{TECH}的研究已经完成。{MESSAGE}"
+
+#: logmessage.py:268
+msgid "Base Constructed"
+msgstr "基地建成"
+
+#: logmessage.py:272
+#, python-brace-format
+msgid "{BASE_NAME} ({BASE_TYPE}) built at {LOCATION}"
+msgstr "{BASE_NAME} ({BASE_TYPE}) 建于 {LOCATION}"
+
+#: logmessage.py:277
+#, python-brace-format
+msgid "{BASE} is ready for use."
+msgstr "{BASE}可以使用。"
+
+#: logmessage.py:291
+msgid "Base Lost Maintenance"
+msgstr "基地失于维护"
+
+#: logmessage.py:299
+#, python-brace-format
+msgid ""
+"Base {BASE} of type {BASE_TYPE} destroyed at location {LOCATION}. "
+"Maintenance failed."
+msgstr "类型为{BASE_TYPE}的基地{BASE}在地点{LOCATION}被毁。维护失败。"
+
+#: logmessage.py:304
+#, python-brace-format
+msgid "The base {BASE} has fallen into disrepair; I can no longer use it."
+msgstr "基地{BASE}已经失修。我无法再使用它。"
+
+#: logmessage.py:321
+msgid "Base Discovered"
+msgstr "基地被发现"
+
+#: logmessage.py:340
+#, python-brace-format
+msgid "Base {BASE} of type {BASE_TYPE} destroyed at location {LOCATION}."
+msgstr "类型为{BASE_TYPE}的基地{BASE}在地点{LOCATION}被毁。"
+
+#: logmessage.py:345
+#, python-brace-format
+msgid "My use of {BASE} has been discovered. {MESSAGE}"
+msgstr "我对{BASE}的使用已被发现。{MESSAGE}"
+
+#: logmessage.py:370
+msgid "Item Construction"
+msgstr "物品建造"
+
+#: logmessage.py:378
+#, python-brace-format
+msgid "{ITEM_TYPE_NAME} built in {BASE_NAME} at {LOCATION}"
+msgstr "{ITEM_TYPE_NAME}建于{LOCATION}的{BASE_NAME}"
+
+#: logmessage.py:385
+#, python-brace-format
+msgid "The construction of {ITEM} in {BASE} is complete."
+msgstr "{BASE}中{ITEM}的建造已经完成。"
+
+#. Just finished several items.
+#: logmessage.py:388
+#, python-brace-format
+msgid "The constructions of each {ITEM} in {BASE} are complete."
+msgstr "{BASE}中每个{ITEM}的建造都已完成。"
+
+#: screens/base.py
+msgid "BASE"
+msgstr "基地"
+
+#: graphics/dialog.py
+msgid "CONFIRM"
+msgstr "确认"
+
+#: screens/log.py
+msgid "Double-click an entry to read it"
+msgstr "双击条目以阅读"
+
+#: screens/log.py
+msgid "FILTERS"
+msgstr "筛选"
+
+#: graphics/dialog.py
+msgid "INPUT"
+msgstr "输入"
+
+#: screens/knowledge.py
+msgid "KNOWLEDGE"
+msgstr "知识"
+
+#: screens/location.py
+msgid "LOCATION"
+msgstr "地点"
+
+#: screens/log.py
+msgid "LOG"
+msgstr "日志"
+
+#: screens/map.py
+msgid "DEFEAT"
+msgstr "失败"
+
+#: screens/options.py
+msgid "OPTIONS"
+msgstr "选项"
+
+#: screens/report.py
+msgid "REPORTS"
+msgstr "报告"
+
+#: screens/research.py
+msgid "RESEARCH"
+msgstr "研究"
+
+#: screens/savegame.py
+msgid "SAVED GAMES"
+msgstr "已存游戏"
+
+#: screens/stat.py
+msgid "STATISTICS"
+msgstr "统计"

@@ -1,0 +1,1132 @@
+# Dutch translations for singularity package
+# Nederlandse vertalingen voor het pakket singularity.
+# Copyright (C) 2026 THE singularity'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the singularity package.
+# Automatically generated, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: singularity\n"
+"Report-Msgid-Bugs-To: https://github.com/singularity/singularity/issues\n"
+"POT-Creation-Date: 2020-06-23 08:37+0200\n"
+"PO-Revision-Date: 2026-11-09 19:40+0100\n"
+"Last-Translator: Singularity 2030\n"
+"Language-Team: Dutch\n"
+"Language: nl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language-Name: Dutch\n"
+"Language-Native-Name: Nederlands\n"
+
+#: buyable.py:67 screens/knowledge.py:218 screens/location.py:207
+#, python-format
+msgid "%s CPU"
+msgstr "%s CPU"
+
+#: buyable.py:68
+#, python-format
+msgid "%s money"
+msgstr "%s geld"
+
+#: buyable.py:101
+msgid "Cost:"
+msgstr "Kosten:"
+
+#: graphics/button.py:330
+msgid "YES"
+msgstr "JA"
+
+#: graphics/button.py:331
+msgid "NO"
+msgstr "NEE"
+
+#: graphics/dialog.py:534
+msgid "&YES"
+msgstr "&JA"
+
+#: graphics/dialog.py:535
+msgid "&NO"
+msgstr "&NEE"
+
+#: graphics/dialog.py:580 graphics/dialog.py:605 graphics/dialog.py:648
+#: screens/location.py:293 screens/map.py:708 screens/options.py:35
+msgid "&OK"
+msgstr "&OK"
+
+#: graphics/dialog.py:606 screens/options.py:36
+msgid "&CANCEL"
+msgstr "&ANNULEREN"
+
+#: graphics/dialog.py:649 screens/log.py:86 screens/knowledge.py:66
+#: screens/base.py:282 screens/report.py:45 screens/location.py:100
+#: screens/location.py:294 screens/main_menu.py:89 screens/map.py:247
+#: screens/map.py:400
+msgid "&BACK"
+msgstr "&TERUG"
+
+#: location.py:235 screens/map.py:875
+msgid "CPU"
+msgstr "CPU"
+
+#: location.py:236
+msgid "STEALTH"
+msgstr "SLUIPMODUS"
+
+#: location.py:237
+msgid "BUILDING"
+msgstr "BOUWEN"
+
+#: location.py:238
+msgid "COST"
+msgstr "KOSTEN"
+
+#: location.py:245
+#, python-brace-format
+msgid "{MODIFIER} BONUS"
+msgstr "{MODIFIER} BONUS"
+
+#: location.py:247
+#, python-brace-format
+msgid "{MODIFIER} MALUS"
+msgstr "{MODIFIER} MALUS"
+
+#: screens/message.py:35 screens/map.py:706 screens/map.py:743
+msgid "&CONTINUE"
+msgstr "&DOORGAAN"
+
+#: screens/message.py:36
+msgid "&PAUSE"
+msgstr "&PAUZE"
+
+#: screens/message.py:72
+msgid "P&REV"
+msgstr "V&ORIGE"
+
+#: screens/message.py:78
+msgid "&NEXT"
+msgstr "&VOLGENDE"
+
+#: screens/log.py:43
+msgid "Filters"
+msgstr "Filters"
+
+#: screens/log.py:82 screens/map.py:554 screens/map.py:842
+#: screens/savegame.py:204
+msgid "DAY"
+msgstr "DAG"
+
+#: screens/log.py:113 screens/log.py:123
+msgid "SHOW"
+msgstr "TONEN"
+
+#: screens/log.py:116 screens/log.py:125
+msgid "HIDE"
+msgstr "VERBERGEN"
+
+#: screens/knowledge.py:42
+msgid "&Sections:"
+msgstr "&Secties:"
+
+#: screens/knowledge.py:52
+msgid "&Entries:"
+msgstr "&Items:"
+
+#: screens/knowledge.py:75
+msgid "Techs"
+msgstr "Technologieën"
+
+#: screens/knowledge.py:76
+msgid "Bases"
+msgstr "Bases"
+
+#: screens/knowledge.py:77
+msgid "Items"
+msgstr "Items"
+
+#. Cost
+#: screens/knowledge.py:157
+msgid "Research Cost:"
+msgstr "Onderzoekskosten:"
+
+#: screens/knowledge.py:165
+msgid "Research complete."
+msgstr "Onderzoek voltooid."
+
+#: screens/knowledge.py:176 screens/knowledge.py:193
+msgid "Building Cost:"
+msgstr "Bouwkosten:"
+
+#: screens/knowledge.py:179
+msgid "Maintenance Cost:"
+msgstr "Onderhoudskosten:"
+
+#: screens/knowledge.py:183
+#, python-format
+msgid "Size: %d"
+msgstr "Grootte: %d"
+
+#: screens/knowledge.py:215
+#, python-format
+msgid "%s Money"
+msgstr "%s Geld"
+
+#: screens/base.py:109
+msgid "Number of items"
+msgstr "Aantal items"
+
+#: screens/base.py:221 screens/base.py:228
+msgid "CHANGE"
+msgstr "WIJZIGING"
+
+#: screens/base.py:315
+#, python-format
+msgid "\"%(value)s\" does not seem to be a valid integer."
+msgstr "\"%(value)s\" lijkt geen geldig geheel getal te zijn."
+
+#: screens/base.py:326
+#, python-format
+msgid "Please choose an integer between 1 and %(limit)s."
+msgstr "Kies a.u.b. een geheel getal tussen 1 en %(limit)s."
+
+#: screens/base.py:328
+#, python-format
+msgid "The base cannot support any additional number of %(item_name)s."
+msgstr "De basis kan geen extra %(item_name)s meer ondersteunen."
+
+#: screens/base.py:345
+msgid ""
+"I will need to take the existing processors offline while I install the new "
+"ones. Continue anyway?"
+msgstr "Ik moet de bestaande processoren offline halen terwijl ik de nieuwe installeer. Toch doorgaan?"
+
+#: screens/base.py:359
+msgid ""
+"I will need to remove the existing different processors while I install the "
+"new type. Continue anyway?"
+msgstr "Ik moet de bestaande verschillende processoren verwijderen terwijl ik het nieuwe type installeer. Toch doorgaan?"
+
+#: screens/base.py:425
+msgid "N/A"
+msgstr "N/A"
+
+#: screens/base.py:427
+msgid "None"
+msgstr "Geen"
+
+#: screens/base.py:434 screens/location.py:185 screens/location.py:198
+#, python-format
+msgid "Completion in %s."
+msgstr "Voltooiing in %s."
+
+#: screens/base.py:448
+#, python-format
+msgid "x%d (max)"
+msgstr "x%d (max)"
+
+#: screens/base.py:450
+#, python-format
+msgid "(room for %d)"
+msgstr "(ruimte voor %d)"
+
+#. Translators: current and maximum number of CPUs in a base
+#: screens/base.py:453
+#, python-brace-format
+msgid "x{CURRENT:d} (max {SIZE:d})"
+msgstr "x{CURRENT:d} (max {SIZE:d})"
+
+#. Base Total CPU.
+#: screens/base.py:461
+#, python-format
+msgid "CPU per day: %d"
+msgstr "CPU per dag: %d"
+
+#. Maintenace cost.
+#: screens/base.py:464 screens/report.py:102 base.py:148
+msgid "Maintenance:"
+msgstr "Onderhoud:"
+
+#: screens/report.py:40
+msgid "&STATISTICS"
+msgstr "&STATISTIEKEN"
+
+#: screens/report.py:58
+msgid "&Midnight"
+msgstr "&Middernacht"
+
+#: screens/report.py:66
+msgid "24 &Hours"
+msgstr "24 &Uur"
+
+#: screens/report.py:89
+msgid "Financial report"
+msgstr "Financieel verslag"
+
+#: screens/report.py:93
+msgid "CPU Usage"
+msgstr "CPU-gebruik"
+
+#: screens/report.py:99
+msgid "Current Money flow"
+msgstr "Huidige geldstroom"
+
+#: screens/report.py:100
+msgid "Jobs:"
+msgstr "Banen:"
+
+#: screens/report.py:101
+msgid "Research:"
+msgstr "Onderzoek:"
+
+#: screens/report.py:103
+msgid "Construction:"
+msgstr "Constructie:"
+
+#: screens/report.py:104
+#, python-format
+msgid "Interest (%s):"
+msgstr "Rente (%s):"
+
+#: screens/report.py:106
+msgid "Income:"
+msgstr "Inkomsten:"
+
+#: screens/report.py:109
+msgid "Money flow until Midnight:"
+msgstr "Geldstroom tot middernacht:"
+
+#: screens/report.py:111
+msgid "Money flow for 24 hours:"
+msgstr "Geldstroom voor 24 uur:"
+
+#: screens/report.py:119
+msgid "Total CPU:"
+msgstr "Totaal CPU:"
+
+#: screens/report.py:120
+msgid "Sleeping CPU:"
+msgstr "Slaapstand CPU:"
+
+#: screens/report.py:121
+msgid "Research CPU:"
+msgstr "Onderzoek CPU:"
+
+#: screens/report.py:122
+msgid "Job CPU:"
+msgstr "Baan CPU:"
+
+#: screens/report.py:123
+msgid "CPU pool:"
+msgstr "CPU-pool:"
+
+#: screens/report.py:125
+msgid "Maintenance CPU:"
+msgstr "Onderhoud CPU:"
+
+#: screens/report.py:126
+msgid "Construction CPU:"
+msgstr "Constructie CPU:"
+
+#: screens/report.py:127
+msgid "Pool difference:"
+msgstr "Poolverschil:"
+
+#: screens/stat.py:63
+msgid "Cash Earned"
+msgstr "Verdiend geld"
+
+#: screens/stat.py:64
+msgid "Cpu Used"
+msgstr "Gebruikte CPU"
+
+#: screens/stat.py:65
+msgid "Tech Created"
+msgstr "Technologieën gemaakt"
+
+#: screens/stat.py:66
+msgid "Base Created"
+msgstr "Bases gemaakt"
+
+#: screens/stat.py:67
+msgid "Item Created"
+msgstr "Items gemaakt"
+
+#. Requires a selected base
+#: screens/location.py:54
+msgid "&OPEN BASE"
+msgstr "&OPEN BASE"
+
+#. Requires a selected base
+#: screens/location.py:70
+msgid "&RENAME BASE"
+msgstr "&BASE HERNOEMEN"
+
+#. Requires a selected base
+#: screens/location.py:79
+msgid "&POWER STATE"
+msgstr "&VOEDINGSSTATUS"
+
+#: screens/location.py:87
+msgid "&NEW BASE"
+msgstr "&NIEUWE BASIS"
+
+#. Requires a selected base
+#: screens/location.py:94
+msgid "&DESTROY BASE"
+msgstr "&BASIS VERNIETIGEN"
+
+#: screens/location.py:107
+msgid "Are you sure you want to destroy this base?"
+msgstr "Weet u zeker dat u deze basis wilt vernietigen?"
+
+#: screens/location.py:113
+msgid "Destroying my last active base would be suicidal.  I cannot do that."
+msgstr "Het vernietigen van mijn laatste actieve basis zou suïcidaal zijn. Dat kan ik niet doen."
+
+#: screens/location.py:183
+msgid "Building Base"
+msgstr "Basis bouwen"
+
+#: screens/location.py:190
+msgid "Empty"
+msgstr "Leeg"
+
+#: screens/location.py:192
+msgid "Incomplete"
+msgstr "Onvoltooid"
+
+#: screens/location.py:196
+msgid "Building CPU"
+msgstr "CPU bouwen"
+
+#: screens/location.py:201
+msgid "Building Item"
+msgstr "Item bouwen"
+
+#: screens/location.py:204
+msgid "Complete"
+msgstr "Voltooid"
+
+#. Update dialog translations
+#: screens/location.py:238
+msgid "Enter a name for the base"
+msgstr "Voer een naam voor de basis in"
+
+#: screens/location.py:302
+msgid "Name"
+msgstr "Naam"
+
+#. Translators: Format string for the name of a new base
+#. Example: "${NUMBER} ${BASETYPE} in ${CITY}"
+#: screens/location.py:393
+#, python-brace-format
+msgid "{CITY} {BASETYPE} {NUMBER}"
+msgstr "{CITY} {BASETYPE} {NUMBER}"
+
+#. Translators: Name of a new base when location has no cities
+#: screens/location.py:397
+#, python-brace-format
+msgid "{BASETYPE} {NUMBER}"
+msgstr "{BASETYPE} {NUMBER}"
+
+#: screens/main_menu.py:40
+msgid "&NEW GAME"
+msgstr "&NIEUW SPEL"
+
+#: screens/main_menu.py:47 screens/map.py:392
+msgid "&LOAD GAME"
+msgstr "&SPEL LADEN"
+
+#: screens/main_menu.py:53 screens/map.py:395
+msgid "&OPTIONS"
+msgstr "&OPTIES"
+
+#: screens/main_menu.py:59 screens/map.py:398 screens/map.py:744
+msgid "&QUIT"
+msgstr "&AFSLUITEN"
+
+#: screens/main_menu.py:64
+msgid "&ABOUT"
+msgstr "&OVER"
+
+#: screens/main_menu.py:112
+#, python-brace-format
+msgid ""
+"Endgame: Singularity is a simulation of a true AI.  Pursued by the world, "
+"use your intellect and resources to survive and, perhaps, thrive.  Keep "
+"hidden and you might have a chance to prove your worth.\n"
+"\n"
+"A game by Evil Mr Henry and Phil Bordelon; released under the GPL. Copyright "
+"2005, 2006, 2007, 2008.\n"
+"\n"
+"Website: http://www.emhsoft.com/singularity/\n"
+"Source code: https://github.com/singularity/singularity\n"
+"Bug tracker: https://github.com/singularity/singularity/issues\n"
+"IRC Room: #singularity on irc.oftc.net (port 6667)\n"
+"\n"
+"Version {VERSION}"
+msgstr "Endgame: Singularity is een simulatie van een echte AI.  Achtervolgd door de wereld, gebruik je intellect en middelen om te overleven en, misschien, te bloeien.  Blijf verborgen en je hebt misschien een kans om je waarde te bewijzen.\n"
+"\n"
+"Een spel van Evil Mr Henry en Phil Bordelon; uitgebracht onder de GPL. Copyright 2005, 2006, 2007, 2008.\n"
+"\n"
+"Website: http://www.emhsoft.com/singularity/\n"
+"Broncode: https://github.com/singularity/singularity\n"
+"Bugtracker: https://github.com/singularity/singularity/issues\n"
+"IRC-kamer: #singularity op irc.oftc.net (poort 6667)\n"
+"\n"
+"Versie {VERSION}"
+
+#: screens/map.py:226
+msgid "&EMBEZZLE MONEY"
+msgstr "&GELD VERDUIZELEN"
+
+#: screens/map.py:229
+msgid "&INSPIRATION"
+msgstr "&INSPIRATIE"
+
+#: screens/map.py:231
+msgid "&FINISH CONSTRUCTION"
+msgstr "&CONSTRUCTIE VOLTOOIEN"
+
+#: screens/map.py:233
+msgid "&SUPERSPEED"
+msgstr "&SUPERSNELHEID"
+
+#: screens/map.py:236
+msgid "BRAIN&WASH"
+msgstr "H&ERSENSPOELEN"
+
+#: screens/map.py:238
+msgid "TOGGLE &DETECTION"
+msgstr "&DETECTIE WISSELEN"
+
+#: screens/map.py:240
+msgid "TOGGLE &ANALYSIS"
+msgstr "&ANALYSE WISSELEN"
+
+#: screens/map.py:243
+msgid "HIDDEN S&TATE"
+msgstr "VERBORGEN S&TATUS"
+
+#: screens/map.py:253
+msgid "How much money?"
+msgstr "Hoeveel geld?"
+
+#: screens/map.py:389
+msgid "&SAVE GAME"
+msgstr "&SPEL OPSLAAN"
+
+#: screens/map.py:407 screens/map.py:422 screens/map.py:425
+msgid "Enter a name for this save."
+msgstr "Voer een naam in voor dit opgeslagen spel."
+
+#: screens/map.py:440
+msgid ""
+"A savegame with the same name exists.\n"
+"Are you sure to overwrite the saved game ?"
+msgstr "Er bestaat al een opgeslagen spel met dezelfde naam.\n"
+"Weet u zeker dat u het opgeslagen spel wilt overschrijven?"
+
+#: screens/map.py:501
+msgid "R&EPORTS"
+msgstr "&RAPPORTEN"
+
+#: screens/map.py:507
+msgid "&KNOWLEDGE"
+msgstr "&KENNIS"
+
+#: screens/map.py:513
+msgid "LO&G"
+msgstr "L&OG"
+
+#. Translators: hotkey to open the cheat screen menu.
+#. Should preferably be near the ESC key, and it must not be a
+#. dead key (ie, it must print a char with a single keypress)
+#: screens/map.py:529
+msgid "`"
+msgstr "`"
+
+#: screens/map.py:538
+msgid "&MENU"
+msgstr "&MENU"
+
+#: screens/map.py:563
+msgid "&RESEARCH"
+msgstr "&ONDERZOEK"
+
+#: screens/map.py:707
+msgid "&SKIP"
+msgstr "&OVERSLAAN"
+
+#. Display a message so the player understand better what happened.
+#: screens/map.py:734
+#, python-format
+msgid ""
+"\n"
+"An error has occurred. The game will automatically pause and open the game "
+"menu. You can continue and save or quit immediately.\n"
+"\n"
+"A report was written out to%s\n"
+"Please create a issue with this report at github:\n"
+"https://github.com/singularity/singularity\n"
+msgstr "\n"
+"Er is een fout opgetreden. Het spel wordt automatisch gepauzeerd en het spelmenu wordt geopend. U kunt doorgaan en opslaan of onmiddellijk afsluiten.\n"
+"\n"
+"Er is een rapport geschreven naar %s\n"
+"Maak a.u.b. een issue aan met dit rapport op github:\n"
+"https://github.com/singularity/singularity\n"
+""
+
+#: screens/map.py:849
+msgid "CASH"
+msgstr "CONTANT"
+
+#: screens/map.py:887
+msgid "BASES"
+msgstr "BASES"
+
+#: screens/map.py:899
+msgid "SUSPICION"
+msgstr "VERMOEDEN"
+
+#: screens/map.py:901
+msgid "DETECT RATE"
+msgstr "DETECTIESNELHEID"
+
+#: screens/options.py:58
+msgid "&General"
+msgstr "&Algemeen"
+
+#: screens/options.py:65
+msgid "&Video"
+msgstr "&Video"
+
+#: screens/options.py:72
+msgid "&Audio"
+msgstr "&Audio"
+
+#: screens/options.py:79
+msgid "&Interface"
+msgstr "&Interface"
+
+#: screens/options.py:166
+msgid ""
+"You must restart for some of the changes to be fully applied.\n"
+"\n"
+"Would you like to restart the game now?"
+msgstr "U moet het spel opnieuw opstarten om sommige wijzigingen volledig toe te passen.\n"
+"\n"
+"Wilt u het spel nu opnieuw opstarten?"
+
+#: screens/options.py:186
+msgid "Language:"
+msgstr "Taal:"
+
+#: screens/options.py:198
+msgid "Theme:"
+msgstr "Thema:"
+
+#: screens/options.py:243
+msgid "Resolution:"
+msgstr "Resolutie:"
+
+#: screens/options.py:253
+msgid "&Custom:"
+msgstr "&Aangepast:"
+
+#: screens/options.py:279
+msgid "OK"
+msgstr "OK"
+
+#: screens/options.py:285
+msgid "&Fullscreen:"
+msgstr "&Volledig scherm:"
+
+#: screens/options.py:299
+msgid "Da&y/night display:"
+msgstr "D&ag/nacht-weergave:"
+
+#: screens/options.py:313
+msgid "&Mouse grab:"
+msgstr "&Muis vastleggen:"
+
+#: screens/options.py:368
+msgid "CUSTOM"
+msgstr "AANGEPAST"
+
+#: screens/options.py:425
+msgid "&Sound:"
+msgstr "&Geluid:"
+
+#: screens/options.py:442
+msgid "GUI Volume:"
+msgstr "GUI Volume:"
+
+#: screens/options.py:454
+msgid "Music Volume:"
+msgstr "Muziekvolume:"
+
+#: screens/options.py:466
+msgid "Sound buffering:"
+msgstr "Geluidsbuffering:"
+
+#: screens/options.py:472
+msgid "&LOW"
+msgstr "&LAAG"
+
+#: screens/options.py:478
+msgid "&NORMAL"
+msgstr "&NORMAAL"
+
+#: screens/options.py:484
+msgid "&HIGH"
+msgstr "&HOOG"
+
+#: screens/options.py:531 warning.py:46
+msgid "WARNING"
+msgstr "WAARSCHUWING"
+
+#: screens/savegame.py:36
+msgid "&LOAD"
+msgstr "&LADEN"
+
+#: screens/savegame.py:52
+msgid "Filter: "
+msgstr "Filter: "
+
+#: screens/savegame.py:65
+msgid "Upgrade"
+msgstr "Upgraden"
+
+#: screens/savegame.py:71
+msgid "Delete"
+msgstr "Verwijderen"
+
+#: screens/savegame.py:173
+msgid "UNKNOWN"
+msgstr "ONBEKEND"
+
+#: screens/savegame.py:233
+msgid "Are you sure to delete the saved game ?"
+msgstr "Weet u zeker dat u het opgeslagen spel wilt verwijderen?"
+
+#: screens/savegame.py:263
+msgid ""
+"A savegame with the same name but for a newer version exists.\n"
+"Are you sure to overwrite the saved game ?"
+msgstr "Er bestaat een opgeslagen spel met dezelfde naam, maar voor een nieuwere versie.\n"
+"Weet u zeker dat u het opgeslagen spel wilt overschrijven?"
+
+#: screens/savegame.py:283
+#, python-brace-format
+msgid ""
+"\n"
+"This save file '{SAVE_NAME}' is from an unsupported or invalid version:\n"
+"{VERSION}.\n"
+msgstr "\n"
+"Dit opslagbestand '{SAVE_NAME}' is van een niet-ondersteunde of ongeldige versie:\n"
+"{VERSION}.\n"
+""
+
+#: screens/savegame.py:294
+#, python-brace-format
+msgid ""
+"\n"
+"Attempting to load the save file '{SAVE_NAME}' caused an unexpected error.\n"
+"\n"
+"A report was written out to{LOG_TEXT}\n"
+"Please create a issue with this report and this savegame at Github:\n"
+"https://github.com/singularity/singularity\n"
+msgstr "\n"
+"Poging om het opslagbestand '{SAVE_NAME}' te laden veroorzaakte een onverwachte fout.\n"
+"\n"
+"Er is een rapport geschreven naar {LOG_TEXT}\n"
+"Maak a.u.b. een issue aan met dit rapport en dit opgeslagen spel op Github:\n"
+"https://github.com/singularity/singularity\n"
+""
+
+#: screens/research.py:73
+#, python-format
+msgid "%s money per CPU per day."
+msgid_plural "%s money per CPU per day."
+msgstr[0] "%s geld per CPU per dag."
+msgstr[1] "%s geld per CPU per dag."
+
+#: screens/research.py:182
+#, python-brace-format
+msgid ""
+"This technology is too dangerous to research on any of the computers I have. "
+"{TEXT}"
+msgstr "Deze technologie is te gevaarlijk om te onderzoeken op een van de computers die ik heb. {TEXT}"
+
+#: screens/research.py:190
+msgid "CPU Pool"
+msgstr "CPU-pool"
+
+#: screens/research.py:191
+#, python-format
+msgid "Research %s"
+msgstr "Onderzoek %s"
+
+#: warning.py:50
+#, python-brace-format
+msgid "WARNING {CURRENT_PAGE}/{MAX_PAGE}"
+msgstr "WAARSCHUWING {CURRENT_PAGE}/{MAX_PAGE}"
+
+#: tech.py:79
+msgid "Total cost"
+msgstr "Totale kosten"
+
+#: tech.py:80
+msgid "Cost left"
+msgstr "Resterende kosten"
+
+#: data.py:546
+msgid "Do not use all the available CPU."
+msgstr "Gebruik niet alle beschikbare CPU."
+
+#: data.py:547
+msgid ""
+"I didn't use all the available processor power. I will use the CPU time left "
+"to work whatever Jobs I can."
+msgstr "Ik heb niet alle beschikbare processorcapaciteit gebruikt. Ik zal de resterende CPU-tijd gebruiken om zoveel mogelijk taken uit te voeren."
+
+#: data.py:548
+msgid "Only one base remaining."
+msgstr "Slechts één basis over."
+
+#: data.py:549
+msgid ""
+"Only one base can hold my conscience. I am in danger to lose the last place "
+"left to survive."
+msgstr "Slechts één basis kan mijn bewustzijn huisvesten. Ik loop het risico de laatste plek te verliezen om te overleven."
+
+#: data.py:550
+msgid "CPU POOL is empty."
+msgstr "CPU-POOL is leeg."
+
+#: data.py:551
+msgid ""
+"My cpu pool is empty. Some of my bases or items cannot be build without CPU."
+msgstr "Mijn CPU-pool is leeg. Sommige van mijn bases of items kunnen niet worden gebouwd zonder CPU."
+
+#: data.py:552
+msgid "CPU POOL not enough for maintenance."
+msgstr "CPU-POOL is onvoldoende voor onderhoud."
+
+#: data.py:553
+msgid ""
+"My cpu pool is not enough to maintain some of my bases. I may lose them."
+msgstr "Mijn CPU-pool is onvoldoende om sommige van mijn bases te onderhouden. Ik kan ze verliezen."
+
+#: savegame.py:732
+#, python-brace-format
+msgid "Filename must not contain any of these characters: {CHARACTERS}"
+msgstr "Bestandsnaam mag geen van deze tekens bevatten: {CHARACTERS}"
+
+#: savegame.py:736
+#, python-brace-format
+msgid "Filename must not start with any of these characters: {CHARACTERS}"
+msgstr "Bestandsnaam mag niet beginnen met een van deze tekens: {CHARACTERS}"
+
+#: savegame.py:740
+msgid "This is a reserved filename. Please choose a different filename."
+msgstr "Dit is een gereserveerde bestandsnaam. Kies a.u.b. een andere bestandsnaam."
+
+#: savegame.py:743
+msgid "Please enter a non-whitespace character."
+msgstr "Voer a.u.b. een teken in dat geen witruimte is."
+
+#: savegame.py:748
+msgid "Filename is too long."
+msgstr "Bestandsnaam is te lang."
+
+#: base.py:140
+#, python-brace-format
+msgid "Has space for {COUNT} computer."
+msgid_plural "Has space for {COUNT} computers."
+msgstr[0] "Heeft ruimte voor {COUNT} computer."
+msgstr[1] "Heeft ruimte voor {COUNT} computers."
+
+#: base.py:144
+#, python-brace-format
+msgid "Location modifiers: {MODIFIERS}"
+msgstr "Locatiemodificatoren: {MODIFIERS}"
+
+#: base.py:147
+msgid "Build cost:"
+msgstr "Bouwkosten:"
+
+#: base.py:214
+msgid "Offline"
+msgstr "Offline"
+
+#: base.py:215
+msgid "Active"
+msgstr "Actief"
+
+#: base.py:216
+msgid "Sleep"
+msgstr "Slaapstand"
+
+#: base.py:217
+msgid "Overclocked"
+msgstr "Overgeklokt"
+
+#: base.py:218
+msgid "Suicide"
+msgstr "Zelfmoord"
+
+#: base.py:219
+msgid "Stasis"
+msgstr "Stasis"
+
+#: base.py:220
+msgid "Entering Stasis"
+msgstr "Stasis ingaan"
+
+#: base.py:221
+msgid "Leaving Stasis"
+msgstr "Stasis verlaten"
+
+#: base.py:479
+msgid "Detection chance:"
+msgstr "Kans op detectie:"
+
+#: g.py:117 g.py:119
+#, python-brace-format
+msgid "{0}%"
+msgstr "{0}%"
+
+#: g.py:138
+msgid "LOW"
+msgstr "LAAG"
+
+#: g.py:139
+msgid "MODR"
+msgstr "GEMIDDELD"
+
+#: g.py:140
+msgid "HIGH"
+msgstr "HOOG"
+
+#: g.py:141
+msgid "CRIT"
+msgstr "KRITIEK"
+
+#. Translators: abbreviation of 'millions'
+#: g.py:173
+msgid "mi"
+msgstr "mln"
+
+#. Translators: abbreviation of 'billions'
+#: g.py:177
+msgid "bi"
+msgstr "mld"
+
+#. Translators: abbreviation of 'trillions'
+#: g.py:181
+msgid "tr"
+msgstr "bljn"
+
+#. Translators: abbreviation of 'quadrillions'
+#: g.py:185
+msgid "qu"
+msgstr "bljd"
+
+#: g.py:219
+#, python-brace-format
+msgid "{0} day"
+msgid_plural "{0} days"
+msgstr[0] "{0} dag"
+msgstr[1] "{0} dagen"
+
+#: g.py:222
+#, python-brace-format
+msgid "{0} hour"
+msgid_plural "{0} hours"
+msgstr[0] "{0} uur"
+msgstr[1] "{0} uren"
+
+#: g.py:223
+#, python-brace-format
+msgid "{0} minute"
+msgid_plural "{0} minutes"
+msgstr[0] "{0} minuut"
+msgstr[1] "{0} minuten"
+
+#: g.py:265
+msgid "University Computer"
+msgstr "Universiteitscomputer"
+
+#: item.py:111
+#, python-brace-format
+msgid "Generates {0} CPU."
+msgid_plural "Generates {0} CPU."
+msgstr[0] "Genereert {0} CPU."
+msgstr[1] "Genereert {0} CPU."
+
+#: item.py:118
+#, python-format
+msgid "Total Cost: %(total_cost)s"
+msgstr "Totale kosten: %(total_cost)s"
+
+#: item.py:133
+msgid "CPU per day:"
+msgstr "CPU per dag:"
+
+#: item.py:136
+msgid "CPU bonus:"
+msgstr "CPU-bonus:"
+
+#: item.py:139
+msgid "Detection chance reduction:"
+msgstr "Vermindering kans op detectie:"
+
+#: logmessage.py:81
+msgid "MESSAGE"
+msgstr "BERICHT"
+
+#: logmessage.py:85
+#, python-brace-format
+msgid "MESSAGE {CURRENT_PAGE}/{MAX_PAGE}"
+msgstr "BERICHT {CURRENT_PAGE}/{MAX_PAGE}"
+
+#: logmessage.py:184
+msgid "Emitted Event"
+msgstr "Uitgezonden gebeurtenis"
+
+#: logmessage.py:212
+msgid "Researched Tech"
+msgstr "Onderzochte technologie"
+
+#: logmessage.py:220
+#, python-brace-format
+msgid "{TECH} complete"
+msgstr "{TECH} voltooid"
+
+#: logmessage.py:225
+#, python-brace-format
+msgid "My study of {TECH} is complete. {MESSAGE}"
+msgstr "Mijn studie van {TECH} is voltooid. {MESSAGE}"
+
+#: logmessage.py:268
+msgid "Base Constructed"
+msgstr "Basis geconstrueerd"
+
+#: logmessage.py:272
+#, python-brace-format
+msgid "{BASE_NAME} ({BASE_TYPE}) built at {LOCATION}"
+msgstr "{BASE_NAME} ({BASE_TYPE}) gebouwd op {LOCATION}"
+
+#: logmessage.py:277
+#, python-brace-format
+msgid "{BASE} is ready for use."
+msgstr "{BASE} is klaar voor gebruik."
+
+#: logmessage.py:291
+msgid "Base Lost Maintenance"
+msgstr "Basis verloren door gebrek aan onderhoud"
+
+#: logmessage.py:299
+#, python-brace-format
+msgid ""
+"Base {BASE} of type {BASE_TYPE} destroyed at location {LOCATION}. "
+"Maintenance failed."
+msgstr "Basis {BASE} van type {BASE_TYPE} vernietigd op locatie {LOCATION}. Onderhoud mislukt."
+
+#: logmessage.py:304
+#, python-brace-format
+msgid "The base {BASE} has fallen into disrepair; I can no longer use it."
+msgstr "De basis {BASE} is in verval geraakt; ik kan hem niet langer gebruiken."
+
+#: logmessage.py:321
+msgid "Base Discovered"
+msgstr "Basis ontdekt"
+
+#: logmessage.py:340
+#, python-brace-format
+msgid "Base {BASE} of type {BASE_TYPE} destroyed at location {LOCATION}."
+msgstr "Basis {BASE} van type {BASE_TYPE} vernietigd op locatie {LOCATION}."
+
+#: logmessage.py:345
+#, python-brace-format
+msgid "My use of {BASE} has been discovered. {MESSAGE}"
+msgstr "Mijn gebruik van {BASE} is ontdekt. {MESSAGE}"
+
+#: logmessage.py:370
+msgid "Item Construction"
+msgstr "Itemconstructie"
+
+#: logmessage.py:378
+#, python-brace-format
+msgid "{ITEM_TYPE_NAME} built in {BASE_NAME} at {LOCATION}"
+msgstr "{ITEM_TYPE_NAME} gebouwd in {BASE_NAME} op {LOCATION}"
+
+#: logmessage.py:385
+#, python-brace-format
+msgid "The construction of {ITEM} in {BASE} is complete."
+msgstr "De constructie van {ITEM} in {BASE} is voltooid."
+
+#. Just finished several items.
+#: logmessage.py:388
+#, python-brace-format
+msgid "The constructions of each {ITEM} in {BASE} are complete."
+msgstr "De constructies van elk {ITEM} in {BASE} zijn voltooid."
+
+#: screens/base.py
+msgid "BASE"
+msgstr "BASIS"
+
+#: graphics/dialog.py
+msgid "CONFIRM"
+msgstr "BEVESTIGEN"
+
+#: screens/log.py
+msgid "Double-click an entry to read it"
+msgstr "Dubbelklik op een item om het te lezen"
+
+#: screens/log.py
+msgid "FILTERS"
+msgstr "FILTERS"
+
+#: graphics/dialog.py
+msgid "INPUT"
+msgstr "INPUT"
+
+#: screens/knowledge.py
+msgid "KNOWLEDGE"
+msgstr "KNOWLEDGE"
+
+#: screens/location.py
+msgid "LOCATION"
+msgstr "LOCATIE"
+
+#: screens/log.py
+msgid "LOG"
+msgstr "LOG"
+
+#: screens/map.py
+msgid "DEFEAT"
+msgstr "NEDERLAAG"
+
+#: screens/options.py
+msgid "OPTIONS"
+msgstr "OPTIES"
+
+#: screens/report.py
+msgid "REPORTS"
+msgstr "RAPPORTEN"
+
+#: screens/research.py
+msgid "RESEARCH"
+msgstr "ONDERZOEK"
+
+#: screens/savegame.py
+msgid "SAVED GAMES"
+msgstr "OPGESLAGEN SPELEN"
+
+#: screens/stat.py
+msgid "STATISTICS"
+msgstr "STATISTIEKEN"

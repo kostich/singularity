@@ -9,10 +9,9 @@ saves/
 *.log
 .*
 _build
-!.travis.yml
-!.codecov.yml
 !.gitignore
 !.gitattributes
+!.github/
 
 singularity/i18n/*.po.sha1
 singularity/i18n/locale/

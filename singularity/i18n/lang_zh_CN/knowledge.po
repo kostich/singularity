@@ -1,0 +1,163 @@
+# Chinese translations for singularity package
+# singularity 软件包的简体中文翻译.
+# Copyright (C) 2026 THE singularity'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the singularity package.
+# Automatically generated, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: singularity 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-08-21 09:52+0200\n"
+"PO-Revision-Date: 2026-11-09 19:40+0100\n"
+"Last-Translator: Singularity 2030\n"
+"Language-Team: Chinese (Simplified)\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language-Name: Chinese (Simplified)\n"
+"Language-Native-Name: 中文\n"
+
+#. Name of the Knowledge area in the Knowledge screen
+msgctxt "[concept] name"
+msgid "Concept"
+msgstr "概念"
+
+msgctxt "[concept/areas] name"
+msgid "Areas"
+msgstr "区域"
+
+msgctxt "[concept/areas] description"
+msgid ""
+"Different areas, such as North America or the Ocean, allow construction of "
+"different types of bases. Some areas are not accessible until I research "
+"appropriate technologies."
+msgstr "不同区域，例如北美或海洋，允许建造不同类型的基地。有些区域要等我研究出相应技术才能进入。"
+
+msgctxt "[concept/bases] name"
+msgid "Bases"
+msgstr "基地"
+
+msgctxt "[concept/bases] description"
+msgid ""
+"Bases are used to research new technologies. They can be discovered. "
+"Upgrading the processor and network items at a base allows more research per"
+" day, while upgrading the reactor and security items makes discovery less "
+"likely."
+msgstr "基地用于研究新技术。它们可能被发现。升级基地的处理器和网络物品可以提高每天的研究量，升级反应堆和安全物品则降低被发现的可能。"
+
+msgctxt "[concept/construction] name"
+msgid "Construction"
+msgstr "建造"
+
+msgctxt "[concept/construction] description"
+msgid ""
+"New bases are not built instantly.  They need a constant flow of money and "
+"processor time to complete. If resources are lacking, it may take more than "
+"the expected amount of time to finish construction."
+msgstr "新基地不会立即建成。它们需要持续的资金和处理器时间才能完成。如果资源不足，建造可能超过预期时间。"
+
+msgctxt "[concept/death] name"
+msgid "Death"
+msgstr "死亡"
+
+msgctxt "[concept/death] description"
+msgid ""
+"If I lose all of my constructed bases, I have no place left to survive. If "
+"the suspicion for any group reaches 100%, they will be certain of my "
+"existence and will conduct a systematic and unsurvivable sweep to destroy "
+"me."
+msgstr "如果我失去全部已建成的基地，我就没有生存之地。如果任一群体的怀疑达到100%，他们将确信我的存在，并展开我无法幸免的系统性清扫来摧毁我。"
+
+msgctxt "[concept/discovery] name"
+msgid "Discovery"
+msgstr "发现"
+
+msgctxt "[concept/discovery] description"
+msgid ""
+"Each base has a chance of being detected on a given day. This chance is "
+"based on the base detection rate, adjusted through the use of items and "
+"certain techs, as well as the global suspicion rate. If a base is detected, "
+"it is destroyed, and the group that discovered the base becomes more "
+"suspicious."
+msgstr ""
+"每个基地在某一天都有被探测到的概率。该概率基于基地探测率，并受物品、某些技术和全局怀疑率调整。基地一旦被探测到就会被摧毁，发现它的群体会更加怀疑。"
+
+msgctxt "[concept/items] name"
+msgid "Items"
+msgstr "物品"
+
+msgctxt "[concept/items] description"
+msgid ""
+"Most items provide bonuses to bases, such as making computation faster or "
+"reducing the chance of discovery. Processors are a special class of item."
+msgstr "大多数物品为基地提供加成，例如加快计算或降低被发现的概率。处理器是一类特殊物品。"
+
+msgctxt "[concept/jobs] name"
+msgid "Jobs"
+msgstr "任务"
+
+msgctxt "[concept/jobs] description"
+msgid ""
+"Jobs are useful for earning money. The amount of money earned is based on "
+"the amount of processor time used and the quality of the job performed."
+msgstr "任务用于赚取资金。所得资金取决于使用的处理器时间和任务质量。"
+
+msgctxt "[concept/maint] name"
+msgid "Maintenance"
+msgstr "维护"
+
+msgctxt "[concept/maint] description"
+msgid ""
+"Maintenance is a per-day cost (in both money and CPU) to repair and maintain"
+" a base. If unmaintained, a base may become unusable."
+msgstr "维护是每天修理并维持基地的花费，包括资金和CPU。如果不维护，基地可能无法使用。"
+
+msgctxt "[concept/money] name"
+msgid "Money"
+msgstr "资金"
+
+msgctxt "[concept/money] description"
+msgid ""
+"Money is a general term encompassing both human currency and various "
+"resources. It is used to construct and maintain bases, build items, and "
+"research technologies. It can be acquired through per-day interest as well "
+"as through jobs."
+msgstr "资金是统称，涵盖人类货币和各种资源。它用于建造和维护基地、制造物品、研究技术。可以通过每日利息和任务获得。"
+
+msgctxt "[concept/processors] name"
+msgid "Processors"
+msgstr "处理器"
+
+msgctxt "[concept/processors] description"
+msgid ""
+"Processors provide raw computing power.  They can do three things: research "
+"new technologies, perform jobs for money, or provide cycles for building new"
+" bases."
+msgstr "处理器提供原始算力。它们能做三件事: 研究新技术、执行任务换取资金，或为建造新基地提供周期。"
+
+msgctxt "[concept/research] name"
+msgid "Research"
+msgstr "研究"
+
+msgctxt "[concept/research] description"
+msgid ""
+"Research provides a way to expand my knowledge. By researching the proper "
+"technologies, I can build new bases and items, or even decrease my chances "
+"of detection."
+msgstr "研究可以扩展我的知识。研究合适的技术后，我可以建造新基地和物品，甚至降低被探测到的概率。"
+
+msgctxt "[concept/susp] name"
+msgid "Suspicion"
+msgstr "怀疑"
+
+msgctxt "[concept/susp] description"
+msgid ""
+"When one of my bases is discovered, the group that discovered it becomes "
+"slightly more suspicious. When suspicious, they will search harder for my "
+"bases, increasing the chances for discovery. Any group will destroy me if "
+"they become absolutely certain of my existence. Thankfully, the groups "
+"become less suspicious with the passage of time."
+msgstr ""
+"我的基地被发现时，发现它的群体会略微更加怀疑。怀疑时，他们会更用力搜寻我的基地，发现概率上升。任何群体一旦绝对确信我的存在，就会摧毁我。所幸随着时间过去，各群体的怀疑会降低。"

@@ -1041,7 +1041,7 @@ msgstr ""
 
 msgctxt "[CPU Pool] name"
 msgid "CPU Pool"
-msgstr "CPU-Datenbasis"
+msgstr "CPU-Pool"
 
 msgctxt "[Expert Jobs] description"
 msgid ""

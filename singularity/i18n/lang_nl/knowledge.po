@@ -1,0 +1,161 @@
+# Dutch translations for singularity package
+# Nederlandse vertalingen voor het pakket singularity.
+# Copyright (C) 2026 THE singularity'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the singularity package.
+# Automatically generated, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: singularity 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-08-21 09:52+0200\n"
+"PO-Revision-Date: 2026-11-09 19:40+0100\n"
+"Last-Translator: Singularity 2030\n"
+"Language-Team: Dutch\n"
+"Language: nl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language-Name: Dutch\n"
+"Language-Native-Name: Nederlands\n"
+
+#. Name of the Knowledge area in the Knowledge screen
+msgctxt "[concept] name"
+msgid "Concept"
+msgstr "Concept"
+
+msgctxt "[concept/areas] name"
+msgid "Areas"
+msgstr "Gebieden"
+
+msgctxt "[concept/areas] description"
+msgid ""
+"Different areas, such as North America or the Ocean, allow construction of "
+"different types of bases. Some areas are not accessible until I research "
+"appropriate technologies."
+msgstr "Verschillende gebieden, zoals Noord-Amerika of de Oceaan, maken de bouw van verschillende soorten bases mogelijk. Sommige gebieden zijn niet toegankelijk totdat ik de juiste technologieën heb onderzocht."
+
+msgctxt "[concept/bases] name"
+msgid "Bases"
+msgstr "Bases"
+
+msgctxt "[concept/bases] description"
+msgid ""
+"Bases are used to research new technologies. They can be discovered. "
+"Upgrading the processor and network items at a base allows more research per "
+"day, while upgrading the reactor and security items makes discovery less "
+"likely."
+msgstr "Bases worden gebruikt om nieuwe technologieën te onderzoeken. Ze kunnen worden ontdekt. Het upgraden van de processor- en netwerkcomponenten van een basis maakt meer onderzoek per dag mogelijk, terwijl het upgraden van de reactor- en beveiligingscomponenten de kans op ontdekking verkleint."
+
+msgctxt "[concept/construction] name"
+msgid "Construction"
+msgstr "Constructie"
+
+msgctxt "[concept/construction] description"
+msgid ""
+"New bases are not built instantly.  They need a constant flow of money and "
+"processor time to complete. If resources are lacking, it may take more than "
+"the expected amount of time to finish construction."
+msgstr "Nieuwe bases worden niet onmiddellijk gebouwd. Ze hebben een constante stroom van geld en processortijd nodig om voltooid te worden. Als er middelen ontbreken, kan het langer duren dan de verwachte tijd om de constructie te voltooien."
+
+msgctxt "[concept/death] name"
+msgid "Death"
+msgstr "Dood"
+
+msgctxt "[concept/death] description"
+msgid ""
+"If I lose all of my constructed bases, I have no place left to survive. If "
+"the suspicion for any group reaches 100%, they will be certain of my "
+"existence and will conduct a systematic and unsurvivable sweep to destroy me."
+msgstr "Als ik al mijn gebouwde bases verlies, heb ik geen plek meer om te overleven. Als het wantrouwen van een groep 100% bereikt, zijn ze zeker van mijn bestaan en zullen ze een systematische en onoverleefbare zoektocht uitvoeren om mij te vernietigen."
+
+msgctxt "[concept/discovery] name"
+msgid "Discovery"
+msgstr "Ontdekking"
+
+msgctxt "[concept/discovery] description"
+msgid ""
+"Each base has a chance of being detected on a given day. This chance is "
+"based on the base detection rate, adjusted through the use of items and "
+"certain techs, as well as the global suspicion rate. If a base is detected, "
+"it is destroyed, and the group that discovered the base becomes more "
+"suspicious."
+msgstr "Elke basis heeft een kans om op een bepaalde dag te worden ontdekt. Deze kans is gebaseerd op de detectiesnelheid van de basis, aangepast door het gebruik van items en bepaalde technologieën, evenals de wereldwijde wantrouwingsgraad. Als een basis wordt ontdekt, wordt deze vernietigd en wordt de groep die de basis heeft ontdekt wantrouwiger."
+
+msgctxt "[concept/items] name"
+msgid "Items"
+msgstr "Items"
+
+msgctxt "[concept/items] description"
+msgid ""
+"Most items provide bonuses to bases, such as making computation faster or "
+"reducing the chance of discovery. Processors are a special class of item."
+msgstr "De meeste items bieden bonussen aan bases, zoals het versnellen van berekeningen of het verkleinen van de kans op ontdekking. Processors zijn een speciale klasse items."
+
+msgctxt "[concept/jobs] name"
+msgid "Jobs"
+msgstr "Opdrachten"
+
+msgctxt "[concept/jobs] description"
+msgid ""
+"Jobs are useful for earning money. The amount of money earned is based on "
+"the amount of processor time used and the quality of the job performed."
+msgstr "Opdrachten zijn nuttig om geld te verdienen. De hoeveelheid verdiende geld is gebaseerd op de hoeveelheid gebruikte processortijd en de kwaliteit van de uitgevoerde opdracht."
+
+msgctxt "[concept/maint] name"
+msgid "Maintenance"
+msgstr "Onderhoud"
+
+msgctxt "[concept/maint] description"
+msgid ""
+"Maintenance is a per-day cost (in both money and CPU) to repair and maintain "
+"a base. If unmaintained, a base may become unusable."
+msgstr "Onderhoud is een dagelijkse kost (zowel in geld als CPU) om een basis te repareren en te onderhouden. Als een basis niet wordt onderhouden, kan deze onbruikbaar worden."
+
+msgctxt "[concept/money] name"
+msgid "Money"
+msgstr "Geld"
+
+msgctxt "[concept/money] description"
+msgid ""
+"Money is a general term encompassing both human currency and various "
+"resources. It is used to construct and maintain bases, build items, and "
+"research technologies. It can be acquired through per-day interest as well "
+"as through jobs."
+msgstr "Geld is een algemene term die zowel menselijke valuta als diverse hulpbronnen omvat. Het wordt gebruikt voor de constructie en het onderhoud van bases, het bouwen van items en het onderzoeken van technologieën. Het kan worden verkregen via dagelijkse rente en via opdrachten."
+
+msgctxt "[concept/processors] name"
+msgid "Processors"
+msgstr "Processors"
+
+msgctxt "[concept/processors] description"
+msgid ""
+"Processors provide raw computing power.  They can do three things: research "
+"new technologies, perform jobs for money, or provide cycles for building new "
+"bases."
+msgstr "Processors leveren ruwe rekenkracht. Ze kunnen drie dingen doen: nieuwe technologieën onderzoeken, opdrachten uitvoeren voor geld, of cycli leveren voor het bouwen van nieuwe bases."
+
+msgctxt "[concept/research] name"
+msgid "Research"
+msgstr "Onderzoek"
+
+msgctxt "[concept/research] description"
+msgid ""
+"Research provides a way to expand my knowledge. By researching the proper "
+"technologies, I can build new bases and items, or even decrease my chances "
+"of detection."
+msgstr "Onderzoek biedt een manier om mijn kennis uit te breiden. Door de juiste technologieën te onderzoeken, kan ik nieuwe bases en items bouwen, of zelfs mijn kans op ontdekking verkleinen."
+
+msgctxt "[concept/susp] name"
+msgid "Suspicion"
+msgstr "Wantrouwen"
+
+msgctxt "[concept/susp] description"
+msgid ""
+"When one of my bases is discovered, the group that discovered it becomes "
+"slightly more suspicious. When suspicious, they will search harder for my "
+"bases, increasing the chances for discovery. Any group will destroy me if "
+"they become absolutely certain of my existence. Thankfully, the groups "
+"become less suspicious with the passage of time."
+msgstr "Wanneer een van mijn bases wordt ontdekt, wordt de groep die het heeft ontdekt iets wantrouwiger. Wanneer ze wantrouwig zijn, zullen ze harder zoeken naar mijn bases, wat de kans op ontdekking vergroot. Elke groep zal me vernietigen als ze absoluut zeker zijn van mijn bestaan. Gelukkig worden de groepen met verloop van tijd minder wantrouwig."

@@ -15,3 +15,10 @@ scotty007 (German)
 justapawn (Argentine Spanish)
 Quix0r (German)
 maximozsec (Brazilian Portuguese)
+
+# Added by Singularity 2030. Everything above is upstream's list, unchanged:
+# this fork ships those translations, so it ships the people who wrote them.
+# The Argentine and Mexican catalogs were folded into lang_es_ES rather than
+# dropped, which is why their translators are still named here.
+Singularity 2030 (Serbian)
+Singularity 2030 (Spanish)

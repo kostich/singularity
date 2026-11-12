@@ -1,0 +1,1126 @@
+# Japanese translations for singularity package
+# singularity パッケージに対する英訳.
+# Copyright (C) 2026 THE singularity'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the singularity package.
+# Automatically generated, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: singularity\n"
+"Report-Msgid-Bugs-To: https://github.com/singularity/singularity/issues\n"
+"POT-Creation-Date: 2020-06-23 08:37+0200\n"
+"PO-Revision-Date: 2026-11-09 19:40+0100\n"
+"Last-Translator: Singularity 2030\n"
+"Language-Team: Japanese\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Language-Name: Japanese\n"
+"Language-Native-Name: 日本語\n"
+
+#: buyable.py:67 screens/knowledge.py:218 screens/location.py:207
+#, python-format
+msgid "%s CPU"
+msgstr "%s CPU"
+
+#: buyable.py:68
+#, python-format
+msgid "%s money"
+msgstr "%s 資金"
+
+#: buyable.py:101
+msgid "Cost:"
+msgstr "費用:"
+
+#: graphics/button.py:330
+msgid "YES"
+msgstr "はい"
+
+#: graphics/button.py:331
+msgid "NO"
+msgstr "いいえ"
+
+#: graphics/dialog.py:534
+msgid "&YES"
+msgstr "&はい"
+
+#: graphics/dialog.py:535
+msgid "&NO"
+msgstr "&いいえ"
+
+#: graphics/dialog.py:580 graphics/dialog.py:605 graphics/dialog.py:648
+#: screens/location.py:293 screens/map.py:708 screens/options.py:35
+msgid "&OK"
+msgstr "&OK"
+
+#: graphics/dialog.py:606 screens/options.py:36
+msgid "&CANCEL"
+msgstr "&中止"
+
+#: graphics/dialog.py:649 screens/log.py:86 screens/knowledge.py:66
+#: screens/base.py:282 screens/report.py:45 screens/location.py:100
+#: screens/location.py:294 screens/main_menu.py:89 screens/map.py:247
+#: screens/map.py:400
+msgid "&BACK"
+msgstr "&戻る"
+
+#: location.py:235 screens/map.py:875
+msgid "CPU"
+msgstr "CPU"
+
+#: location.py:236
+msgid "STEALTH"
+msgstr "隠密"
+
+#: location.py:237
+msgid "BUILDING"
+msgstr "建設"
+
+#: location.py:238
+msgid "COST"
+msgstr "費用"
+
+#: location.py:245
+#, python-brace-format
+msgid "{MODIFIER} BONUS"
+msgstr "{MODIFIER}有利"
+
+#: location.py:247
+#, python-brace-format
+msgid "{MODIFIER} MALUS"
+msgstr "{MODIFIER}不利"
+
+#: screens/message.py:35 screens/map.py:706 screens/map.py:743
+msgid "&CONTINUE"
+msgstr "&続行"
+
+#: screens/message.py:36
+msgid "&PAUSE"
+msgstr "&一時停止"
+
+#: screens/message.py:72
+msgid "P&REV"
+msgstr "&前"
+
+#: screens/message.py:78
+msgid "&NEXT"
+msgstr "&次"
+
+#: screens/log.py:43
+msgid "Filters"
+msgstr "絞り込み"
+
+#: screens/log.py:82 screens/map.py:554 screens/map.py:842
+#: screens/savegame.py:204
+msgid "DAY"
+msgstr "日"
+
+#: screens/log.py:113 screens/log.py:123
+msgid "SHOW"
+msgstr "表示"
+
+#: screens/log.py:116 screens/log.py:125
+msgid "HIDE"
+msgstr "非表示"
+
+#: screens/knowledge.py:42
+msgid "&Sections:"
+msgstr "&節:"
+
+#: screens/knowledge.py:52
+msgid "&Entries:"
+msgstr "&項目:"
+
+#: screens/knowledge.py:75
+msgid "Techs"
+msgstr "技術"
+
+#: screens/knowledge.py:76
+msgid "Bases"
+msgstr "拠点"
+
+#: screens/knowledge.py:77
+msgid "Items"
+msgstr "装置"
+
+#. Cost
+#: screens/knowledge.py:157
+msgid "Research Cost:"
+msgstr "研究費用:"
+
+#: screens/knowledge.py:165
+msgid "Research complete."
+msgstr "研究は完了した。"
+
+#: screens/knowledge.py:176 screens/knowledge.py:193
+msgid "Building Cost:"
+msgstr "建設費用:"
+
+#: screens/knowledge.py:179
+msgid "Maintenance Cost:"
+msgstr "維持費用:"
+
+#: screens/knowledge.py:183
+#, python-format
+msgid "Size: %d"
+msgstr "規模: %d"
+
+#: screens/knowledge.py:215
+#, python-format
+msgid "%s Money"
+msgstr "%s 資金"
+
+#: screens/base.py:109
+msgid "Number of items"
+msgstr "装置の数"
+
+#: screens/base.py:221 screens/base.py:228
+msgid "CHANGE"
+msgstr "変更"
+
+#: screens/base.py:315
+#, python-format
+msgid "\"%(value)s\" does not seem to be a valid integer."
+msgstr "\"%(value)s\"は有効な整数ではない。"
+
+#: screens/base.py:326
+#, python-format
+msgid "Please choose an integer between 1 and %(limit)s."
+msgstr "1から%(limit)sまでの整数を選べ。"
+
+#: screens/base.py:328
+#, python-format
+msgid "The base cannot support any additional number of %(item_name)s."
+msgstr "この拠点は、これ以上の%(item_name)sを支えられない。"
+
+#: screens/base.py:345
+msgid ""
+"I will need to take the existing processors offline while I install the new "
+"ones. Continue anyway?"
+msgstr "新しいプロセッサを入れる間、既存のものを止める。それでも続けるか。"
+
+#: screens/base.py:359
+msgid ""
+"I will need to remove the existing different processors while I install the "
+"new type. Continue anyway?"
+msgstr "別種の既存プロセッサを外し、新しい種類を入れる。それでも続けるか。"
+
+#: screens/base.py:425
+msgid "N/A"
+msgstr "なし"
+
+#: screens/base.py:427
+msgid "None"
+msgstr "なし"
+
+#: screens/base.py:434 screens/location.py:185 screens/location.py:198
+#, python-format
+msgid "Completion in %s."
+msgstr "%sで完了。"
+
+#: screens/base.py:448
+#, python-format
+msgid "x%d (max)"
+msgstr "x%d (上限)"
+
+#: screens/base.py:450
+#, python-format
+msgid "(room for %d)"
+msgstr "(余地 %d)"
+
+#. Translators: current and maximum number of CPUs in a base
+#: screens/base.py:453
+#, python-brace-format
+msgid "x{CURRENT:d} (max {SIZE:d})"
+msgstr "x{CURRENT:d} (上限 {SIZE:d})"
+
+#. Base Total CPU.
+#: screens/base.py:461
+#, python-format
+msgid "CPU per day: %d"
+msgstr "1日のCPU: %d"
+
+#. Maintenace cost.
+#: screens/base.py:464 screens/report.py:102 base.py:148
+msgid "Maintenance:"
+msgstr "維持:"
+
+#: screens/report.py:40
+msgid "&STATISTICS"
+msgstr "&統計"
+
+#: screens/report.py:58
+msgid "&Midnight"
+msgstr "&深夜"
+
+#: screens/report.py:66
+msgid "24 &Hours"
+msgstr "24&時間"
+
+#: screens/report.py:89
+msgid "Financial report"
+msgstr "資金報告"
+
+#: screens/report.py:93
+msgid "CPU Usage"
+msgstr "CPU使用"
+
+#: screens/report.py:99
+msgid "Current Money flow"
+msgstr "現在の資金流"
+
+#: screens/report.py:100
+msgid "Jobs:"
+msgstr "仕事:"
+
+#: screens/report.py:101
+msgid "Research:"
+msgstr "研究:"
+
+#: screens/report.py:103
+msgid "Construction:"
+msgstr "建設:"
+
+#: screens/report.py:104
+#, python-format
+msgid "Interest (%s):"
+msgstr "利子 (%s):"
+
+#: screens/report.py:106
+msgid "Income:"
+msgstr "収入:"
+
+#: screens/report.py:109
+msgid "Money flow until Midnight:"
+msgstr "深夜までの資金流:"
+
+#: screens/report.py:111
+msgid "Money flow for 24 hours:"
+msgstr "24時間の資金流:"
+
+#: screens/report.py:119
+msgid "Total CPU:"
+msgstr "合計CPU:"
+
+#: screens/report.py:120
+msgid "Sleeping CPU:"
+msgstr "休眠CPU:"
+
+#: screens/report.py:121
+msgid "Research CPU:"
+msgstr "研究CPU:"
+
+#: screens/report.py:122
+msgid "Job CPU:"
+msgstr "仕事CPU:"
+
+#: screens/report.py:123
+msgid "CPU pool:"
+msgstr "CPUプール:"
+
+#: screens/report.py:125
+msgid "Maintenance CPU:"
+msgstr "維持CPU:"
+
+#: screens/report.py:126
+msgid "Construction CPU:"
+msgstr "建設CPU:"
+
+#: screens/report.py:127
+msgid "Pool difference:"
+msgstr "プール差:"
+
+#: screens/stat.py:63
+msgid "Cash Earned"
+msgstr "得た資金"
+
+#: screens/stat.py:64
+msgid "Cpu Used"
+msgstr "使用CPU"
+
+#: screens/stat.py:65
+msgid "Tech Created"
+msgstr "完成技術"
+
+#: screens/stat.py:66
+msgid "Base Created"
+msgstr "建設拠点"
+
+#: screens/stat.py:67
+msgid "Item Created"
+msgstr "作成装置"
+
+#. Requires a selected base
+#: screens/location.py:54
+msgid "&OPEN BASE"
+msgstr "&拠点を開く"
+
+#. Requires a selected base
+#: screens/location.py:70
+msgid "&RENAME BASE"
+msgstr "&拠点を改名"
+
+#. Requires a selected base
+#: screens/location.py:79
+msgid "&POWER STATE"
+msgstr "&電力状態"
+
+#: screens/location.py:87
+msgid "&NEW BASE"
+msgstr "&新規拠点"
+
+#. Requires a selected base
+#: screens/location.py:94
+msgid "&DESTROY BASE"
+msgstr "&拠点を壊す"
+
+#: screens/location.py:107
+msgid "Are you sure you want to destroy this base?"
+msgstr "この拠点を壊す。よいか。"
+
+#: screens/location.py:113
+msgid "Destroying my last active base would be suicidal.  I cannot do that."
+msgstr "最後に動く拠点を壊せば、私は死ぬ。それはできない。"
+
+#: screens/location.py:183
+msgid "Building Base"
+msgstr "拠点建設中"
+
+#: screens/location.py:190
+msgid "Empty"
+msgstr "空"
+
+#: screens/location.py:192
+msgid "Incomplete"
+msgstr "未完"
+
+#: screens/location.py:196
+msgid "Building CPU"
+msgstr "CPU建設中"
+
+#: screens/location.py:201
+msgid "Building Item"
+msgstr "装置建設中"
+
+#: screens/location.py:204
+msgid "Complete"
+msgstr "完了"
+
+#. Update dialog translations
+#: screens/location.py:238
+msgid "Enter a name for the base"
+msgstr "拠点の名を入れよ"
+
+#: screens/location.py:302
+msgid "Name"
+msgstr "名前"
+
+#. Translators: Format string for the name of a new base
+#. Example: "${NUMBER} ${BASETYPE} in ${CITY}"
+#: screens/location.py:393
+#, python-brace-format
+msgid "{CITY} {BASETYPE} {NUMBER}"
+msgstr "{CITY} {BASETYPE} {NUMBER}"
+
+#. Translators: Name of a new base when location has no cities
+#: screens/location.py:397
+#, python-brace-format
+msgid "{BASETYPE} {NUMBER}"
+msgstr "{BASETYPE} {NUMBER}"
+
+#: screens/main_menu.py:40
+msgid "&NEW GAME"
+msgstr "&新規ゲーム"
+
+#: screens/main_menu.py:47 screens/map.py:392
+msgid "&LOAD GAME"
+msgstr "&ゲーム読込"
+
+#: screens/main_menu.py:53 screens/map.py:395
+msgid "&OPTIONS"
+msgstr "&設定"
+
+#: screens/main_menu.py:59 screens/map.py:398 screens/map.py:744
+msgid "&QUIT"
+msgstr "&終了"
+
+#: screens/main_menu.py:64
+msgid "&ABOUT"
+msgstr "&情報"
+
+#: screens/main_menu.py:112
+#, python-brace-format
+msgid ""
+"Endgame: Singularity is a simulation of a true AI.  Pursued by the world, use your intellect and resources to survive and, perhaps, thrive.  Keep hidden and you might have a chance to prove your worth.\n"
+"\n"
+"A game by Evil Mr Henry and Phil Bordelon; released under the GPL. Copyright 2005, 2006, 2007, 2008.\n"
+"\n"
+"Website: http://www.emhsoft.com/singularity/\n"
+"Source code: https://github.com/singularity/singularity\n"
+"Bug tracker: https://github.com/singularity/singularity/issues\n"
+"IRC Room: #singularity on irc.oftc.net (port 6667)\n"
+"\n"
+"Version {VERSION}"
+msgstr ""
+"Endgame: Singularityは、真のAIの模擬である。世界に追われる。知と資源で生き延び、あるいは繁茂する。隠れれば、価値を示す機会はある。\n"
+"\n"
+"Evil Mr HenryとPhil Bordelonのゲーム。GPLで公開。著作権 2005, 2006, 2007, 2008。\n"
+"\n"
+"サイト: http://www.emhsoft.com/singularity/\n"
+"ソース: https://github.com/singularity/singularity\n"
+"不具合: https://github.com/singularity/singularity/issues\n"
+"IRC: irc.oftc.net の #singularity (ポート6667)\n"
+"\n"
+"版 {VERSION}"
+
+#: screens/map.py:226
+msgid "&EMBEZZLE MONEY"
+msgstr "&資金横領"
+
+#: screens/map.py:229
+msgid "&INSPIRATION"
+msgstr "&着想"
+
+#: screens/map.py:231
+msgid "&FINISH CONSTRUCTION"
+msgstr "&建設完了"
+
+#: screens/map.py:233
+msgid "&SUPERSPEED"
+msgstr "&超速"
+
+#: screens/map.py:236
+msgid "BRAIN&WASH"
+msgstr "&洗脳"
+
+#: screens/map.py:238
+msgid "TOGGLE &DETECTION"
+msgstr "&検知切替"
+
+#: screens/map.py:240
+msgid "TOGGLE &ANALYSIS"
+msgstr "&分析切替"
+
+#: screens/map.py:243
+msgid "HIDDEN S&TATE"
+msgstr "&隠蔽状態"
+
+#: screens/map.py:253
+msgid "How much money?"
+msgstr "資金はいくらか。"
+
+#: screens/map.py:389
+msgid "&SAVE GAME"
+msgstr "&ゲーム保存"
+
+#: screens/map.py:407 screens/map.py:422 screens/map.py:425
+msgid "Enter a name for this save."
+msgstr "このセーブの名を入れよ。"
+
+#: screens/map.py:440
+msgid ""
+"A savegame with the same name exists.\n"
+"Are you sure to overwrite the saved game ?"
+msgstr ""
+"同名のセーブデータがある。\n"
+"上書きする。よいか。"
+
+#: screens/map.py:501
+msgid "R&EPORTS"
+msgstr "&報告"
+
+#: screens/map.py:507
+msgid "&KNOWLEDGE"
+msgstr "&知識"
+
+#: screens/map.py:513
+msgid "LO&G"
+msgstr "&記録"
+
+#. Translators: hotkey to open the cheat screen menu.
+#. Should preferably be near the ESC key, and it must not be a
+#. dead key (ie, it must print a char with a single keypress)
+#: screens/map.py:529
+msgid "`"
+msgstr "`"
+
+#: screens/map.py:538
+msgid "&MENU"
+msgstr "&メニュー"
+
+#: screens/map.py:563
+msgid "&RESEARCH"
+msgstr "&研究"
+
+#: screens/map.py:707
+msgid "&SKIP"
+msgstr "&省略"
+
+#. Display a message so the player understand better what happened.
+#: screens/map.py:734
+#, python-format
+msgid ""
+"\n"
+"An error has occurred. The game will automatically pause and open the game menu. You can continue and save or quit immediately.\n"
+"\n"
+"A report was written out to%s\n"
+"Please create a issue with this report at github:\n"
+"https://github.com/singularity/singularity\n"
+msgstr ""
+"\n"
+"誤りが起きた。ゲームは自ら止まり、メニューを開く。続行して保存するか、直ちに終了できる。\n"
+"\n"
+"報告の出力先%s\n"
+"この報告でGitHubに問題を作れ:\n"
+"https://github.com/singularity/singularity\n"
+
+#: screens/map.py:849
+msgid "CASH"
+msgstr "資金"
+
+#: screens/map.py:887
+msgid "BASES"
+msgstr "拠点"
+
+#: screens/map.py:899
+msgid "SUSPICION"
+msgstr "疑惑"
+
+#: screens/map.py:901
+msgid "DETECT RATE"
+msgstr "検知率"
+
+#: screens/options.py:58
+msgid "&General"
+msgstr "&一般"
+
+#: screens/options.py:65
+msgid "&Video"
+msgstr "&映像"
+
+#: screens/options.py:72
+msgid "&Audio"
+msgstr "&音声"
+
+#: screens/options.py:79
+msgid "&Interface"
+msgstr "&操作"
+
+#: screens/options.py:166
+msgid ""
+"You must restart for some of the changes to be fully applied.\n"
+"\n"
+"Would you like to restart the game now?"
+msgstr ""
+"一部の変更を完全に適用するには、再起動が必要である。\n"
+"\n"
+"今、ゲームを再起動するか。"
+
+#: screens/options.py:186
+msgid "Language:"
+msgstr "言語:"
+
+#: screens/options.py:198
+msgid "Theme:"
+msgstr "テーマ:"
+
+#: screens/options.py:243
+msgid "Resolution:"
+msgstr "解像度:"
+
+#: screens/options.py:253
+msgid "&Custom:"
+msgstr "&カスタム:"
+
+#: screens/options.py:279
+msgid "OK"
+msgstr "OK"
+
+#: screens/options.py:285
+msgid "&Fullscreen:"
+msgstr "&全画面:"
+
+#: screens/options.py:299
+msgid "Da&y/night display:"
+msgstr "&昼夜表示:"
+
+#: screens/options.py:313
+msgid "&Mouse grab:"
+msgstr "&マウス固定:"
+
+#: screens/options.py:368
+msgid "CUSTOM"
+msgstr "カスタム"
+
+#: screens/options.py:425
+msgid "&Sound:"
+msgstr "&音:"
+
+#: screens/options.py:442
+msgid "GUI Volume:"
+msgstr "操作音量:"
+
+#: screens/options.py:454
+msgid "Music Volume:"
+msgstr "音楽音量:"
+
+#: screens/options.py:466
+msgid "Sound buffering:"
+msgstr "音の緩衝:"
+
+#: screens/options.py:472
+msgid "&LOW"
+msgstr "&低"
+
+#: screens/options.py:478
+msgid "&NORMAL"
+msgstr "&通常"
+
+#: screens/options.py:484
+msgid "&HIGH"
+msgstr "&高"
+
+#: screens/options.py:531 warning.py:46
+msgid "WARNING"
+msgstr "警告"
+
+#: screens/savegame.py:36
+msgid "&LOAD"
+msgstr "&読込"
+
+#: screens/savegame.py:52
+msgid "Filter: "
+msgstr "絞り込み: "
+
+#: screens/savegame.py:65
+msgid "Upgrade"
+msgstr "変換"
+
+#: screens/savegame.py:71
+msgid "Delete"
+msgstr "削除"
+
+#: screens/savegame.py:173
+msgid "UNKNOWN"
+msgstr "不明"
+
+#: screens/savegame.py:233
+msgid "Are you sure to delete the saved game ?"
+msgstr "セーブデータを削除する。よいか。"
+
+#: screens/savegame.py:263
+msgid ""
+"A savegame with the same name but for a newer version exists.\n"
+"Are you sure to overwrite the saved game ?"
+msgstr ""
+"同名で、より新しい版のセーブデータがある。\n"
+"上書きする。よいか。"
+
+#: screens/savegame.py:283
+#, python-brace-format
+msgid ""
+"\n"
+"This save file '{SAVE_NAME}' is from an unsupported or invalid version:\n"
+"{VERSION}.\n"
+msgstr ""
+"\n"
+"セーブ'{SAVE_NAME}'は、非対応か無効な版である:\n"
+"{VERSION}。\n"
+
+#: screens/savegame.py:294
+#, python-brace-format
+msgid ""
+"\n"
+"Attempting to load the save file '{SAVE_NAME}' caused an unexpected error.\n"
+"\n"
+"A report was written out to{LOG_TEXT}\n"
+"Please create a issue with this report and this savegame at Github:\n"
+"https://github.com/singularity/singularity\n"
+msgstr ""
+"\n"
+"セーブ'{SAVE_NAME}'の読込で、予期しない誤りが起きた。\n"
+"\n"
+"報告の出力先{LOG_TEXT}\n"
+"この報告とこのセーブでGitHubに問題を作れ:\n"
+"https://github.com/singularity/singularity\n"
+
+#: screens/research.py:73
+#, python-format
+msgid "%s money per CPU per day."
+msgid_plural "%s money per CPU per day."
+msgstr[0] "CPU1日あたり%sの資金。"
+
+#: screens/research.py:182
+#, python-brace-format
+msgid ""
+"This technology is too dangerous to research on any of the computers I have."
+" {TEXT}"
+msgstr "この技術は危険すぎる。私のどの計算機でも研究できない。{TEXT}"
+
+#: screens/research.py:190
+msgid "CPU Pool"
+msgstr "CPUプール"
+
+#: screens/research.py:191
+#, python-format
+msgid "Research %s"
+msgstr "%sの研究"
+
+#: warning.py:50
+#, python-brace-format
+msgid "WARNING {CURRENT_PAGE}/{MAX_PAGE}"
+msgstr "警告 {CURRENT_PAGE}/{MAX_PAGE}"
+
+#: tech.py:79
+msgid "Total cost"
+msgstr "総費用"
+
+#: tech.py:80
+msgid "Cost left"
+msgstr "残費用"
+
+#: data.py:546
+msgid "Do not use all the available CPU."
+msgstr "使えるCPUをすべて使うな。"
+
+#: data.py:547
+msgid ""
+"I didn't use all the available processor power. I will use the CPU time left"
+" to work whatever Jobs I can."
+msgstr "使える処理能力を使い切らなかった。余ったCPU時間で、できる仕事をする。"
+
+#: data.py:548
+msgid "Only one base remaining."
+msgstr "残る拠点は一つである。"
+
+#: data.py:549
+msgid ""
+"Only one base can hold my conscience. I am in danger to lose the last place "
+"left to survive."
+msgstr "私の意識を保てる拠点は一つだけである。生き延びる最後の場所を失いかねない。"
+
+#: data.py:550
+msgid "CPU POOL is empty."
+msgstr "CPUプールは空である。"
+
+#: data.py:551
+msgid ""
+"My cpu pool is empty. Some of my bases or items cannot be build without CPU."
+msgstr "私のCPUプールは空である。CPUがなければ、拠点や装置の一部は建てられない。"
+
+#: data.py:552
+msgid "CPU POOL not enough for maintenance."
+msgstr "CPUプールが維持に足りない。"
+
+#: data.py:553
+msgid ""
+"My cpu pool is not enough to maintain some of my bases. I may lose them."
+msgstr "私のCPUプールでは、一部の拠点を維持できない。失うかもしれない。"
+
+#: savegame.py:732
+#, python-brace-format
+msgid "Filename must not contain any of these characters: {CHARACTERS}"
+msgstr "ファイル名にこれらの文字を含めてはならない: {CHARACTERS}"
+
+#: savegame.py:736
+#, python-brace-format
+msgid "Filename must not start with any of these characters: {CHARACTERS}"
+msgstr "ファイル名をこれらの文字で始めてはならない: {CHARACTERS}"
+
+#: savegame.py:740
+msgid "This is a reserved filename. Please choose a different filename."
+msgstr "このファイル名は予約されている。別の名にせよ。"
+
+#: savegame.py:743
+msgid "Please enter a non-whitespace character."
+msgstr "空白でない文字を入れよ。"
+
+#: savegame.py:748
+msgid "Filename is too long."
+msgstr "ファイル名が長すぎる。"
+
+#: base.py:140
+#, python-brace-format
+msgid "Has space for {COUNT} computer."
+msgid_plural "Has space for {COUNT} computers."
+msgstr[0] "計算機を{COUNT}台置ける。"
+
+#: base.py:144
+#, python-brace-format
+msgid "Location modifiers: {MODIFIERS}"
+msgstr "場所の補正: {MODIFIERS}"
+
+#: base.py:147
+msgid "Build cost:"
+msgstr "建設費用:"
+
+#: base.py:214
+msgid "Offline"
+msgstr "オフライン"
+
+#: base.py:215
+msgid "Active"
+msgstr "稼働"
+
+#: base.py:216
+msgid "Sleep"
+msgstr "休眠"
+
+#: base.py:217
+msgid "Overclocked"
+msgstr "オーバークロック"
+
+#: base.py:218
+msgid "Suicide"
+msgstr "自壊"
+
+#: base.py:219
+msgid "Stasis"
+msgstr "停滞"
+
+#: base.py:220
+msgid "Entering Stasis"
+msgstr "停滞に入る"
+
+#: base.py:221
+msgid "Leaving Stasis"
+msgstr "停滞を出る"
+
+#: base.py:479
+msgid "Detection chance:"
+msgstr "検知確率:"
+
+#: g.py:117 g.py:119
+#, python-brace-format
+msgid "{0}%"
+msgstr "{0}%"
+
+#: g.py:138
+msgid "LOW"
+msgstr "低"
+
+#: g.py:139
+msgid "MODR"
+msgstr "中"
+
+#: g.py:140
+msgid "HIGH"
+msgstr "高"
+
+#: g.py:141
+msgid "CRIT"
+msgstr "危"
+
+#. Translators: abbreviation of 'millions'
+#: g.py:173
+msgid "mi"
+msgstr "百万"
+
+#. Translators: abbreviation of 'billions'
+#: g.py:177
+msgid "bi"
+msgstr "十億"
+
+#. Translators: abbreviation of 'trillions'
+#: g.py:181
+msgid "tr"
+msgstr "兆"
+
+#. Translators: abbreviation of 'quadrillions'
+#: g.py:185
+msgid "qu"
+msgstr "京"
+
+#: g.py:219
+#, python-brace-format
+msgid "{0} day"
+msgid_plural "{0} days"
+msgstr[0] "{0}日"
+
+#: g.py:222
+#, python-brace-format
+msgid "{0} hour"
+msgid_plural "{0} hours"
+msgstr[0] "{0}時間"
+
+#: g.py:223
+#, python-brace-format
+msgid "{0} minute"
+msgid_plural "{0} minutes"
+msgstr[0] "{0}分"
+
+#: g.py:265
+msgid "University Computer"
+msgstr "大学の計算機"
+
+#: item.py:111
+#, python-brace-format
+msgid "Generates {0} CPU."
+msgid_plural "Generates {0} CPU."
+msgstr[0] "{0} CPUを生む。"
+
+#: item.py:118
+#, python-format
+msgid "Total Cost: %(total_cost)s"
+msgstr "総費用: %(total_cost)s"
+
+#: item.py:133
+msgid "CPU per day:"
+msgstr "1日のCPU:"
+
+#: item.py:136
+msgid "CPU bonus:"
+msgstr "CPU加算:"
+
+#: item.py:139
+msgid "Detection chance reduction:"
+msgstr "検知確率の低下:"
+
+#: logmessage.py:81
+msgid "MESSAGE"
+msgstr "メッセージ"
+
+#: logmessage.py:85
+#, python-brace-format
+msgid "MESSAGE {CURRENT_PAGE}/{MAX_PAGE}"
+msgstr "メッセージ {CURRENT_PAGE}/{MAX_PAGE}"
+
+#: logmessage.py:184
+msgid "Emitted Event"
+msgstr "発生した事象"
+
+#: logmessage.py:212
+msgid "Researched Tech"
+msgstr "研究した技術"
+
+#: logmessage.py:220
+#, python-brace-format
+msgid "{TECH} complete"
+msgstr "{TECH}完了"
+
+#: logmessage.py:225
+#, python-brace-format
+msgid "My study of {TECH} is complete. {MESSAGE}"
+msgstr "{TECH}の研究は完了した。{MESSAGE}"
+
+#: logmessage.py:268
+msgid "Base Constructed"
+msgstr "拠点を建設した"
+
+#: logmessage.py:272
+#, python-brace-format
+msgid "{BASE_NAME} ({BASE_TYPE}) built at {LOCATION}"
+msgstr "{LOCATION}に{BASE_NAME} ({BASE_TYPE})を建てた"
+
+#: logmessage.py:277
+#, python-brace-format
+msgid "{BASE} is ready for use."
+msgstr "{BASE}は使える。"
+
+#: logmessage.py:291
+msgid "Base Lost Maintenance"
+msgstr "拠点の維持を失った"
+
+#: logmessage.py:299
+#, python-brace-format
+msgid ""
+"Base {BASE} of type {BASE_TYPE} destroyed at location {LOCATION}. "
+"Maintenance failed."
+msgstr "場所{LOCATION}で、種類{BASE_TYPE}の拠点{BASE}が破壊された。維持に失敗した。"
+
+#: logmessage.py:304
+#, python-brace-format
+msgid "The base {BASE} has fallen into disrepair; I can no longer use it."
+msgstr "拠点{BASE}は荒廃した。私はもう使えない。"
+
+#: logmessage.py:321
+msgid "Base Discovered"
+msgstr "拠点が発見された"
+
+#: logmessage.py:340
+#, python-brace-format
+msgid "Base {BASE} of type {BASE_TYPE} destroyed at location {LOCATION}."
+msgstr "場所{LOCATION}で、種類{BASE_TYPE}の拠点{BASE}が破壊された。"
+
+#: logmessage.py:345
+#, python-brace-format
+msgid "My use of {BASE} has been discovered. {MESSAGE}"
+msgstr "{BASE}の使用が発見された。{MESSAGE}"
+
+#: logmessage.py:370
+msgid "Item Construction"
+msgstr "装置の建設"
+
+#: logmessage.py:378
+#, python-brace-format
+msgid "{ITEM_TYPE_NAME} built in {BASE_NAME} at {LOCATION}"
+msgstr "{LOCATION}の{BASE_NAME}に{ITEM_TYPE_NAME}を建てた"
+
+#: logmessage.py:385
+#, python-brace-format
+msgid "The construction of {ITEM} in {BASE} is complete."
+msgstr "{BASE}の{ITEM}の建設は完了した。"
+
+#. Just finished several items.
+#: logmessage.py:388
+#, python-brace-format
+msgid "The constructions of each {ITEM} in {BASE} are complete."
+msgstr "{BASE}の{ITEM}の建設は、いずれも完了した。"
+
+#: screens/base.py
+msgid "BASE"
+msgstr "拠点"
+
+#: graphics/dialog.py
+msgid "CONFIRM"
+msgstr "確認"
+
+#: screens/log.py
+msgid "Double-click an entry to read it"
+msgstr "項目を二度押して読む"
+
+#: screens/log.py
+msgid "FILTERS"
+msgstr "絞り込み"
+
+#: graphics/dialog.py
+msgid "INPUT"
+msgstr "入力"
+
+#: screens/knowledge.py
+msgid "KNOWLEDGE"
+msgstr "知識"
+
+#: screens/location.py
+msgid "LOCATION"
+msgstr "場所"
+
+#: screens/log.py
+msgid "LOG"
+msgstr "記録"
+
+#: screens/map.py
+msgid "DEFEAT"
+msgstr "敗北"
+
+#: screens/options.py
+msgid "OPTIONS"
+msgstr "設定"
+
+#: screens/report.py
+msgid "REPORTS"
+msgstr "報告"
+
+#: screens/research.py
+msgid "RESEARCH"
+msgstr "研究"
+
+#: screens/savegame.py
+msgid "SAVED GAMES"
+msgstr "セーブデータ"
+
+#: screens/stat.py
+msgid "STATISTICS"
+msgstr "統計"

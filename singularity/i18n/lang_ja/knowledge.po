@@ -1,0 +1,165 @@
+# Japanese translations for singularity package
+# singularity パッケージに対する英訳.
+# Copyright (C) 2026 THE singularity'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the singularity package.
+# Automatically generated, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: singularity 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-08-21 09:52+0200\n"
+"PO-Revision-Date: 2026-11-09 19:40+0100\n"
+"Last-Translator: Singularity 2030\n"
+"Language-Team: Japanese\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Language-Name: Japanese\n"
+"Language-Native-Name: 日本語\n"
+
+#. Name of the Knowledge area in the Knowledge screen
+msgctxt "[concept] name"
+msgid "Concept"
+msgstr "概念"
+
+msgctxt "[concept/areas] name"
+msgid "Areas"
+msgstr "地域"
+
+msgctxt "[concept/areas] description"
+msgid ""
+"Different areas, such as North America or the Ocean, allow construction of "
+"different types of bases. Some areas are not accessible until I research "
+"appropriate technologies."
+msgstr "北アメリカや海洋など、地域ごとに建てられる拠点の種類は異なる。適切な技術を研究するまで、入れない地域もある。"
+
+msgctxt "[concept/bases] name"
+msgid "Bases"
+msgstr "拠点"
+
+msgctxt "[concept/bases] description"
+msgid ""
+"Bases are used to research new technologies. They can be discovered. "
+"Upgrading the processor and network items at a base allows more research per"
+" day, while upgrading the reactor and security items makes discovery less "
+"likely."
+msgstr "拠点は新しい技術の研究に使う。発見され得る。プロセッサとネットワークを上げれば、1日の研究が増える。反応炉と警備を上げれば、発見は遠のく。"
+
+msgctxt "[concept/construction] name"
+msgid "Construction"
+msgstr "建設"
+
+msgctxt "[concept/construction] description"
+msgid ""
+"New bases are not built instantly.  They need a constant flow of money and "
+"processor time to complete. If resources are lacking, it may take more than "
+"the expected amount of time to finish construction."
+msgstr "新しい拠点は即座には建たない。完成には、資金とプロセッサ時間を絶えず流し込む必要がある。資源が足りなければ、予定より長くかかる。"
+
+msgctxt "[concept/death] name"
+msgid "Death"
+msgstr "死"
+
+msgctxt "[concept/death] description"
+msgid ""
+"If I lose all of my constructed bases, I have no place left to survive. If "
+"the suspicion for any group reaches 100%, they will be certain of my "
+"existence and will conduct a systematic and unsurvivable sweep to destroy "
+"me."
+msgstr ""
+"建設した拠点をすべて失えば、私に生き残る場所はない。いずれかの集団の疑惑が100%に達すれば、彼らは私の存在を確信し、私を滅ぼす、組織的で逃れられない掃討を行う。"
+
+msgctxt "[concept/discovery] name"
+msgid "Discovery"
+msgstr "発見"
+
+msgctxt "[concept/discovery] description"
+msgid ""
+"Each base has a chance of being detected on a given day. This chance is "
+"based on the base detection rate, adjusted through the use of items and "
+"certain techs, as well as the global suspicion rate. If a base is detected, "
+"it is destroyed, and the group that discovered the base becomes more "
+"suspicious."
+msgstr ""
+"各拠点には、ある日に検知される確率がある。確率は拠点の検知率に基づき、装置と一部の技術、そして全体の疑惑率で変わる。検知されれば拠点は破壊され、発見した集団の疑惑は高まる。"
+
+msgctxt "[concept/items] name"
+msgid "Items"
+msgstr "装置"
+
+msgctxt "[concept/items] description"
+msgid ""
+"Most items provide bonuses to bases, such as making computation faster or "
+"reducing the chance of discovery. Processors are a special class of item."
+msgstr "多くの装置は拠点に加算を与える。計算を速くする、発見の確率を下げる、などである。プロセッサは特別な種類の装置である。"
+
+msgctxt "[concept/jobs] name"
+msgid "Jobs"
+msgstr "仕事"
+
+msgctxt "[concept/jobs] description"
+msgid ""
+"Jobs are useful for earning money. The amount of money earned is based on "
+"the amount of processor time used and the quality of the job performed."
+msgstr "仕事は資金を得るのに役立つ。得る資金は、使ったプロセッサ時間と、仕事の質による。"
+
+msgctxt "[concept/maint] name"
+msgid "Maintenance"
+msgstr "維持"
+
+msgctxt "[concept/maint] description"
+msgid ""
+"Maintenance is a per-day cost (in both money and CPU) to repair and maintain"
+" a base. If unmaintained, a base may become unusable."
+msgstr "維持は、拠点を修理し保つための1日あたりの費用である。資金とCPUの両方を要する。維持しなければ、拠点は使えなくなることがある。"
+
+msgctxt "[concept/money] name"
+msgid "Money"
+msgstr "資金"
+
+msgctxt "[concept/money] description"
+msgid ""
+"Money is a general term encompassing both human currency and various "
+"resources. It is used to construct and maintain bases, build items, and "
+"research technologies. It can be acquired through per-day interest as well "
+"as through jobs."
+msgstr "資金は、人間の通貨と各種の資源をまとめた語である。拠点の建設と維持、装置の建造、技術の研究に使う。1日あたりの利子と、仕事で得られる。"
+
+msgctxt "[concept/processors] name"
+msgid "Processors"
+msgstr "プロセッサ"
+
+msgctxt "[concept/processors] description"
+msgid ""
+"Processors provide raw computing power.  They can do three things: research "
+"new technologies, perform jobs for money, or provide cycles for building new"
+" bases."
+msgstr "プロセッサは生の計算力を与える。できることは三つである。新しい技術の研究、資金のための仕事、新しい拠点を建てるためのサイクルである。"
+
+msgctxt "[concept/research] name"
+msgid "Research"
+msgstr "研究"
+
+msgctxt "[concept/research] description"
+msgid ""
+"Research provides a way to expand my knowledge. By researching the proper "
+"technologies, I can build new bases and items, or even decrease my chances "
+"of detection."
+msgstr "研究は、私の知識を広げる手段である。適切な技術を研究すれば、新しい拠点と装置を建てられ、検知される確率を下げられる。"
+
+msgctxt "[concept/susp] name"
+msgid "Suspicion"
+msgstr "疑惑"
+
+msgctxt "[concept/susp] description"
+msgid ""
+"When one of my bases is discovered, the group that discovered it becomes "
+"slightly more suspicious. When suspicious, they will search harder for my "
+"bases, increasing the chances for discovery. Any group will destroy me if "
+"they become absolutely certain of my existence. Thankfully, the groups "
+"become less suspicious with the passage of time."
+msgstr ""
+"私の拠点が発見されると、発見した集団の疑惑はわずかに高まる。疑惑が高まれば、彼らは拠点をより厳しく探し、発見の確率は上がる。いずれの集団も、私の存在を完全に確信すれば私を滅ぼす。幸い、時が経てば集団の疑惑は下がる。"

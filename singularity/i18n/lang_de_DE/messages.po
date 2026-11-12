@@ -564,8 +564,8 @@ msgid "&MENU"
 msgstr "&MENÜ"
 
 #: screens/map.py:563
-msgid "&RESEARCH/TASKS"
-msgstr "&FORSCHUNG/AUFGABEN"
+msgid "&RESEARCH"
+msgstr "&FORSCHUNG"
 
 #: screens/map.py:707
 msgid "&SKIP"
@@ -1110,6 +1110,63 @@ msgstr "Der Bau von {ITEM} in {BASE} ist fertig."
 #, python-brace-format
 msgid "The constructions of each {ITEM} in {BASE} are complete."
 msgstr "Der Bau von mehreren Objekten vom Typ {ITEM} in {BASE} ist fertig."
+
+
+#: screens/base.py
+msgid "BASE"
+msgstr "BASIS"
+
+#: graphics/dialog.py
+msgid "CONFIRM"
+msgstr "BESTÄTIGEN"
+
+#: screens/log.py
+msgid "Double-click an entry to read it"
+msgstr "Doppelklick auf einen Eintrag, um ihn zu lesen"
+
+#: screens/log.py
+msgid "FILTERS"
+msgstr "FILTER"
+
+#: graphics/dialog.py
+msgid "INPUT"
+msgstr "EINGABE"
+
+#: screens/knowledge.py
+msgid "KNOWLEDGE"
+msgstr "WISSEN"
+
+#: screens/location.py
+msgid "LOCATION"
+msgstr "ORT"
+
+#: screens/log.py
+msgid "LOG"
+msgstr "PROTOKOLL"
+
+#: screens/map.py
+msgid "DEFEAT"
+msgstr "NIEDERLAGE"
+
+#: screens/options.py
+msgid "OPTIONS"
+msgstr "OPTIONEN"
+
+#: screens/report.py
+msgid "REPORTS"
+msgstr "BERICHTE"
+
+#: screens/research.py
+msgid "RESEARCH"
+msgstr "FORSCHUNG"
+
+#: screens/savegame.py
+msgid "SAVED GAMES"
+msgstr "SPIELSTÄNDE"
+
+#: screens/stat.py
+msgid "STATISTICS"
+msgstr "STATISTIK"
 
 #~ msgid "Has space for %d computers."
 #~ msgstr "Hat Platz für %d Computer."

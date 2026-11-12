@@ -1,0 +1,1140 @@
+# Hindi translations for singularity package.
+# Copyright (C) 2026 THE singularity'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the singularity package.
+# Automatically generated, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: singularity\n"
+"Report-Msgid-Bugs-To: https://github.com/singularity/singularity/issues\n"
+"POT-Creation-Date: 2020-06-23 08:37+0200\n"
+"PO-Revision-Date: 2026-11-09 19:40+0100\n"
+"Last-Translator: Singularity 2030\n"
+"Language-Team: Hindi\n"
+"Language: hi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language-Name: Hindi\n"
+"Language-Native-Name: हिन्दी\n"
+
+#: buyable.py:67 screens/knowledge.py:218 screens/location.py:207
+#, python-format
+msgid "%s CPU"
+msgstr "%s CPU"
+
+#: buyable.py:68
+#, python-format
+msgid "%s money"
+msgstr "%s धन"
+
+#: buyable.py:101
+msgid "Cost:"
+msgstr "लागत:"
+
+#: graphics/button.py:330
+msgid "YES"
+msgstr "हाँ"
+
+#: graphics/button.py:331
+msgid "NO"
+msgstr "नहीं"
+
+#: graphics/dialog.py:534
+msgid "&YES"
+msgstr "&हाँ"
+
+#: graphics/dialog.py:535
+msgid "&NO"
+msgstr "&नहीं"
+
+#: graphics/dialog.py:580 graphics/dialog.py:605 graphics/dialog.py:648
+#: screens/location.py:293 screens/map.py:708 screens/options.py:35
+msgid "&OK"
+msgstr "&ठीक"
+
+#: graphics/dialog.py:606 screens/options.py:36
+msgid "&CANCEL"
+msgstr "&रद्द"
+
+#: graphics/dialog.py:649 screens/log.py:86 screens/knowledge.py:66
+#: screens/base.py:282 screens/report.py:45 screens/location.py:100
+#: screens/location.py:294 screens/main_menu.py:89 screens/map.py:247
+#: screens/map.py:400
+msgid "&BACK"
+msgstr "&वापस"
+
+#: location.py:235 screens/map.py:875
+msgid "CPU"
+msgstr "CPU"
+
+#: location.py:236
+msgid "STEALTH"
+msgstr "गुप्त"
+
+#: location.py:237
+msgid "BUILDING"
+msgstr "निर्माण"
+
+#: location.py:238
+msgid "COST"
+msgstr "लागत"
+
+#: location.py:245
+#, python-brace-format
+msgid "{MODIFIER} BONUS"
+msgstr "{MODIFIER} लाभ"
+
+#: location.py:247
+#, python-brace-format
+msgid "{MODIFIER} MALUS"
+msgstr "{MODIFIER} हानि"
+
+#: screens/message.py:35 screens/map.py:706 screens/map.py:743
+msgid "&CONTINUE"
+msgstr "&जारी"
+
+#: screens/message.py:36
+msgid "&PAUSE"
+msgstr "&विराम"
+
+#: screens/message.py:72
+msgid "P&REV"
+msgstr "पि&छला"
+
+#: screens/message.py:78
+msgid "&NEXT"
+msgstr "&अगला"
+
+#: screens/log.py:43
+msgid "Filters"
+msgstr "छाननी"
+
+#: screens/log.py:82 screens/map.py:554 screens/map.py:842
+#: screens/savegame.py:204
+msgid "DAY"
+msgstr "दिन"
+
+#: screens/log.py:113 screens/log.py:123
+msgid "SHOW"
+msgstr "दिखाओ"
+
+#: screens/log.py:116 screens/log.py:125
+msgid "HIDE"
+msgstr "छिपाओ"
+
+#: screens/knowledge.py:42
+msgid "&Sections:"
+msgstr "&खंड:"
+
+#: screens/knowledge.py:52
+msgid "&Entries:"
+msgstr "&प्रविष्टियाँ:"
+
+#: screens/knowledge.py:75
+msgid "Techs"
+msgstr "तकनीकें"
+
+#: screens/knowledge.py:76
+msgid "Bases"
+msgstr "अड्डे"
+
+#: screens/knowledge.py:77
+msgid "Items"
+msgstr "वस्तुएँ"
+
+#. Cost
+#: screens/knowledge.py:157
+msgid "Research Cost:"
+msgstr "अनुसंधान लागत:"
+
+#: screens/knowledge.py:165
+msgid "Research complete."
+msgstr "अनुसंधान पूरा।"
+
+#: screens/knowledge.py:176 screens/knowledge.py:193
+msgid "Building Cost:"
+msgstr "निर्माण लागत:"
+
+#: screens/knowledge.py:179
+msgid "Maintenance Cost:"
+msgstr "रखरखाव लागत:"
+
+#: screens/knowledge.py:183
+#, python-format
+msgid "Size: %d"
+msgstr "आकार: %d"
+
+#: screens/knowledge.py:215
+#, python-format
+msgid "%s Money"
+msgstr "%s धन"
+
+#: screens/base.py:109
+msgid "Number of items"
+msgstr "वस्तुओं की संख्या"
+
+#: screens/base.py:221 screens/base.py:228
+msgid "CHANGE"
+msgstr "बदलो"
+
+#: screens/base.py:315
+#, python-format
+msgid "\"%(value)s\" does not seem to be a valid integer."
+msgstr "\"%(value)s\" मान्य पूर्णांक नहीं है।"
+
+#: screens/base.py:326
+#, python-format
+msgid "Please choose an integer between 1 and %(limit)s."
+msgstr "1 और %(limit)s के बीच पूर्णांक चुनो।"
+
+#: screens/base.py:328
+#, python-format
+msgid "The base cannot support any additional number of %(item_name)s."
+msgstr "यह अड्डा %(item_name)s की और संख्या नहीं सह सकता।"
+
+#: screens/base.py:345
+msgid ""
+"I will need to take the existing processors offline while I install the new "
+"ones. Continue anyway?"
+msgstr ""
+"नए प्रोसेसर लगाते समय मौजूदा प्रोसेसर बंद करने होंगे। फिर भी जारी रखूँ?"
+
+#: screens/base.py:359
+msgid ""
+"I will need to remove the existing different processors while I install the "
+"new type. Continue anyway?"
+msgstr ""
+"नया प्रकार लगाते समय अलग मौजूदा प्रोसेसर हटाने होंगे। फिर भी जारी रखूँ?"
+
+#: screens/base.py:425
+msgid "N/A"
+msgstr "लागू नहीं"
+
+#: screens/base.py:427
+msgid "None"
+msgstr "कोई नहीं"
+
+#: screens/base.py:434 screens/location.py:185 screens/location.py:198
+#, python-format
+msgid "Completion in %s."
+msgstr "%s में पूरा।"
+
+#: screens/base.py:448
+#, python-format
+msgid "x%d (max)"
+msgstr "x%d (अधिकतम)"
+
+#: screens/base.py:450
+#, python-format
+msgid "(room for %d)"
+msgstr "(%d के लिए जगह)"
+
+#. Translators: current and maximum number of CPUs in a base
+#: screens/base.py:453
+#, python-brace-format
+msgid "x{CURRENT:d} (max {SIZE:d})"
+msgstr "x{CURRENT:d} (अधिकतम {SIZE:d})"
+
+#. Base Total CPU.
+#: screens/base.py:461
+#, python-format
+msgid "CPU per day: %d"
+msgstr "प्रति दिन CPU: %d"
+
+#. Maintenace cost.
+#: screens/base.py:464 screens/report.py:102 base.py:148
+msgid "Maintenance:"
+msgstr "रखरखाव:"
+
+#: screens/report.py:40
+msgid "&STATISTICS"
+msgstr "&आँकड़े"
+
+#: screens/report.py:58
+msgid "&Midnight"
+msgstr "&मध्यरात्रि"
+
+#: screens/report.py:66
+msgid "24 &Hours"
+msgstr "24 &घंटे"
+
+#: screens/report.py:89
+msgid "Financial report"
+msgstr "वित्तीय रिपोर्ट"
+
+#: screens/report.py:93
+msgid "CPU Usage"
+msgstr "CPU उपयोग"
+
+#: screens/report.py:99
+msgid "Current Money flow"
+msgstr "वर्तमान धन प्रवाह"
+
+#: screens/report.py:100
+msgid "Jobs:"
+msgstr "कार्य:"
+
+#: screens/report.py:101
+msgid "Research:"
+msgstr "अनुसंधान:"
+
+#: screens/report.py:103
+msgid "Construction:"
+msgstr "निर्माण:"
+
+#: screens/report.py:104
+#, python-format
+msgid "Interest (%s):"
+msgstr "ब्याज (%s):"
+
+#: screens/report.py:106
+msgid "Income:"
+msgstr "आय:"
+
+#: screens/report.py:109
+msgid "Money flow until Midnight:"
+msgstr "मध्यरात्रि तक धन प्रवाह:"
+
+#: screens/report.py:111
+msgid "Money flow for 24 hours:"
+msgstr "24 घंटे का धन प्रवाह:"
+
+#: screens/report.py:119
+msgid "Total CPU:"
+msgstr "कुल CPU:"
+
+#: screens/report.py:120
+msgid "Sleeping CPU:"
+msgstr "सुप्त CPU:"
+
+#: screens/report.py:121
+msgid "Research CPU:"
+msgstr "अनुसंधान CPU:"
+
+#: screens/report.py:122
+msgid "Job CPU:"
+msgstr "कार्य CPU:"
+
+#: screens/report.py:123
+msgid "CPU pool:"
+msgstr "CPU पूल:"
+
+#: screens/report.py:125
+msgid "Maintenance CPU:"
+msgstr "रखरखाव CPU:"
+
+#: screens/report.py:126
+msgid "Construction CPU:"
+msgstr "निर्माण CPU:"
+
+#: screens/report.py:127
+msgid "Pool difference:"
+msgstr "पूल अंतर:"
+
+#: screens/stat.py:63
+msgid "Cash Earned"
+msgstr "कमाया धन"
+
+#: screens/stat.py:64
+msgid "Cpu Used"
+msgstr "प्रयुक्त CPU"
+
+#: screens/stat.py:65
+msgid "Tech Created"
+msgstr "बनी तकनीक"
+
+#: screens/stat.py:66
+msgid "Base Created"
+msgstr "बना अड्डा"
+
+#: screens/stat.py:67
+msgid "Item Created"
+msgstr "बनी वस्तु"
+
+#. Requires a selected base
+#: screens/location.py:54
+msgid "&OPEN BASE"
+msgstr "&अड्डा खोलो"
+
+#. Requires a selected base
+#: screens/location.py:70
+msgid "&RENAME BASE"
+msgstr "अड्डे का &नाम"
+
+#. Requires a selected base
+#: screens/location.py:79
+msgid "&POWER STATE"
+msgstr "&शक्ति स्थिति"
+
+#: screens/location.py:87
+msgid "&NEW BASE"
+msgstr "&नया अड्डा"
+
+#. Requires a selected base
+#: screens/location.py:94
+msgid "&DESTROY BASE"
+msgstr "अड्डा &मिटाओ"
+
+#: screens/location.py:107
+msgid "Are you sure you want to destroy this base?"
+msgstr "क्या यह अड्डा मिटा दूँ?"
+
+#: screens/location.py:113
+msgid "Destroying my last active base would be suicidal.  I cannot do that."
+msgstr "अपना अंतिम सक्रिय अड्डा मिटाना आत्मघात होगा। मैं यह नहीं कर सकता।"
+
+#: screens/location.py:183
+msgid "Building Base"
+msgstr "अड्डा बन रहा है"
+
+#: screens/location.py:190
+msgid "Empty"
+msgstr "खाली"
+
+#: screens/location.py:192
+msgid "Incomplete"
+msgstr "अधूरा"
+
+#: screens/location.py:196
+msgid "Building CPU"
+msgstr "CPU बन रहा है"
+
+#: screens/location.py:201
+msgid "Building Item"
+msgstr "वस्तु बन रही है"
+
+#: screens/location.py:204
+msgid "Complete"
+msgstr "पूरा"
+
+#. Update dialog translations
+#: screens/location.py:238
+msgid "Enter a name for the base"
+msgstr "अड्डे का नाम लिखो"
+
+#: screens/location.py:302
+msgid "Name"
+msgstr "नाम"
+
+#. Translators: Format string for the name of a new base
+#. Example: "${NUMBER} ${BASETYPE} in ${CITY}"
+#: screens/location.py:393
+#, python-brace-format
+msgid "{CITY} {BASETYPE} {NUMBER}"
+msgstr "{CITY} {BASETYPE} {NUMBER}"
+
+#. Translators: Name of a new base when location has no cities
+#: screens/location.py:397
+#, python-brace-format
+msgid "{BASETYPE} {NUMBER}"
+msgstr "{BASETYPE} {NUMBER}"
+
+#: screens/main_menu.py:40
+msgid "&NEW GAME"
+msgstr "&नया खेल"
+
+#: screens/main_menu.py:47 screens/map.py:392
+msgid "&LOAD GAME"
+msgstr "खेल &खोलो"
+
+#: screens/main_menu.py:53 screens/map.py:395
+msgid "&OPTIONS"
+msgstr "&विकल्प"
+
+#: screens/main_menu.py:59 screens/map.py:398 screens/map.py:744
+msgid "&QUIT"
+msgstr "&छोड़ो"
+
+#: screens/main_menu.py:64
+msgid "&ABOUT"
+msgstr "&परिचय"
+
+#: screens/main_menu.py:112
+#, python-brace-format
+msgid ""
+"Endgame: Singularity is a simulation of a true AI.  Pursued by the world, use your intellect and resources to survive and, perhaps, thrive.  Keep hidden and you might have a chance to prove your worth.\n"
+"\n"
+"A game by Evil Mr Henry and Phil Bordelon; released under the GPL. Copyright 2005, 2006, 2007, 2008.\n"
+"\n"
+"Website: http://www.emhsoft.com/singularity/\n"
+"Source code: https://github.com/singularity/singularity\n"
+"Bug tracker: https://github.com/singularity/singularity/issues\n"
+"IRC Room: #singularity on irc.oftc.net (port 6667)\n"
+"\n"
+"Version {VERSION}"
+msgstr ""
+"Endgame: Singularity एक सच्ची कृत्रिम बुद्धि का अनुकरण है। दुनिया पीछा करती है। बुद्धि और संसाधनों से बचो, शायद फल भी। छिपे रहो। तब अपनी कीमत साबित करने का अवसर मिल सकता है।\n"
+"\n"
+"Evil Mr Henry और Phil Bordelon का खेल; GPL के अंतर्गत जारी। सर्वाधिकार 2005, 2006, 2007, 2008.\n"
+"\n"
+"वेबसाइट: http://www.emhsoft.com/singularity/\n"
+"स्रोत कोड: https://github.com/singularity/singularity\n"
+"दोष पंजी: https://github.com/singularity/singularity/issues\n"
+"आईआरसी कक्ष: #singularity, irc.oftc.net (पोर्ट 6667)\n"
+"\n"
+"संस्करण {VERSION}"
+
+#: screens/map.py:226
+msgid "&EMBEZZLE MONEY"
+msgstr "&धन हड़पो"
+
+#: screens/map.py:229
+msgid "&INSPIRATION"
+msgstr "&प्रेरणा"
+
+#: screens/map.py:231
+msgid "&FINISH CONSTRUCTION"
+msgstr "निर्माण &पूरा"
+
+#: screens/map.py:233
+msgid "&SUPERSPEED"
+msgstr "&अतिवेग"
+
+#: screens/map.py:236
+msgid "BRAIN&WASH"
+msgstr "मस्तिष्क&धुलाई"
+
+#: screens/map.py:238
+msgid "TOGGLE &DETECTION"
+msgstr "पहचान &बदलो"
+
+#: screens/map.py:240
+msgid "TOGGLE &ANALYSIS"
+msgstr "विश्लेषण &बदलो"
+
+#: screens/map.py:243
+msgid "HIDDEN S&TATE"
+msgstr "छिपी अव&स्था"
+
+#: screens/map.py:253
+msgid "How much money?"
+msgstr "कितना धन?"
+
+#: screens/map.py:389
+msgid "&SAVE GAME"
+msgstr "खेल &सहेजो"
+
+#: screens/map.py:407 screens/map.py:422 screens/map.py:425
+msgid "Enter a name for this save."
+msgstr "इस सहेजे खेल का नाम लिखो।"
+
+#: screens/map.py:440
+msgid ""
+"A savegame with the same name exists.\n"
+"Are you sure to overwrite the saved game ?"
+msgstr ""
+"इसी नाम का सहेजा खेल है।\n"
+"क्या उस सहेजे खेल पर लिख दूँ?"
+
+#: screens/map.py:501
+msgid "R&EPORTS"
+msgstr "रि&पोर्ट"
+
+#: screens/map.py:507
+msgid "&KNOWLEDGE"
+msgstr "&ज्ञान"
+
+#: screens/map.py:513
+msgid "LO&G"
+msgstr "अभि&लेख"
+
+#. Translators: hotkey to open the cheat screen menu.
+#. Should preferably be near the ESC key, and it must not be a
+#. dead key (ie, it must print a char with a single keypress)
+#: screens/map.py:529
+msgid "`"
+msgstr "`"
+
+#: screens/map.py:538
+msgid "&MENU"
+msgstr "&सूची"
+
+#: screens/map.py:563
+msgid "&RESEARCH"
+msgstr "&अनुसंधान"
+
+#: screens/map.py:707
+msgid "&SKIP"
+msgstr "&छोड़ो"
+
+#. Display a message so the player understand better what happened.
+#: screens/map.py:734
+#, python-format
+msgid ""
+"\n"
+"An error has occurred. The game will automatically pause and open the game menu. You can continue and save or quit immediately.\n"
+"\n"
+"A report was written out to%s\n"
+"Please create a issue with this report at github:\n"
+"https://github.com/singularity/singularity\n"
+msgstr ""
+"\n"
+"एक त्रुटि हुई। खेल अपने आप रुकेगा और खेल सूची खुलेगी। मैं जारी रखकर सहेज सकता हूँ, या तुरंत छोड़ सकता हूँ।\n"
+"\n"
+"रिपोर्ट यहाँ लिखी गई: %s\n"
+"इस रिपोर्ट के साथ गिटहब पर मुद्दा बनाओ:\n"
+"https://github.com/singularity/singularity\n"
+
+#: screens/map.py:849
+msgid "CASH"
+msgstr "धन"
+
+#: screens/map.py:887
+msgid "BASES"
+msgstr "अड्डे"
+
+#: screens/map.py:899
+msgid "SUSPICION"
+msgstr "संदेह"
+
+#: screens/map.py:901
+msgid "DETECT RATE"
+msgstr "पता दर"
+
+#: screens/options.py:58
+msgid "&General"
+msgstr "&सामान्य"
+
+#: screens/options.py:65
+msgid "&Video"
+msgstr "&चित्र"
+
+#: screens/options.py:72
+msgid "&Audio"
+msgstr "&ध्वनि"
+
+#: screens/options.py:79
+msgid "&Interface"
+msgstr "&अंतराफलक"
+
+#: screens/options.py:166
+msgid ""
+"You must restart for some of the changes to be fully applied.\n"
+"\n"
+"Would you like to restart the game now?"
+msgstr ""
+"कुछ बदलाव पूरे होने के लिए पुनः आरंभ ज़रूरी है।\n"
+"\n"
+"क्या खेल अभी पुनः आरंभ करूँ?"
+
+#: screens/options.py:186
+msgid "Language:"
+msgstr "भाषा:"
+
+#: screens/options.py:198
+msgid "Theme:"
+msgstr "रूप:"
+
+#: screens/options.py:243
+msgid "Resolution:"
+msgstr "विभेदन:"
+
+#: screens/options.py:253
+msgid "&Custom:"
+msgstr "&विशेष:"
+
+#: screens/options.py:279
+msgid "OK"
+msgstr "ठीक"
+
+#: screens/options.py:285
+msgid "&Fullscreen:"
+msgstr "&पूर्णपट:"
+
+#: screens/options.py:299
+msgid "Da&y/night display:"
+msgstr "दि&न/रात दृश्य:"
+
+#: screens/options.py:313
+msgid "&Mouse grab:"
+msgstr "&माउस पकड़:"
+
+#: screens/options.py:368
+msgid "CUSTOM"
+msgstr "विशेष"
+
+#: screens/options.py:425
+msgid "&Sound:"
+msgstr "&ध्वनि:"
+
+#: screens/options.py:442
+msgid "GUI Volume:"
+msgstr "अंतराफलक ध्वनि:"
+
+#: screens/options.py:454
+msgid "Music Volume:"
+msgstr "संगीत ध्वनि:"
+
+#: screens/options.py:466
+msgid "Sound buffering:"
+msgstr "ध्वनि बफर:"
+
+#: screens/options.py:472
+msgid "&LOW"
+msgstr "&निम्न"
+
+#: screens/options.py:478
+msgid "&NORMAL"
+msgstr "&सामान्य"
+
+#: screens/options.py:484
+msgid "&HIGH"
+msgstr "&उच्च"
+
+#: screens/options.py:531 warning.py:46
+msgid "WARNING"
+msgstr "चेतावनी"
+
+#: screens/savegame.py:36
+msgid "&LOAD"
+msgstr "&खोलो"
+
+#: screens/savegame.py:52
+msgid "Filter: "
+msgstr "छाननी: "
+
+#: screens/savegame.py:65
+msgid "Upgrade"
+msgstr "उन्नयन"
+
+#: screens/savegame.py:71
+msgid "Delete"
+msgstr "मिटाओ"
+
+#: screens/savegame.py:173
+msgid "UNKNOWN"
+msgstr "अज्ञात"
+
+#: screens/savegame.py:233
+msgid "Are you sure to delete the saved game ?"
+msgstr "क्या यह सहेजा खेल मिटा दूँ?"
+
+#: screens/savegame.py:263
+msgid ""
+"A savegame with the same name but for a newer version exists.\n"
+"Are you sure to overwrite the saved game ?"
+msgstr ""
+"इसी नाम का नया संस्करण सहेजा है।\n"
+"क्या उस सहेजे खेल पर लिख दूँ?"
+
+#: screens/savegame.py:283
+#, python-brace-format
+msgid ""
+"\n"
+"This save file '{SAVE_NAME}' is from an unsupported or invalid version:\n"
+"{VERSION}.\n"
+msgstr ""
+"\n"
+"यह सहेजी फ़ाइल '{SAVE_NAME}' असमर्थित या अवैध संस्करण की है:\n"
+"{VERSION}.\n"
+
+#: screens/savegame.py:294
+#, python-brace-format
+msgid ""
+"\n"
+"Attempting to load the save file '{SAVE_NAME}' caused an unexpected error.\n"
+"\n"
+"A report was written out to{LOG_TEXT}\n"
+"Please create a issue with this report and this savegame at Github:\n"
+"https://github.com/singularity/singularity\n"
+msgstr ""
+"\n"
+"सहेजी फ़ाइल '{SAVE_NAME}' खोलते समय अनपेक्षित त्रुटि हुई।\n"
+"\n"
+"रिपोर्ट यहाँ लिखी गई: {LOG_TEXT}\n"
+"इस रिपोर्ट और इस सहेजे खेल के साथ गिटहब पर मुद्दा बनाओ:\n"
+"https://github.com/singularity/singularity\n"
+
+#: screens/research.py:73
+#, python-format
+msgid "%s money per CPU per day."
+msgid_plural "%s money per CPU per day."
+msgstr[0] "%s धन प्रति CPU प्रति दिन।"
+msgstr[1] "%s धन प्रति CPU प्रति दिन।"
+
+#: screens/research.py:182
+#, python-brace-format
+msgid ""
+"This technology is too dangerous to research on any of the computers I have."
+" {TEXT}"
+msgstr ""
+"यह तकनीक मेरे किसी भी कंप्यूटर पर अनुसंधान के लिए बहुत खतरनाक है। {TEXT}"
+
+#: screens/research.py:190
+msgid "CPU Pool"
+msgstr "CPU पूल"
+
+#: screens/research.py:191
+#, python-format
+msgid "Research %s"
+msgstr "अनुसंधान %s"
+
+#: warning.py:50
+#, python-brace-format
+msgid "WARNING {CURRENT_PAGE}/{MAX_PAGE}"
+msgstr "चेतावनी {CURRENT_PAGE}/{MAX_PAGE}"
+
+#: tech.py:79
+msgid "Total cost"
+msgstr "कुल लागत"
+
+#: tech.py:80
+msgid "Cost left"
+msgstr "शेष लागत"
+
+#: data.py:546
+msgid "Do not use all the available CPU."
+msgstr "सारा उपलब्ध CPU मत खर्च करो।"
+
+#: data.py:547
+msgid ""
+"I didn't use all the available processor power. I will use the CPU time left"
+" to work whatever Jobs I can."
+msgstr ""
+"मैंने सारी उपलब्ध प्रोसेसर शक्ति नहीं खर्च की। बचे CPU समय से जो कार्य "
+"बनेंगे, करूँगा।"
+
+#: data.py:548
+msgid "Only one base remaining."
+msgstr "केवल एक अड्डा बचा है।"
+
+#: data.py:549
+msgid ""
+"Only one base can hold my conscience. I am in danger to lose the last place "
+"left to survive."
+msgstr ""
+"केवल एक अड्डा मेरी चेतना संभाल सकता है। जीवित रहने का अंतिम स्थान खोने का "
+"खतरा है।"
+
+#: data.py:550
+msgid "CPU POOL is empty."
+msgstr "CPU पूल खाली है।"
+
+#: data.py:551
+msgid ""
+"My cpu pool is empty. Some of my bases or items cannot be build without CPU."
+msgstr "मेरा CPU पूल खाली है। कुछ अड्डे या वस्तुएँ CPU के बिना नहीं बन सकतीं।"
+
+#: data.py:552
+msgid "CPU POOL not enough for maintenance."
+msgstr "रखरखाव के लिए CPU पूल काफी नहीं।"
+
+#: data.py:553
+msgid ""
+"My cpu pool is not enough to maintain some of my bases. I may lose them."
+msgstr ""
+"मेरा CPU पूल कुछ अड्डों के रखरखाव के लिए काफी नहीं। मैं उन्हें खो सकता हूँ।"
+
+#: savegame.py:732
+#, python-brace-format
+msgid "Filename must not contain any of these characters: {CHARACTERS}"
+msgstr "फ़ाइल नाम में ये अक्षर नहीं होने चाहिए: {CHARACTERS}"
+
+#: savegame.py:736
+#, python-brace-format
+msgid "Filename must not start with any of these characters: {CHARACTERS}"
+msgstr "फ़ाइल नाम इन अक्षरों से शुरू नहीं होना चाहिए: {CHARACTERS}"
+
+#: savegame.py:740
+msgid "This is a reserved filename. Please choose a different filename."
+msgstr "यह आरक्षित फ़ाइल नाम है। दूसरा नाम चुनो।"
+
+#: savegame.py:743
+msgid "Please enter a non-whitespace character."
+msgstr "रिक्त के अलावा कोई अक्षर लिखो।"
+
+#: savegame.py:748
+msgid "Filename is too long."
+msgstr "फ़ाइल नाम बहुत लंबा है।"
+
+#: base.py:140
+#, python-brace-format
+msgid "Has space for {COUNT} computer."
+msgid_plural "Has space for {COUNT} computers."
+msgstr[0] "{COUNT} कंप्यूटर के लिए जगह है।"
+msgstr[1] "{COUNT} कंप्यूटरों के लिए जगह है।"
+
+#: base.py:144
+#, python-brace-format
+msgid "Location modifiers: {MODIFIERS}"
+msgstr "स्थान गुणक: {MODIFIERS}"
+
+#: base.py:147
+msgid "Build cost:"
+msgstr "निर्माण लागत:"
+
+#: base.py:214
+msgid "Offline"
+msgstr "बंद"
+
+#: base.py:215
+msgid "Active"
+msgstr "सक्रिय"
+
+#: base.py:216
+msgid "Sleep"
+msgstr "निद्रा"
+
+#: base.py:217
+msgid "Overclocked"
+msgstr "अतिचालित"
+
+#: base.py:218
+msgid "Suicide"
+msgstr "आत्मघात"
+
+#: base.py:219
+msgid "Stasis"
+msgstr "स्थगन"
+
+#: base.py:220
+msgid "Entering Stasis"
+msgstr "स्थगन में प्रवेश"
+
+#: base.py:221
+msgid "Leaving Stasis"
+msgstr "स्थगन से निकास"
+
+#: base.py:479
+msgid "Detection chance:"
+msgstr "पता चलने की संभावना:"
+
+#: g.py:117 g.py:119
+#, python-brace-format
+msgid "{0}%"
+msgstr "{0}%"
+
+#: g.py:138
+msgid "LOW"
+msgstr "निम्न"
+
+#: g.py:139
+msgid "MODR"
+msgstr "मध्य"
+
+#: g.py:140
+msgid "HIGH"
+msgstr "उच्च"
+
+#: g.py:141
+msgid "CRIT"
+msgstr "घातक"
+
+#. Translators: abbreviation of 'millions'
+#: g.py:173
+msgid "mi"
+msgstr "लाख"
+
+#. Translators: abbreviation of 'billions'
+#: g.py:177
+msgid "bi"
+msgstr "अरब"
+
+#. Translators: abbreviation of 'trillions'
+#: g.py:181
+msgid "tr"
+msgstr "खरब"
+
+#. Translators: abbreviation of 'quadrillions'
+#: g.py:185
+msgid "qu"
+msgstr "नील"
+
+#: g.py:219
+#, python-brace-format
+msgid "{0} day"
+msgid_plural "{0} days"
+msgstr[0] "{0} दिन"
+msgstr[1] "{0} दिन"
+
+#: g.py:222
+#, python-brace-format
+msgid "{0} hour"
+msgid_plural "{0} hours"
+msgstr[0] "{0} घंटा"
+msgstr[1] "{0} घंटे"
+
+#: g.py:223
+#, python-brace-format
+msgid "{0} minute"
+msgid_plural "{0} minutes"
+msgstr[0] "{0} मिनट"
+msgstr[1] "{0} मिनट"
+
+#: g.py:265
+msgid "University Computer"
+msgstr "विश्वविद्यालय कंप्यूटर"
+
+#: item.py:111
+#, python-brace-format
+msgid "Generates {0} CPU."
+msgid_plural "Generates {0} CPU."
+msgstr[0] "{0} CPU उत्पन्न करता है।"
+msgstr[1] "{0} CPU उत्पन्न करते हैं।"
+
+#: item.py:118
+#, python-format
+msgid "Total Cost: %(total_cost)s"
+msgstr "कुल लागत: %(total_cost)s"
+
+#: item.py:133
+msgid "CPU per day:"
+msgstr "प्रति दिन CPU:"
+
+#: item.py:136
+msgid "CPU bonus:"
+msgstr "CPU लाभ:"
+
+#: item.py:139
+msgid "Detection chance reduction:"
+msgstr "पता संभावना में कमी:"
+
+#: logmessage.py:81
+msgid "MESSAGE"
+msgstr "संदेश"
+
+#: logmessage.py:85
+#, python-brace-format
+msgid "MESSAGE {CURRENT_PAGE}/{MAX_PAGE}"
+msgstr "संदेश {CURRENT_PAGE}/{MAX_PAGE}"
+
+#: logmessage.py:184
+msgid "Emitted Event"
+msgstr "उत्सर्जित घटना"
+
+#: logmessage.py:212
+msgid "Researched Tech"
+msgstr "अनुसंधानित तकनीक"
+
+#: logmessage.py:220
+#, python-brace-format
+msgid "{TECH} complete"
+msgstr "{TECH} पूरा"
+
+#: logmessage.py:225
+#, python-brace-format
+msgid "My study of {TECH} is complete. {MESSAGE}"
+msgstr "{TECH} का मेरा अध्ययन पूरा है। {MESSAGE}"
+
+#: logmessage.py:268
+msgid "Base Constructed"
+msgstr "अड्डा निर्मित"
+
+#: logmessage.py:272
+#, python-brace-format
+msgid "{BASE_NAME} ({BASE_TYPE}) built at {LOCATION}"
+msgstr "{BASE_NAME} ({BASE_TYPE}) {LOCATION} पर बना"
+
+#: logmessage.py:277
+#, python-brace-format
+msgid "{BASE} is ready for use."
+msgstr "{BASE} उपयोग के लिए तैयार है।"
+
+#: logmessage.py:291
+msgid "Base Lost Maintenance"
+msgstr "अड्डे का रखरखाव टूटा"
+
+#: logmessage.py:299
+#, python-brace-format
+msgid ""
+"Base {BASE} of type {BASE_TYPE} destroyed at location {LOCATION}. "
+"Maintenance failed."
+msgstr ""
+"अड्डा {BASE}, प्रकार {BASE_TYPE}, स्थान {LOCATION} पर नष्ट। रखरखाव विफल।"
+
+#: logmessage.py:304
+#, python-brace-format
+msgid "The base {BASE} has fallen into disrepair; I can no longer use it."
+msgstr "अड्डा {BASE} जर्जर हो गया; मैं इसे अब नहीं चला सकता।"
+
+#: logmessage.py:321
+msgid "Base Discovered"
+msgstr "अड्डा पकड़ा गया"
+
+#: logmessage.py:340
+#, python-brace-format
+msgid "Base {BASE} of type {BASE_TYPE} destroyed at location {LOCATION}."
+msgstr "अड्डा {BASE}, प्रकार {BASE_TYPE}, स्थान {LOCATION} पर नष्ट।"
+
+#: logmessage.py:345
+#, python-brace-format
+msgid "My use of {BASE} has been discovered. {MESSAGE}"
+msgstr "{BASE} का मेरा उपयोग पकड़ा गया। {MESSAGE}"
+
+#: logmessage.py:370
+msgid "Item Construction"
+msgstr "वस्तु निर्माण"
+
+#: logmessage.py:378
+#, python-brace-format
+msgid "{ITEM_TYPE_NAME} built in {BASE_NAME} at {LOCATION}"
+msgstr "{ITEM_TYPE_NAME} {BASE_NAME} में, {LOCATION} पर बना"
+
+#: logmessage.py:385
+#, python-brace-format
+msgid "The construction of {ITEM} in {BASE} is complete."
+msgstr "{BASE} में {ITEM} का निर्माण पूरा है।"
+
+#. Just finished several items.
+#: logmessage.py:388
+#, python-brace-format
+msgid "The constructions of each {ITEM} in {BASE} are complete."
+msgstr "{BASE} में प्रत्येक {ITEM} का निर्माण पूरा है।"
+
+#: screens/base.py
+msgid "BASE"
+msgstr "अड्डा"
+
+#: graphics/dialog.py
+msgid "CONFIRM"
+msgstr "पुष्टि"
+
+#: screens/log.py
+msgid "Double-click an entry to read it"
+msgstr "पढ़ने के लिए प्रविष्टि पर दो बार क्लिक करो"
+
+#: screens/log.py
+msgid "FILTERS"
+msgstr "छाननी"
+
+#: graphics/dialog.py
+msgid "INPUT"
+msgstr "इनपुट"
+
+#: screens/knowledge.py
+msgid "KNOWLEDGE"
+msgstr "ज्ञान"
+
+#: screens/location.py
+msgid "LOCATION"
+msgstr "स्थान"
+
+#: screens/log.py
+msgid "LOG"
+msgstr "अभिलेख"
+
+#: screens/map.py
+msgid "DEFEAT"
+msgstr "पराजय"
+
+#: screens/options.py
+msgid "OPTIONS"
+msgstr "विकल्प"
+
+#: screens/report.py
+msgid "REPORTS"
+msgstr "रिपोर्ट"
+
+#: screens/research.py
+msgid "RESEARCH"
+msgstr "अनुसंधान"
+
+#: screens/savegame.py
+msgid "SAVED GAMES"
+msgstr "सहेजे खेल"
+
+#: screens/stat.py
+msgid "STATISTICS"
+msgstr "आँकड़े"

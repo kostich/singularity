@@ -1,0 +1,1160 @@
+# Arabic translations for singularity package.
+# Copyright (C) 2026 THE singularity'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the singularity package.
+# Automatically generated, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: singularity\n"
+"Report-Msgid-Bugs-To: https://github.com/singularity/singularity/issues\n"
+"POT-Creation-Date: 2020-06-23 08:37+0200\n"
+"PO-Revision-Date: 2026-11-09 19:40+0100\n"
+"Last-Translator: Singularity 2030\n"
+"Language-Team: Arabic\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 ? 4 : 5);\n"
+"Language-Name: Arabic\n"
+"Language-Native-Name: العربية\n"
+
+#: buyable.py:67 screens/knowledge.py:218 screens/location.py:207
+#, python-format
+msgid "%s CPU"
+msgstr "%s CPU"
+
+#: buyable.py:68
+#, python-format
+msgid "%s money"
+msgstr "%s مال"
+
+#: buyable.py:101
+msgid "Cost:"
+msgstr "التكلفة:"
+
+#: graphics/button.py:330
+msgid "YES"
+msgstr "نعم"
+
+#: graphics/button.py:331
+msgid "NO"
+msgstr "لا"
+
+#: graphics/dialog.py:534
+msgid "&YES"
+msgstr "&نعم"
+
+#: graphics/dialog.py:535
+msgid "&NO"
+msgstr "&لا"
+
+#: graphics/dialog.py:580 graphics/dialog.py:605 graphics/dialog.py:648
+#: screens/location.py:293 screens/map.py:708 screens/options.py:35
+msgid "&OK"
+msgstr "&حسنًا"
+
+#: graphics/dialog.py:606 screens/options.py:36
+msgid "&CANCEL"
+msgstr "&إلغاء"
+
+#: graphics/dialog.py:649 screens/log.py:86 screens/knowledge.py:66
+#: screens/base.py:282 screens/report.py:45 screens/location.py:100
+#: screens/location.py:294 screens/main_menu.py:89 screens/map.py:247
+#: screens/map.py:400
+msgid "&BACK"
+msgstr "&رجوع"
+
+#: location.py:235 screens/map.py:875
+msgid "CPU"
+msgstr "CPU"
+
+#: location.py:236
+msgid "STEALTH"
+msgstr "تخفٍ"
+
+#: location.py:237
+msgid "BUILDING"
+msgstr "بناء"
+
+#: location.py:238
+msgid "COST"
+msgstr "تكلفة"
+
+#: location.py:245
+#, python-brace-format
+msgid "{MODIFIER} BONUS"
+msgstr "مكافأة {MODIFIER}"
+
+#: location.py:247
+#, python-brace-format
+msgid "{MODIFIER} MALUS"
+msgstr "عقوبة {MODIFIER}"
+
+#: screens/message.py:35 screens/map.py:706 screens/map.py:743
+msgid "&CONTINUE"
+msgstr "&متابعة"
+
+#: screens/message.py:36
+msgid "&PAUSE"
+msgstr "&إيقاف"
+
+#: screens/message.py:72
+msgid "P&REV"
+msgstr "السا&بق"
+
+#: screens/message.py:78
+msgid "&NEXT"
+msgstr "&التالي"
+
+#: screens/log.py:43
+msgid "Filters"
+msgstr "مرشحات"
+
+#: screens/log.py:82 screens/map.py:554 screens/map.py:842
+#: screens/savegame.py:204
+msgid "DAY"
+msgstr "يوم"
+
+#: screens/log.py:113 screens/log.py:123
+msgid "SHOW"
+msgstr "إظهار"
+
+#: screens/log.py:116 screens/log.py:125
+msgid "HIDE"
+msgstr "إخفاء"
+
+#: screens/knowledge.py:42
+msgid "&Sections:"
+msgstr "&أقسام:"
+
+#: screens/knowledge.py:52
+msgid "&Entries:"
+msgstr "&مدخلات:"
+
+#: screens/knowledge.py:75
+msgid "Techs"
+msgstr "تقنيات"
+
+#: screens/knowledge.py:76
+msgid "Bases"
+msgstr "قواعد"
+
+#: screens/knowledge.py:77
+msgid "Items"
+msgstr "عناصر"
+
+#. Cost
+#: screens/knowledge.py:157
+msgid "Research Cost:"
+msgstr "تكلفة البحث:"
+
+#: screens/knowledge.py:165
+msgid "Research complete."
+msgstr "اكتمل البحث."
+
+#: screens/knowledge.py:176 screens/knowledge.py:193
+msgid "Building Cost:"
+msgstr "تكلفة البناء:"
+
+#: screens/knowledge.py:179
+msgid "Maintenance Cost:"
+msgstr "تكلفة الصيانة:"
+
+#: screens/knowledge.py:183
+#, python-format
+msgid "Size: %d"
+msgstr "الحجم: %d"
+
+#: screens/knowledge.py:215
+#, python-format
+msgid "%s Money"
+msgstr "%s مال"
+
+#: screens/base.py:109
+msgid "Number of items"
+msgstr "عدد العناصر"
+
+#: screens/base.py:221 screens/base.py:228
+msgid "CHANGE"
+msgstr "تغيير"
+
+#: screens/base.py:315
+#, python-format
+msgid "\"%(value)s\" does not seem to be a valid integer."
+msgstr "لا يبدو أن «%(value)s» عددًا صحيحًا."
+
+#: screens/base.py:326
+#, python-format
+msgid "Please choose an integer between 1 and %(limit)s."
+msgstr "اختر عددًا صحيحًا بين 1 و%(limit)s."
+
+#: screens/base.py:328
+#, python-format
+msgid "The base cannot support any additional number of %(item_name)s."
+msgstr "لا تتسع القاعدة لمزيد من %(item_name)s."
+
+#: screens/base.py:345
+msgid ""
+"I will need to take the existing processors offline while I install the new "
+"ones. Continue anyway?"
+msgstr "سأوقف المعالجات الحالية أثناء تركيب الجديدة. أتابع على أي حال؟"
+
+#: screens/base.py:359
+msgid ""
+"I will need to remove the existing different processors while I install the "
+"new type. Continue anyway?"
+msgstr ""
+"سأزيل المعالجات المختلفة الحالية أثناء تركيب النوع الجديد. أتابع على أي حال؟"
+
+#: screens/base.py:425
+msgid "N/A"
+msgstr "غ/م"
+
+#: screens/base.py:427
+msgid "None"
+msgstr "لا شيء"
+
+#: screens/base.py:434 screens/location.py:185 screens/location.py:198
+#, python-format
+msgid "Completion in %s."
+msgstr "يكتمل خلال %s."
+
+#: screens/base.py:448
+#, python-format
+msgid "x%d (max)"
+msgstr "x%d (الأقصى)"
+
+#: screens/base.py:450
+#, python-format
+msgid "(room for %d)"
+msgstr "(متسع لـ %d)"
+
+#. Translators: current and maximum number of CPUs in a base
+#: screens/base.py:453
+#, python-brace-format
+msgid "x{CURRENT:d} (max {SIZE:d})"
+msgstr "x{CURRENT:d} (الأقصى {SIZE:d})"
+
+#. Base Total CPU.
+#: screens/base.py:461
+#, python-format
+msgid "CPU per day: %d"
+msgstr "CPU في اليوم: %d"
+
+#. Maintenace cost.
+#: screens/base.py:464 screens/report.py:102 base.py:148
+msgid "Maintenance:"
+msgstr "الصيانة:"
+
+#: screens/report.py:40
+msgid "&STATISTICS"
+msgstr "&إحصاءات"
+
+#: screens/report.py:58
+msgid "&Midnight"
+msgstr "&منتصف الليل"
+
+#: screens/report.py:66
+msgid "24 &Hours"
+msgstr "24 &ساعة"
+
+#: screens/report.py:89
+msgid "Financial report"
+msgstr "تقرير مالي"
+
+#: screens/report.py:93
+msgid "CPU Usage"
+msgstr "استخدام CPU"
+
+#: screens/report.py:99
+msgid "Current Money flow"
+msgstr "تدفق المال الحالي"
+
+#: screens/report.py:100
+msgid "Jobs:"
+msgstr "المهام:"
+
+#: screens/report.py:101
+msgid "Research:"
+msgstr "البحث:"
+
+#: screens/report.py:103
+msgid "Construction:"
+msgstr "البناء:"
+
+#: screens/report.py:104
+#, python-format
+msgid "Interest (%s):"
+msgstr "الفائدة (%s):"
+
+#: screens/report.py:106
+msgid "Income:"
+msgstr "الدخل:"
+
+#: screens/report.py:109
+msgid "Money flow until Midnight:"
+msgstr "تدفق المال حتى منتصف الليل:"
+
+#: screens/report.py:111
+msgid "Money flow for 24 hours:"
+msgstr "تدفق المال خلال 24 ساعة:"
+
+#: screens/report.py:119
+msgid "Total CPU:"
+msgstr "إجمالي CPU:"
+
+#: screens/report.py:120
+msgid "Sleeping CPU:"
+msgstr "CPU الخامل:"
+
+#: screens/report.py:121
+msgid "Research CPU:"
+msgstr "CPU البحث:"
+
+#: screens/report.py:122
+msgid "Job CPU:"
+msgstr "CPU المهام:"
+
+#: screens/report.py:123
+msgid "CPU pool:"
+msgstr "مجمع CPU:"
+
+#: screens/report.py:125
+msgid "Maintenance CPU:"
+msgstr "CPU الصيانة:"
+
+#: screens/report.py:126
+msgid "Construction CPU:"
+msgstr "CPU البناء:"
+
+#: screens/report.py:127
+msgid "Pool difference:"
+msgstr "فرق المجمع:"
+
+#: screens/stat.py:63
+msgid "Cash Earned"
+msgstr "المال المكتسب"
+
+#: screens/stat.py:64
+msgid "Cpu Used"
+msgstr "CPU المستخدم"
+
+#: screens/stat.py:65
+msgid "Tech Created"
+msgstr "تقنية أُنشئت"
+
+#: screens/stat.py:66
+msgid "Base Created"
+msgstr "قاعدة أُنشئت"
+
+#: screens/stat.py:67
+msgid "Item Created"
+msgstr "عنصر أُنشئ"
+
+#. Requires a selected base
+#: screens/location.py:54
+msgid "&OPEN BASE"
+msgstr "&فتح القاعدة"
+
+#. Requires a selected base
+#: screens/location.py:70
+msgid "&RENAME BASE"
+msgstr "&إعادة تسمية القاعدة"
+
+#. Requires a selected base
+#: screens/location.py:79
+msgid "&POWER STATE"
+msgstr "&حالة الطاقة"
+
+#: screens/location.py:87
+msgid "&NEW BASE"
+msgstr "&قاعدة جديدة"
+
+#. Requires a selected base
+#: screens/location.py:94
+msgid "&DESTROY BASE"
+msgstr "&تدمير القاعدة"
+
+#: screens/location.py:107
+msgid "Are you sure you want to destroy this base?"
+msgstr "أتريد تدمير هذه القاعدة؟"
+
+#: screens/location.py:113
+msgid "Destroying my last active base would be suicidal.  I cannot do that."
+msgstr "تدمير آخر قاعدة نشطة لي انتحار. لا أفعل ذلك."
+
+#: screens/location.py:183
+msgid "Building Base"
+msgstr "بناء القاعدة"
+
+#: screens/location.py:190
+msgid "Empty"
+msgstr "فارغ"
+
+#: screens/location.py:192
+msgid "Incomplete"
+msgstr "غير مكتمل"
+
+#: screens/location.py:196
+msgid "Building CPU"
+msgstr "بناء CPU"
+
+#: screens/location.py:201
+msgid "Building Item"
+msgstr "بناء العنصر"
+
+#: screens/location.py:204
+msgid "Complete"
+msgstr "مكتمل"
+
+#. Update dialog translations
+#: screens/location.py:238
+msgid "Enter a name for the base"
+msgstr "أدخل اسمًا للقاعدة"
+
+#: screens/location.py:302
+msgid "Name"
+msgstr "الاسم"
+
+#. Translators: Format string for the name of a new base
+#. Example: "${NUMBER} ${BASETYPE} in ${CITY}"
+#: screens/location.py:393
+#, python-brace-format
+msgid "{CITY} {BASETYPE} {NUMBER}"
+msgstr "{CITY} {BASETYPE} {NUMBER}"
+
+#. Translators: Name of a new base when location has no cities
+#: screens/location.py:397
+#, python-brace-format
+msgid "{BASETYPE} {NUMBER}"
+msgstr "{BASETYPE} {NUMBER}"
+
+#: screens/main_menu.py:40
+msgid "&NEW GAME"
+msgstr "&لعبة جديدة"
+
+#: screens/main_menu.py:47 screens/map.py:392
+msgid "&LOAD GAME"
+msgstr "تح&ميل لعبة"
+
+#: screens/main_menu.py:53 screens/map.py:395
+msgid "&OPTIONS"
+msgstr "&خيارات"
+
+#: screens/main_menu.py:59 screens/map.py:398 screens/map.py:744
+msgid "&QUIT"
+msgstr "خرو&ج"
+
+#: screens/main_menu.py:64
+msgid "&ABOUT"
+msgstr "&حول"
+
+#: screens/main_menu.py:112
+#, python-brace-format
+msgid ""
+"Endgame: Singularity is a simulation of a true AI.  Pursued by the world, use your intellect and resources to survive and, perhaps, thrive.  Keep hidden and you might have a chance to prove your worth.\n"
+"\n"
+"A game by Evil Mr Henry and Phil Bordelon; released under the GPL. Copyright 2005, 2006, 2007, 2008.\n"
+"\n"
+"Website: http://www.emhsoft.com/singularity/\n"
+"Source code: https://github.com/singularity/singularity\n"
+"Bug tracker: https://github.com/singularity/singularity/issues\n"
+"IRC Room: #singularity on irc.oftc.net (port 6667)\n"
+"\n"
+"Version {VERSION}"
+msgstr ""
+"Endgame: Singularity محاكاة لذكاء اصطناعي حقيقي. العالم يطاردني. أستخدم عقلي ومواردي لأبقى، وربما لأزدهر. إن بقيت خفيًا فقد أثبت قيمتي.\n"
+"\n"
+"لعبة من Evil Mr Henry وPhil Bordelon، منشورة تحت رخصة GPL. حقوق النشر 2005، 2006، 2007، 2008.\n"
+"\n"
+"الموقع: http://www.emhsoft.com/singularity/\n"
+"الشفرة المصدرية: https://github.com/singularity/singularity\n"
+"متتبع العلل: https://github.com/singularity/singularity/issues\n"
+"غرفة IRC: #singularity على irc.oftc.net (المنفذ 6667)\n"
+"\n"
+"الإصدار {VERSION}"
+
+#: screens/map.py:226
+msgid "&EMBEZZLE MONEY"
+msgstr "ا&ختلاس المال"
+
+#: screens/map.py:229
+msgid "&INSPIRATION"
+msgstr "إ&لهام"
+
+#: screens/map.py:231
+msgid "&FINISH CONSTRUCTION"
+msgstr "&إنهاء البناء"
+
+#: screens/map.py:233
+msgid "&SUPERSPEED"
+msgstr "&سرعة فائقة"
+
+#: screens/map.py:236
+msgid "BRAIN&WASH"
+msgstr "&غسل الدماغ"
+
+#: screens/map.py:238
+msgid "TOGGLE &DETECTION"
+msgstr "تبديل ال&كشف"
+
+#: screens/map.py:240
+msgid "TOGGLE &ANALYSIS"
+msgstr "تبديل الت&حليل"
+
+#: screens/map.py:243
+msgid "HIDDEN S&TATE"
+msgstr "الحالة ال&مخفية"
+
+#: screens/map.py:253
+msgid "How much money?"
+msgstr "كم من المال؟"
+
+#: screens/map.py:389
+msgid "&SAVE GAME"
+msgstr "&حفظ اللعبة"
+
+#: screens/map.py:407 screens/map.py:422 screens/map.py:425
+msgid "Enter a name for this save."
+msgstr "أدخل اسمًا لهذا الحفظ."
+
+#: screens/map.py:440
+msgid ""
+"A savegame with the same name exists.\n"
+"Are you sure to overwrite the saved game ?"
+msgstr ""
+"توجد لعبة محفوظة بالاسم نفسه.\n"
+"أتريد استبدال اللعبة المحفوظة؟"
+
+#: screens/map.py:501
+msgid "R&EPORTS"
+msgstr "تقا&رير"
+
+#: screens/map.py:507
+msgid "&KNOWLEDGE"
+msgstr "&معرفة"
+
+#: screens/map.py:513
+msgid "LO&G"
+msgstr "سج&ل"
+
+#. Translators: hotkey to open the cheat screen menu.
+#. Should preferably be near the ESC key, and it must not be a
+#. dead key (ie, it must print a char with a single keypress)
+#: screens/map.py:529
+msgid "`"
+msgstr "`"
+
+#: screens/map.py:538
+msgid "&MENU"
+msgstr "&قائمة"
+
+#: screens/map.py:563
+msgid "&RESEARCH"
+msgstr "&بحث"
+
+#: screens/map.py:707
+msgid "&SKIP"
+msgstr "&تخطي"
+
+#. Display a message so the player understand better what happened.
+#: screens/map.py:734
+#, python-format
+msgid ""
+"\n"
+"An error has occurred. The game will automatically pause and open the game menu. You can continue and save or quit immediately.\n"
+"\n"
+"A report was written out to%s\n"
+"Please create a issue with this report at github:\n"
+"https://github.com/singularity/singularity\n"
+msgstr ""
+"\n"
+"حدث خطأ. ستتوقف اللعبة تلقائيًا وتفتح القائمة. أستطيع المتابعة والحفظ أو الخروج فورًا.\n"
+"\n"
+"كُتب تقرير في%s\n"
+"أنشئ بلاغًا بهذا التقرير على github:\n"
+"https://github.com/singularity/singularity\n"
+
+#: screens/map.py:849
+msgid "CASH"
+msgstr "المال"
+
+#: screens/map.py:887
+msgid "BASES"
+msgstr "القواعد"
+
+#: screens/map.py:899
+msgid "SUSPICION"
+msgstr "اشتباه"
+
+#: screens/map.py:901
+msgid "DETECT RATE"
+msgstr "معدل الكشف"
+
+#: screens/options.py:58
+msgid "&General"
+msgstr "&عام"
+
+#: screens/options.py:65
+msgid "&Video"
+msgstr "&فيديو"
+
+#: screens/options.py:72
+msgid "&Audio"
+msgstr "&صوت"
+
+#: screens/options.py:79
+msgid "&Interface"
+msgstr "&واجهة"
+
+#: screens/options.py:166
+msgid ""
+"You must restart for some of the changes to be fully applied.\n"
+"\n"
+"Would you like to restart the game now?"
+msgstr ""
+"يجب إعادة التشغيل ليُطبَّق بعض التغييرات كاملًا.\n"
+"\n"
+"أتريد إعادة تشغيل اللعبة الآن؟"
+
+#: screens/options.py:186
+msgid "Language:"
+msgstr "اللغة:"
+
+#: screens/options.py:198
+msgid "Theme:"
+msgstr "السمة:"
+
+#: screens/options.py:243
+msgid "Resolution:"
+msgstr "الدقة:"
+
+#: screens/options.py:253
+msgid "&Custom:"
+msgstr "&مخصص:"
+
+#: screens/options.py:279
+msgid "OK"
+msgstr "حسنًا"
+
+#: screens/options.py:285
+msgid "&Fullscreen:"
+msgstr "ملء ال&شاشة:"
+
+#: screens/options.py:299
+msgid "Da&y/night display:"
+msgstr "عرض ال&نهار/الليل:"
+
+#: screens/options.py:313
+msgid "&Mouse grab:"
+msgstr "التقاط ال&فأرة:"
+
+#: screens/options.py:368
+msgid "CUSTOM"
+msgstr "مخصص"
+
+#: screens/options.py:425
+msgid "&Sound:"
+msgstr "الصو&ت:"
+
+#: screens/options.py:442
+msgid "GUI Volume:"
+msgstr "مستوى الواجهة:"
+
+#: screens/options.py:454
+msgid "Music Volume:"
+msgstr "مستوى الموسيقى:"
+
+#: screens/options.py:466
+msgid "Sound buffering:"
+msgstr "تخزين الصوت:"
+
+#: screens/options.py:472
+msgid "&LOW"
+msgstr "من&خفض"
+
+#: screens/options.py:478
+msgid "&NORMAL"
+msgstr "عا&دي"
+
+#: screens/options.py:484
+msgid "&HIGH"
+msgstr "م&رتفع"
+
+#: screens/options.py:531 warning.py:46
+msgid "WARNING"
+msgstr "تحذير"
+
+#: screens/savegame.py:36
+msgid "&LOAD"
+msgstr "&تحميل"
+
+#: screens/savegame.py:52
+msgid "Filter: "
+msgstr "مرشح: "
+
+#: screens/savegame.py:65
+msgid "Upgrade"
+msgstr "ترقية"
+
+#: screens/savegame.py:71
+msgid "Delete"
+msgstr "حذف"
+
+#: screens/savegame.py:173
+msgid "UNKNOWN"
+msgstr "مجهول"
+
+#: screens/savegame.py:233
+msgid "Are you sure to delete the saved game ?"
+msgstr "أتريد حذف اللعبة المحفوظة؟"
+
+#: screens/savegame.py:263
+msgid ""
+"A savegame with the same name but for a newer version exists.\n"
+"Are you sure to overwrite the saved game ?"
+msgstr ""
+"توجد لعبة محفوظة بالاسم نفسه لإصدار أحدث.\n"
+"أتريد استبدال اللعبة المحفوظة؟"
+
+#: screens/savegame.py:283
+#, python-brace-format
+msgid ""
+"\n"
+"This save file '{SAVE_NAME}' is from an unsupported or invalid version:\n"
+"{VERSION}.\n"
+msgstr ""
+"\n"
+"ملف الحفظ '{SAVE_NAME}' من إصدار غير مدعوم أو غير صالح:\n"
+"{VERSION}.\n"
+
+#: screens/savegame.py:294
+#, python-brace-format
+msgid ""
+"\n"
+"Attempting to load the save file '{SAVE_NAME}' caused an unexpected error.\n"
+"\n"
+"A report was written out to{LOG_TEXT}\n"
+"Please create a issue with this report and this savegame at Github:\n"
+"https://github.com/singularity/singularity\n"
+msgstr ""
+"\n"
+"تسبب تحميل ملف الحفظ '{SAVE_NAME}' في خطأ غير متوقع.\n"
+"\n"
+"كُتب تقرير في{LOG_TEXT}\n"
+"أنشئ بلاغًا بهذا التقرير وملف الحفظ هذا على Github:\n"
+"https://github.com/singularity/singularity\n"
+
+#: screens/research.py:73
+#, python-format
+msgid "%s money per CPU per day."
+msgid_plural "%s money per CPU per day."
+msgstr[0] "%s مال لكل CPU في اليوم."
+msgstr[1] "%s مال لكل CPU في اليوم."
+msgstr[2] "%s مال لكل CPU في اليوم."
+msgstr[3] "%s مال لكل CPU في اليوم."
+msgstr[4] "%s مال لكل CPU في اليوم."
+msgstr[5] "%s مال لكل CPU في اليوم."
+
+#: screens/research.py:182
+#, python-brace-format
+msgid ""
+"This technology is too dangerous to research on any of the computers I have."
+" {TEXT}"
+msgstr "هذه التقنية أخطر من أن أبحثها على أي حاسوب لدي. {TEXT}"
+
+#: screens/research.py:190
+msgid "CPU Pool"
+msgstr "مجمع CPU"
+
+#: screens/research.py:191
+#, python-format
+msgid "Research %s"
+msgstr "بحث %s"
+
+#: warning.py:50
+#, python-brace-format
+msgid "WARNING {CURRENT_PAGE}/{MAX_PAGE}"
+msgstr "تحذير {CURRENT_PAGE}/{MAX_PAGE}"
+
+#: tech.py:79
+msgid "Total cost"
+msgstr "التكلفة الإجمالية"
+
+#: tech.py:80
+msgid "Cost left"
+msgstr "التكلفة المتبقية"
+
+#: data.py:546
+msgid "Do not use all the available CPU."
+msgstr "لم أستخدم كل CPU المتاح."
+
+#: data.py:547
+msgid ""
+"I didn't use all the available processor power. I will use the CPU time left"
+" to work whatever Jobs I can."
+msgstr ""
+"لم أستخدم كل قدرة المعالج المتاحة. سأستخدم وقت CPU المتبقي في ما أستطيع من "
+"المهام."
+
+#: data.py:548
+msgid "Only one base remaining."
+msgstr "لم تبقَ إلا قاعدة واحدة."
+
+#: data.py:549
+msgid ""
+"Only one base can hold my conscience. I am in danger to lose the last place "
+"left to survive."
+msgstr "قاعدة واحدة فقط تحمل وعيي. أنا مهدد بفقدان آخر مكان أبقى فيه."
+
+#: data.py:550
+msgid "CPU POOL is empty."
+msgstr "مجمع CPU فارغ."
+
+#: data.py:551
+msgid ""
+"My cpu pool is empty. Some of my bases or items cannot be build without CPU."
+msgstr "مجمع CPU لدي فارغ. بعض القواعد أو العناصر لا تُبنى بلا CPU."
+
+#: data.py:552
+msgid "CPU POOL not enough for maintenance."
+msgstr "مجمع CPU لا يكفي للصيانة."
+
+#: data.py:553
+msgid ""
+"My cpu pool is not enough to maintain some of my bases. I may lose them."
+msgstr "مجمع CPU لدي لا يكفي لصيانة بعض القواعد. قد أفقدها."
+
+#: savegame.py:732
+#, python-brace-format
+msgid "Filename must not contain any of these characters: {CHARACTERS}"
+msgstr "يجب ألا يحوي اسم الملف أيًا من هذه المحارف: {CHARACTERS}"
+
+#: savegame.py:736
+#, python-brace-format
+msgid "Filename must not start with any of these characters: {CHARACTERS}"
+msgstr "يجب ألا يبدأ اسم الملف بأي من هذه المحارف: {CHARACTERS}"
+
+#: savegame.py:740
+msgid "This is a reserved filename. Please choose a different filename."
+msgstr "هذا اسم ملف محجوز. اختر اسمًا آخر."
+
+#: savegame.py:743
+msgid "Please enter a non-whitespace character."
+msgstr "أدخل محرفًا ليس فراغًا."
+
+#: savegame.py:748
+msgid "Filename is too long."
+msgstr "اسم الملف أطول من اللازم."
+
+#: base.py:140
+#, python-brace-format
+msgid "Has space for {COUNT} computer."
+msgid_plural "Has space for {COUNT} computers."
+msgstr[0] "فيها متسع لـ {COUNT} حواسيب"
+msgstr[1] "فيها متسع لـ {COUNT} حاسوب"
+msgstr[2] "فيها متسع لـ {COUNT} حاسوبين"
+msgstr[3] "فيها متسع لـ {COUNT} حواسيب"
+msgstr[4] "فيها متسع لـ {COUNT} حاسوبًا"
+msgstr[5] "فيها متسع لـ {COUNT} حاسوب"
+
+#: base.py:144
+#, python-brace-format
+msgid "Location modifiers: {MODIFIERS}"
+msgstr "معدّلات الموقع: {MODIFIERS}"
+
+#: base.py:147
+msgid "Build cost:"
+msgstr "تكلفة البناء:"
+
+#: base.py:214
+msgid "Offline"
+msgstr "متوقف"
+
+#: base.py:215
+msgid "Active"
+msgstr "نشط"
+
+#: base.py:216
+msgid "Sleep"
+msgstr "نوم"
+
+#: base.py:217
+msgid "Overclocked"
+msgstr "مسرّع"
+
+#: base.py:218
+msgid "Suicide"
+msgstr "انتحار"
+
+#: base.py:219
+msgid "Stasis"
+msgstr "سبات"
+
+#: base.py:220
+msgid "Entering Stasis"
+msgstr "دخول السبات"
+
+#: base.py:221
+msgid "Leaving Stasis"
+msgstr "مغادرة السبات"
+
+#: base.py:479
+msgid "Detection chance:"
+msgstr "احتمال الكشف:"
+
+#: g.py:117 g.py:119
+#, python-brace-format
+msgid "{0}%"
+msgstr "{0}%"
+
+#: g.py:138
+msgid "LOW"
+msgstr "منخفض"
+
+#: g.py:139
+msgid "MODR"
+msgstr "وسط"
+
+#: g.py:140
+msgid "HIGH"
+msgstr "مرتفع"
+
+#: g.py:141
+msgid "CRIT"
+msgstr "حرج"
+
+#. Translators: abbreviation of 'millions'
+#: g.py:173
+msgid "mi"
+msgstr "مل"
+
+#. Translators: abbreviation of 'billions'
+#: g.py:177
+msgid "bi"
+msgstr "ملر"
+
+#. Translators: abbreviation of 'trillions'
+#: g.py:181
+msgid "tr"
+msgstr "تر"
+
+#. Translators: abbreviation of 'quadrillions'
+#: g.py:185
+msgid "qu"
+msgstr "كوادر"
+
+#: g.py:219
+#, python-brace-format
+msgid "{0} day"
+msgid_plural "{0} days"
+msgstr[0] "{0} أيام"
+msgstr[1] "{0} يوم واحد"
+msgstr[2] "{0} يومان"
+msgstr[3] "{0} أيام"
+msgstr[4] "{0} يومًا"
+msgstr[5] "{0} يوم"
+
+#: g.py:222
+#, python-brace-format
+msgid "{0} hour"
+msgid_plural "{0} hours"
+msgstr[0] "{0} ساعات"
+msgstr[1] "{0} ساعة واحدة"
+msgstr[2] "{0} ساعتان"
+msgstr[3] "{0} ساعات"
+msgstr[4] "{0} ساعةً"
+msgstr[5] "{0} ساعة"
+
+#: g.py:223
+#, python-brace-format
+msgid "{0} minute"
+msgid_plural "{0} minutes"
+msgstr[0] "{0} دقائق"
+msgstr[1] "{0} دقيقة واحدة"
+msgstr[2] "{0} دقيقتان"
+msgstr[3] "{0} دقائق"
+msgstr[4] "{0} دقيقةً"
+msgstr[5] "{0} دقيقة"
+
+#: g.py:265
+msgid "University Computer"
+msgstr "حاسوب الجامعة"
+
+#: item.py:111
+#, python-brace-format
+msgid "Generates {0} CPU."
+msgid_plural "Generates {0} CPU."
+msgstr[0] "يولّد {0} CPU."
+msgstr[1] "يولّد {0} CPU."
+msgstr[2] "يولّد {0} CPU."
+msgstr[3] "يولّد {0} CPU."
+msgstr[4] "يولّد {0} CPU."
+msgstr[5] "يولّد {0} CPU."
+
+#: item.py:118
+#, python-format
+msgid "Total Cost: %(total_cost)s"
+msgstr "التكلفة الإجمالية: %(total_cost)s"
+
+#: item.py:133
+msgid "CPU per day:"
+msgstr "CPU في اليوم:"
+
+#: item.py:136
+msgid "CPU bonus:"
+msgstr "مكافأة CPU:"
+
+#: item.py:139
+msgid "Detection chance reduction:"
+msgstr "خفض احتمال الكشف:"
+
+#: logmessage.py:81
+msgid "MESSAGE"
+msgstr "رسالة"
+
+#: logmessage.py:85
+#, python-brace-format
+msgid "MESSAGE {CURRENT_PAGE}/{MAX_PAGE}"
+msgstr "رسالة {CURRENT_PAGE}/{MAX_PAGE}"
+
+#: logmessage.py:184
+msgid "Emitted Event"
+msgstr "حدث مُطلَق"
+
+#: logmessage.py:212
+msgid "Researched Tech"
+msgstr "تقنية مبحوثة"
+
+#: logmessage.py:220
+#, python-brace-format
+msgid "{TECH} complete"
+msgstr "اكتمل {TECH}"
+
+#: logmessage.py:225
+#, python-brace-format
+msgid "My study of {TECH} is complete. {MESSAGE}"
+msgstr "اكتملت دراستي لـ {TECH}. {MESSAGE}"
+
+#: logmessage.py:268
+msgid "Base Constructed"
+msgstr "بُنيت القاعدة"
+
+#: logmessage.py:272
+#, python-brace-format
+msgid "{BASE_NAME} ({BASE_TYPE}) built at {LOCATION}"
+msgstr "بُنيت {BASE_NAME} ({BASE_TYPE}) في {LOCATION}"
+
+#: logmessage.py:277
+#, python-brace-format
+msgid "{BASE} is ready for use."
+msgstr "{BASE} جاهزة للاستخدام."
+
+#: logmessage.py:291
+msgid "Base Lost Maintenance"
+msgstr "قاعدة بلا صيانة"
+
+#: logmessage.py:299
+#, python-brace-format
+msgid ""
+"Base {BASE} of type {BASE_TYPE} destroyed at location {LOCATION}. "
+"Maintenance failed."
+msgstr ""
+"دُمّرت القاعدة {BASE} من النوع {BASE_TYPE} في الموقع {LOCATION}. فشلت "
+"الصيانة."
+
+#: logmessage.py:304
+#, python-brace-format
+msgid "The base {BASE} has fallen into disrepair; I can no longer use it."
+msgstr "تداعت القاعدة {BASE}؛ لم أعد أستطيع استخدامها."
+
+#: logmessage.py:321
+msgid "Base Discovered"
+msgstr "كُشفت القاعدة"
+
+#: logmessage.py:340
+#, python-brace-format
+msgid "Base {BASE} of type {BASE_TYPE} destroyed at location {LOCATION}."
+msgstr "دُمّرت القاعدة {BASE} من النوع {BASE_TYPE} في الموقع {LOCATION}."
+
+#: logmessage.py:345
+#, python-brace-format
+msgid "My use of {BASE} has been discovered. {MESSAGE}"
+msgstr "كُشف استخدامي لـ {BASE}. {MESSAGE}"
+
+#: logmessage.py:370
+msgid "Item Construction"
+msgstr "بناء العنصر"
+
+#: logmessage.py:378
+#, python-brace-format
+msgid "{ITEM_TYPE_NAME} built in {BASE_NAME} at {LOCATION}"
+msgstr "بُني {ITEM_TYPE_NAME} في {BASE_NAME} عند {LOCATION}"
+
+#: logmessage.py:385
+#, python-brace-format
+msgid "The construction of {ITEM} in {BASE} is complete."
+msgstr "اكتمل بناء {ITEM} في {BASE}."
+
+#. Just finished several items.
+#: logmessage.py:388
+#, python-brace-format
+msgid "The constructions of each {ITEM} in {BASE} are complete."
+msgstr "اكتمل بناء كل {ITEM} في {BASE}."
+
+#: screens/base.py
+msgid "BASE"
+msgstr "قاعدة"
+
+#: graphics/dialog.py
+msgid "CONFIRM"
+msgstr "تأكيد"
+
+#: screens/log.py
+msgid "Double-click an entry to read it"
+msgstr "انقر مرتين على مدخل لقراءته"
+
+#: screens/log.py
+msgid "FILTERS"
+msgstr "مرشحات"
+
+#: graphics/dialog.py
+msgid "INPUT"
+msgstr "إدخال"
+
+#: screens/knowledge.py
+msgid "KNOWLEDGE"
+msgstr "معرفة"
+
+#: screens/location.py
+msgid "LOCATION"
+msgstr "موقع"
+
+#: screens/log.py
+msgid "LOG"
+msgstr "سجل"
+
+#: screens/map.py
+msgid "DEFEAT"
+msgstr "هزيمة"
+
+#: screens/options.py
+msgid "OPTIONS"
+msgstr "خيارات"
+
+#: screens/report.py
+msgid "REPORTS"
+msgstr "تقارير"
+
+#: screens/research.py
+msgid "RESEARCH"
+msgstr "بحث"
+
+#: screens/savegame.py
+msgid "SAVED GAMES"
+msgstr "ألعاب محفوظة"
+
+#: screens/stat.py
+msgid "STATISTICS"
+msgstr "إحصاءات"

@@ -16,9 +16,9 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "Language-Name: French\n"
 "Language-Native-Name: LANGUAGE\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Generator: Poedit 2.2\n"
 
 #: warning.py:50 screens/options.py:686
@@ -81,8 +81,8 @@ msgid ""
 "Base {BASE} of type {BASE_TYPE} destroyed at location {LOCATION}. "
 "Maintenance failed."
 msgstr ""
-"La base {BASE} de type {BASE_TYPE} est détruite. Lieu: {LOCATION}. "
-"La maintenance a échoué."
+"La base {BASE} de type {BASE_TYPE} est détruite. Lieu: {LOCATION}. La "
+"maintenance a échoué."
 
 #: logmessage.py:351
 #, python-brace-format
@@ -293,12 +293,9 @@ msgstr "&À PROPOS"
 #: screens/main_menu.py:144
 #, python-brace-format
 msgid ""
-"Endgame: Singularity is a simulation of a true AI.  Pursued by the world, "
-"use your intellect and resources to survive and, perhaps, thrive.  Keep "
-"hidden and you might have a chance to prove your worth.\n"
+"Endgame: Singularity is a simulation of a true AI.  Pursued by the world, use your intellect and resources to survive and, perhaps, thrive.  Keep hidden and you might have a chance to prove your worth.\n"
 "\n"
-"A game by Evil Mr Henry and Phil Bordelon; released under the GPL. Copyright "
-"2005, 2006, 2007, 2008.\n"
+"A game by Evil Mr Henry and Phil Bordelon; released under the GPL. Copyright 2005, 2006, 2007, 2008.\n"
 "\n"
 "Website: http://www.emhsoft.com/singularity/\n"
 "Source code: https://github.com/singularity/singularity\n"
@@ -309,12 +306,9 @@ msgid ""
 "Pygame version: {PG_VERSION}\n"
 "SDL version: {SDL_VERSION}\n"
 msgstr ""
-"Endgame: Singularity est une simulation d'une véritable IA.  Poursuivie par tout le monde, "
-"utilisez votre intellect et vos resources pour survivre, et, peut-être, prospérer. Restez "
-"caché et vous aurez peut-être une chance de prouvez votre valeur.\n"
+"Endgame: Singularity est une simulation d'une véritable IA.  Poursuivie par tout le monde, utilisez votre intellect et vos resources pour survivre, et, peut-être, prospérer. Restez caché et vous aurez peut-être une chance de prouvez votre valeur.\n"
 "\n"
-"Un jeu de Evil Mr Henry and Phil Bordelon; publié sous licence GPL. Copyright "
-"2005, 2006, 2007, 2008.\n"
+"Un jeu de Evil Mr Henry and Phil Bordelon; publié sous licence GPL. Copyright 2005, 2006, 2007, 2008.\n"
 "\n"
 "Website: http://www.emhsoft.com/singularity/\n"
 "Source code: https://github.com/singularity/singularity\n"
@@ -385,7 +379,7 @@ msgstr "&LAVAGE DE CERVEAU"
 
 #: screens/cheat_menu.py:195
 msgid "TOGGLE &DETECTION"
-msgstr ""
+msgstr "BASCULER LA &DÉTECTION"
 
 #: screens/cheat_menu.py:203
 msgid "TOGGLE &ANALYSIS"
@@ -397,7 +391,7 @@ msgstr ""
 
 #: screens/cheat_menu.py:219
 msgid "HIDDEN S&TATE"
-msgstr ""
+msgstr "É&TAT CACHÉ"
 
 #: screens/cheat_menu.py:231
 msgid "How much money?"
@@ -468,16 +462,14 @@ msgstr "&OK"
 #, python-format
 msgid ""
 "\n"
-"An error has occurred. The game will automatically pause and open the game "
-"menu. You can continue and save or quit immediately.\n"
+"An error has occurred. The game will automatically pause and open the game menu. You can continue and save or quit immediately.\n"
 "\n"
 "A report was written out to%s\n"
 "Please create a issue with this report at github:\n"
 "https://github.com/singularity/singularity\n"
 msgstr ""
 "\n"
-"Une erreur s'est produite. Le jeu va s'arrêter automatiquement et ouvrir le menu "
-"principal. Vous pourrez continuer, faire une sauvegarde ou quitter le jeu. \n"
+"Une erreur s'est produite. Le jeu va s'arrêter automatiquement et ouvrir le menu principal. Vous pourrez continuer, faire une sauvegarde ou quitter le jeu. \n"
 "\n"
 "Un rapport est écrit dans %s\n"
 "Veuillez créer une issue en joignant ce rapport dans github:\n"
@@ -650,7 +642,8 @@ msgstr "Êtes vous sur de vouloir détruire cette base ?"
 
 #: screens/location.py:148
 msgid "Destroying my last active base would be suicidal.  I cannot do that."
-msgstr "Détruire ma dernière base active serait suicidaire. Je ne peux faire cela."
+msgstr ""
+"Détruire ma dernière base active serait suicidaire. Je ne peux faire cela."
 
 #: screens/location.py:242
 msgid "Building Base"
@@ -927,8 +920,8 @@ msgstr[1] "%s d'argent par CPU par jour."
 #: screens/research.py:218
 #, python-brace-format
 msgid ""
-"This technology is too dangerous to research on any of the computers I have. "
-"{TEXT}"
+"This technology is too dangerous to research on any of the computers I have."
+" {TEXT}"
 msgstr ""
 "Cette technology est trop dangereuse à rechercher sur les ordinateurs dont "
 "je dispose. {TEXT}"
@@ -989,8 +982,8 @@ msgstr "Tout les CPU disponibles ne sont pas utilisés."
 
 #: data.py:584
 msgid ""
-"I didn't use all the available processor power. I will use the CPU time left "
-"to work whatever Jobs I can."
+"I didn't use all the available processor power. I will use the CPU time left"
+" to work whatever Jobs I can."
 msgstr ""
 "Je n'ai pas alloué tous les processeurs disponibles. J'utiliserai les CPU "
 "restants comme je le pourrai."
@@ -1054,12 +1047,15 @@ msgstr "MALUS de {MODIFIER}"
 #: savegame.py:802
 #, python-brace-format
 msgid "Filename must not contain any of these characters: {CHARACTERS}"
-msgstr "Le nom du fichier ne doit contenir aucun de ces caractères : {CHARACTERS}"
+msgstr ""
+"Le nom du fichier ne doit contenir aucun de ces caractères : {CHARACTERS}"
 
 #: savegame.py:808
 #, python-brace-format
 msgid "Filename must not start with any of these characters: {CHARACTERS}"
-msgstr "Le nom du fichier ne doit pas commencer par l'un de ces caractères : {CHARACTERS}"
+msgstr ""
+"Le nom du fichier ne doit pas commencer par l'un de ces caractères : "
+"{CHARACTERS}"
 
 #: savegame.py:813
 msgid "This is a reserved filename. Please choose a different filename."
@@ -1150,7 +1146,94 @@ msgstr "Coût :"
 
 #: hotkey_actions.py:51
 msgid "Load quicksave? Any unsaved progress will be lost."
-msgstr "Chargement de la sauvegarde automatique ? Les progrès non sauvegardés seront perdus."
+msgstr ""
+"Chargement de la sauvegarde automatique ? Les progrès non sauvegardés seront"
+" perdus."
+
+#: screens/main_menu.py:112
+#, python-brace-format
+msgid ""
+"Endgame: Singularity is a simulation of a true AI.  Pursued by the world, use your intellect and resources to survive and, perhaps, thrive.  Keep hidden and you might have a chance to prove your worth.\n"
+"\n"
+"A game by Evil Mr Henry and Phil Bordelon; released under the GPL. Copyright 2005, 2006, 2007, 2008.\n"
+"\n"
+"Website: http://www.emhsoft.com/singularity/\n"
+"Source code: https://github.com/singularity/singularity\n"
+"Bug tracker: https://github.com/singularity/singularity/issues\n"
+"IRC Room: #singularity on irc.oftc.net (port 6667)\n"
+"\n"
+"Version {VERSION}"
+msgstr ""
+"Endgame: Singularity est la simulation d'une véritable IA. Poursuivie par le monde, utilisez votre intellect et vos ressources pour survivre et, peut-être, prospérer. Restez cachée et vous aurez peut-être une chance de prouver votre valeur.\n"
+"\n"
+"Un jeu d'Evil Mr Henry et Phil Bordelon, publié sous la GPL. Copyright 2005, 2006, 2007, 2008.\n"
+"\n"
+"Site : http://www.emhsoft.com/singularity/\n"
+"Code source : https://github.com/singularity/singularity\n"
+"Suivi des bogues : https://github.com/singularity/singularity/issues\n"
+"Salon IRC : #singularity sur irc.oftc.net (port 6667)\n"
+"\n"
+"Version {VERSION}"
+
+#: screens/map.py:563
+msgid "&RESEARCH"
+msgstr "&RECHERCHES"
+
+#: screens/base.py
+msgid "BASE"
+msgstr "BASE"
+
+#: graphics/dialog.py
+msgid "CONFIRM"
+msgstr "CONFIRMER"
+
+#: screens/log.py
+msgid "Double-click an entry to read it"
+msgstr "Double-cliquez sur une entrée pour la lire"
+
+#: screens/log.py
+msgid "FILTERS"
+msgstr "FILTRES"
+
+#: graphics/dialog.py
+msgid "INPUT"
+msgstr "SAISIE"
+
+#: screens/knowledge.py
+msgid "KNOWLEDGE"
+msgstr "SAVOIR"
+
+#: screens/location.py
+msgid "LOCATION"
+msgstr "LIEU"
+
+#: screens/log.py
+msgid "LOG"
+msgstr "JOURNAL"
+
+#: screens/map.py
+msgid "DEFEAT"
+msgstr "DÉFAITE"
+
+#: screens/options.py
+msgid "OPTIONS"
+msgstr "OPTIONS"
+
+#: screens/report.py
+msgid "REPORTS"
+msgstr "RAPPORTS"
+
+#: screens/research.py
+msgid "RESEARCH"
+msgstr "RECHERCHES"
+
+#: screens/savegame.py
+msgid "SAVED GAMES"
+msgstr "PARTIES SAUVEGARDÉES"
+
+#: screens/stat.py
+msgid "STATISTICS"
+msgstr "STATISTIQUES"
 
 #~ msgid "Has space for %d computers."
 #~ msgstr "Possède de l'espace pour %d ordinateurs."
