@@ -31,7 +31,13 @@ concurrency:
 jobs:
   test:
     name: tests (py${{ matrix.python-version }})
-    runs-on: ubuntu-latest
+    # Pinned to the newest Ubuntu LTS instead of `ubuntu-latest`, which is a
+    # moving target: the label is being migrated to 26.04 right now (October
+    # and November 2026), and anything it moves to next will arrive without a
+    # commit that mentions it. A pipeline whose operating system changes on its
+    # own is a pipeline that goes red for a reason no diff explains. Bump this
+    # on purpose, when the next LTS is what you mean to test against.
+    runs-on: ubuntu-26.04
     timeout-minutes: 20
     strategy:
       fail-fast: false
@@ -83,7 +89,7 @@ jobs:
 
   build:
     name: build
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-26.04
     timeout-minutes: 20
 
     steps:
@@ -144,10 +150,3 @@ jobs:
         # ever made.
         /tmp/installed/bin/singularity --version
         /tmp/installed/bin/python -m singularity --version
-
-    - name: Keep the built files
-      uses: actions/upload-artifact@v6
-      with:
-        name: dist
-        path: dist/*
-        if-no-files-found: error

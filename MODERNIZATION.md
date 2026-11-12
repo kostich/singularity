@@ -4547,14 +4547,29 @@ either: 940 tests, both environments.
 Smaller things in the same file: a push and a pull request against `master` both
 trigger it, plus a manual run from the Actions tab; the token is read-only; a
 newer push to the same ref cancels the older run; each job is capped at twenty
-minutes; pip is cached against `pyproject.toml` and `setup.py`; the actions are
-on `checkout@v5`, `setup-python@v6` and `upload-artifact@v6` because the
-Node 20 ones are deprecated on a runner that now forces Node 24, and those are
-the first tags of each that target Node 24; and the built files are kept as an
-artifact. One step only prints versions — `python`, `pygame` with its SDL,
-`numpy`, `polib` — because that is precisely what the runner had and this
-machine did not, and reading it off a log beats repeating the afternoon that
-went into working it out.
+minutes; pip is cached against `pyproject.toml` and `setup.py`; and the two
+actions are on `checkout@v5` and `setup-python@v6`, the first tags of each that
+target Node 24, because the runner forces that now and the Node 20 tags warn.
+One step only prints versions — `python`, `pygame` with its SDL, `numpy`,
+`polib` — because that is precisely what the runner had and this machine did
+not, and reading it off a log beats repeating the afternoon that went into
+working it out.
+
+The jobs run on `ubuntu-26.04`, not on `ubuntu-latest`. 26.04 is the newest
+Ubuntu LTS and it is generally available, and `ubuntu-latest` is being migrated
+to it during October and November 2026, so pinning it is both the newest stable
+LTS and the end state the label is already heading for. What matters as much is
+that it is a fixed name: `-latest` follows whatever GitHub promotes next, and a
+workflow whose operating system changes without a commit is one that goes red
+for a reason nobody can find in the diff. It is bumped on purpose, or not at
+all.
+
+Nothing is uploaded either. The `build` job makes the sdist and the wheel,
+installs the wheel into a clean virtualenv, checks the data is inside it and
+starts the game, which is the point: it proves the package is complete. Keeping
+the built files then made GitHub store two binaries on every run, forever, for a
+fork that has never shipped a wheel from CI, so the upload step is gone. A run
+that ends with no artifact is the cheap outcome here, not a missing feature.
 
 Verified here first, before any of it was pushed:
 
@@ -4614,6 +4629,7 @@ $ curl .../actions/workflows/tests.yml/badge.svg?branch=master
 ```
 
 The warning that run still carried — `upload-artifact@v5` targeting Node 20 —
-is what moved that one tag to `v6`. The other two tags were already clean. A
-`notice` about `ubuntu-latest` migrating to Ubuntu 26 is informational and needs
-nothing.
+was what moved that tag to `v6`, and the step itself was then removed (above),
+so there is nothing left to warn about. The `notice` in that same run, that
+`ubuntu-latest` is migrating to Ubuntu 26, is what prompted pinning
+`ubuntu-26.04`.
