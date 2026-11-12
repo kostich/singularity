@@ -15,7 +15,7 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-A full copy of this license is provided in LICENSE.gpl-2.txt
+A full copy of this license is provided in LICENSE.gpl.txt
 
 CODE LICENSE (singularity/code/savegame.py)
 
@@ -56,6 +56,34 @@ The sounds, music, text files, and icons in the singularity/data subdirectory
 are under the Creative Commons Licence "Attribution-ShareAlike 3.0".  Please
 see the LICENSE.CC-BY-SA-3.txt for the license text.
 
+ARTWORK ADDED BY SINGULARITY 2030
+The 2030 theme is original work for this fork: its theme data, its palette and
+layout, the scenario pictures under singularity/data/themes/2030/images/ (the
+dialog_*.jpg plates, generated locally with Krea-2-Turbo -- model, seed and
+grade are recorded in DESIGN.md), and the button glyphs rasterised from the
+Lucide sources in 2030/icons/. They are under the same Creative Commons
+Attribution-ShareAlike 3.0 licence as the rest of the data.
+
+The application icon, singularity/data/themes/2030/images/icon.png and
+flatpak/icons/*.png, is a redrawn version of the original Singularity mark.
+The wedges, the eyes and the two reds come from that mark, which is CC-BY-SA
+3.0 like the rest of the artwork; the "2030" and the slanted eyes are new. It
+therefore keeps the same licence and the same credit as the mark it comes
+from, and neither the legacy themes' own icon.png files nor upstream's 32x32
+original were replaced.
+
+flatpak/screenshots/*.png are frames of the running game, written by
+utils/make_screenshots.py, and are CC-BY-SA 3.0 for the same reason: they are
+the game's own artwork and interface.
+
+Those last two groups sit outside singularity/data/, which is why they are
+named here instead of being covered by the section above.
+
+The tools that produce all of this -- utils/make_app_icon.py,
+utils/make_screenshots.py, utils/make_2030_art.py, utils/make_icon_set.py,
+utils/make_dialog_art.py, utils/subset_fonts.py -- are part of the program and
+are GPL-2+ with it.
+
 TRANSLATION LICENSE
 The translations are generally placed in the directories (singularity/i18n/lang_*)
 and are by default licensed under "the same license as the singularity package".
@@ -64,9 +92,9 @@ Historically, this has been defined as GPL-2+ for `.po` files and CC-BY-SA 3.0 f
 `.dat` file translations.  For new translations (submitted after 2019-12-22), the
 default is GPL-2+ as we are moving to `.po` files as exclusive translation method.
 
-ARTWORK LICENSE FOR singularity/data/themes/default/images/earth.jpg AND
-  singularity/data/themes/default/images/earth_night.jpg
-The day and night earth images of the Default theme are from NASA's "Blue Marble
+ARTWORK LICENSE FOR singularity/data/themes/Legacy-default/images/earth.jpg AND
+  singularity/data/themes/Legacy-default/images/earth_night.jpg
+The day and night earth images of the legacy default theme are from NASA's "Blue Marble
 2002" image collection:
 http://visibleearth.nasa.gov/view_set.php?categoryID=2364
 
@@ -94,7 +122,7 @@ Beyond the NASA Terms, the Visible Earth team requests, but does not require:
 Other images, such as backgrounds in Vector and other themes, are distributed
 under the same license as other data files. See DATA LICENSE section for details
 
-FONT LICENSE for singularity/data/themes/default/fonts/*
+FONT LICENSE for singularity/data/themes/Legacy-default/fonts/*
 The boxy font used is "Acknowledge", by Brian Kent, modified in order to have
 the numbers fixed-width and to register the correct height in pygame.
 http://www.aenigmafonts.com/fonts/fontsa.html
@@ -118,9 +146,11 @@ Note that this is /not/ the license available on his website; Brian has given
 us directly 'free to use for any purpose' licensing on this font file.  Thanks
 so much, Brian!
 
-The other font used is DejaVu Sans, derived from Bitstream Vera Sans and Arev
-Fonts; while DejaVu's modifications are public domain, both Bistream Vera and
-Arev Fonts have copyrights, shown below:
+The other fonts used are DejaVu Sans and DejaVu Sans Mono, derived from
+Bitstream Vera Sans and Arev Fonts; while DejaVu's modifications are public
+domain, both Bistream Vera and Arev Fonts have copyrights, shown below. DejaVu
+Sans Mono is used as the 2030 theme's display face (titles, HUD, buttons) and
+DejaVu Sans as its body face; both are the same family and carry this licence.
 
 Bistream Vera Copyright
 
@@ -227,10 +257,131 @@ NOTE: These fonts are 100% free for
       to use this for anything you want!
 
 
-CODE LICENSE for singularity/code/polib.py [embedded POLIB]
-The file singularity/code/polib.py is taken from Polib package, v0.7.0,
-and it is licensed under the MIT License.
-http://bitbucket.org/izi/polib/
+FONT LICENSE for singularity/data/themes/2030/fonts/Noto*.ttf
+
+The seven Noto*.ttf files in that directory are modified subsets of Google's
+Noto faces, built by utils/subset_fonts.py: glyphs the game never draws were
+removed, and the Latin letters, digits, punctuation and block glyphs the game
+does draw were added from DejaVu. fonts/README.txt beside them says which face
+came from where.
+
+    NotoSansCJK-JP.ttf, NotoSansCJK-SC.ttf
+    NotoSansMonoCJK-JP.ttf, NotoSansMonoCJK-SC.ttf
+        Copyright © 2014-2021 Adobe (http://www.adobe.com/), with
+        Reserved Font Name 'Source'.  (Noto Sans Mono CJK names no reserved
+        font.)  Based on Source Han Sans.
+
+    NotoSansArabic.ttf
+        Copyright 2022 The Noto Project Authors
+        (https://github.com/notofonts/arabic)
+
+    NotoSansBengali.ttf
+        Copyright 2025 The Noto Project Authors
+        (https://github.com/notofonts/bengali)
+
+    NotoSansDevanagari.ttf
+        Copyright 2022 The Noto Project Authors
+        (https://github.com/notofonts/devanagari)
+
+The subsets are Modified Versions under the SIL Open Font License, Version
+1.1, reproduced below. They are not sold on their own, and no reserved font
+name is used for them. The licence covers the font files only, not the game.
+
+
+SIL OPEN FONT LICENSE Version 1.1 - 26 February 2007
+-----------------------------------------------------------
+
+PREAMBLE
+The goals of the Open Font License (OFL) are to stimulate worldwide
+development of collaborative font projects, to support the font
+creation efforts of academic and linguistic communities, and to
+provide a free and open framework in which fonts may be shared and
+improved in partnership with others.
+
+The OFL allows the licensed fonts to be used, studied, modified and
+redistributed freely as long as they are not sold by themselves. The
+fonts, including any derivative works, can be bundled, embedded,
+redistributed and/or sold with any software provided that any reserved
+names are not used by derivative works. The fonts and derivatives,
+however, cannot be released under any other type of license. The
+requirement for fonts to remain under this license does not apply to
+any document created using the fonts or their derivatives.
+
+DEFINITIONS
+"Font Software" refers to the set of files released by the Copyright
+Holder(s) under this license and clearly marked as such. This may
+include source files, build scripts and documentation.
+
+"Reserved Font Name" refers to any names specified as such after the
+copyright statement(s).
+
+"Original Version" refers to the collection of Font Software
+components as distributed by the Copyright Holder(s).
+
+"Modified Version" refers to any derivative made by adding to,
+deleting, or substituting -- in part or in whole -- any of the
+components of the Original Version, by changing formats or by porting
+the Font Software to a new environment.
+
+"Author" refers to any designer, engineer, programmer, technical
+writer or other person who contributed to the Font Software.
+
+PERMISSION & CONDITIONS
+Permission is hereby granted, free of charge, to any person obtaining
+a copy of the Font Software, to use, study, copy, merge, embed,
+modify, redistribute, and sell modified and unmodified copies of the
+Font Software, subject to the following conditions:
+
+1) Neither the Font Software nor any of its individual components, in
+Original or Modified Versions, may be sold by itself.
+
+2) Original or Modified Versions of the Font Software may be bundled,
+redistributed and/or sold with any software, provided that each copy
+contains the above copyright notice and this license. These can be
+included either as stand-alone text files, human-readable headers or
+in the appropriate machine-readable metadata fields within text or
+binary files as long as those fields can be easily viewed by the user.
+
+3) No Modified Version of the Font Software may use the Reserved Font
+Name(s) unless explicit written permission is granted by the
+corresponding Copyright Holder. This restriction only applies to the
+primary font name as presented to the users.
+
+4) The name(s) of the Copyright Holder(s) or the Author(s) of the Font
+Software shall not be used to promote, endorse or advertise any
+Modified Version, except to acknowledge the contribution(s) of the
+Copyright Holder(s) and the Author(s) or with their explicit written
+permission.
+
+5) The Font Software, modified or unmodified, in part or in whole,
+must be distributed entirely under this license, and must not be
+distributed under any other license. The requirement for fonts to
+remain under this license does not apply to any document created using
+the Font Software.
+
+TERMINATION
+This license becomes null and void if any of the above conditions are
+not met.
+
+DISCLAIMER
+THE FONT SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT
+OF COPYRIGHT, PATENT, TRADEMARK, OR OTHER RIGHT. IN NO EVENT SHALL THE
+COPYRIGHT HOLDER BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+INCLUDING ANY GENERAL, SPECIAL, INDIRECT, INCIDENTAL, OR CONSEQUENTIAL
+DAMAGES, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF THE USE OR INABILITY TO USE THE FONT SOFTWARE OR FROM
+OTHER DEALINGS IN THE FONT SOFTWARE.
+
+
+POLIB LICENSE (historical)
+Endgame: Singularity used to embed Polib v0.7.0 in
+singularity/code/polib.py.  That file has been removed; Polib is now a
+normal runtime dependency, installed separately (Fedora: python3-polib,
+otherwise "pip install polib").  It is MIT licensed and the licence text
+is reproduced below for reference.
+https://github.com/izimobil/polib
 
 Copyright (c) 2006-2011 David Jean Louis.
 

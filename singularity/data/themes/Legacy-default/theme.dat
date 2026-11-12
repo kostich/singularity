@@ -1,0 +1,233 @@
+[general]
+name = Legacy Default
+
+[fonts]
+normal = DejaVuSans.ttf
+special = acknowtt.ttf
+
+# Pinned, not decorative: a theme inherits whatever it does not define, and
+# this theme's parent is the *current* default theme (2030), whose type scale
+# is larger. Spelling the shipped values out is what keeps this theme looking
+# exactly as it did before 2030 existed. Do not "tidy" this away.
+[sizes]
+default          = 20
+dialog_text      = 20
+button           = 36
+suspicion_bar    = 32
+time_display     = 24
+resource_display = 24
+report_content   = 20
+
+# Pinned, for the same reason [sizes] above is: a theme inherits whatever it
+# does not define, and this theme's parent is the *current* default theme
+# (2030), whose dialogs are centred, padded and carry a picture pane. Spelling
+# the old geometry out is what keeps the legacy themes looking exactly as they
+# did before 2030 existed. Do not "tidy" this away.
+[dialog]
+anchor       = top_center
+border_width = 1
+# A plane rectangle with no header band: the panel the game has always drawn.
+window_shape  = rect
+header        = none
+header_height = 0
+chamfer       = 0
+scrollbar     = classic
+window_layout = classic
+close_button  = none
+# Every button keeps the height its call site asked for, which is the only
+# behaviour the game had before the key existed.
+button_height = 0
+content_border_width = 1
+padding      = 0
+margin       = 0.01
+image_slot   = none
+image_slot_width = 0.28
+image_slot_height = 0.34
+icon_buttons = none
+text_plate   = none
+button_hover = none
+content_padding = 0
+rule              = none
+paragraph_spacing = none
+scroll_body       = none
+list_stripes = none
+empty_state = none
+tabular_digits = none
+text_width    = padding
+image_overlay = none
+# menu_backdrop is none here, so the menu stays a flat fill; pinned so that a
+# theme inheriting this one does not pick 2030's rain up.
+menu_backdrop = none
+
+# Pinned for the same reason [dialog] above is: this theme inherits 2030, whose
+# play screen is compact. Spelling the old arrangement out is what keeps every
+# legacy theme's map screen exactly as it was.
+[hud]
+layout    = classic
+resources = stacked
+vitals    = classic
+modal_dim = normal
+
+[colors]
+# General color alias
+white           = #ffffffff
+black           = #000000ff
+red             = #ff0000ff
+green           = #00ff00ff
+blue            = #0000ffff
+yellow          = #ffff00ff
+orange          = #ff8000ff
+gray            = #808080ff
+dark_red        = #800000ff
+dark_green      = #008000ff
+dark_blue       = #000080ff
+darker_blue1    = #000050ff
+darker_blue     = #000032ff
+light_red       = #ff3232ff
+light_green     = #32ff32ff
+light_blue      = #3232ffff
+clear           = #00000000
+
+# Screen colors
+main_menu_background     = black
+about_dialog_background  = darker_blue
+map_background           = black
+options_background       = darker_blue
+singularity_title        = dark_red
+hidden_state_menu        = dark_blue
+
+# The simple menu dialog (e.g. difficult or the in game menu)
+simple_menu_background     = dark_blue
+simple_menu_border         = white
+
+# Pane colors
+pane_background          = dark_blue
+pane_background_empty    = black
+research_pane_background = pane_background
+knowledge_pane_background = pane_background
+# The pane edge used to be pane_background itself, hardcoded in the screens.
+# Aliased to the same colour so this theme is unchanged on every screen.
+pane_border              = pane_background
+
+# Dialog colors
+text_dialog_background   = dark_blue
+text_entry_background    = darker_blue1
+text_dialog_border       = white
+# window_shape is rect here, so these are never drawn; pinned so a theme that
+# inherits this one cannot pick 2030's chrome up.
+dialog_frame_fill        = dark_blue
+dialog_frame_edge        = white
+dialog_frame_glow        = white
+dialog_header_fill       = dark_blue
+dialog_header_text       = white
+# Pinned for the same reason the [dialog] block above is: this theme inherits
+# 2030, which gives a dialog's picture frame a bright cyan. Nothing here draws
+# a picture (image_slot = none), so this changes no pixel -- it keeps the
+# palette self-contained, so a later change to 2030's value cannot reach it.
+dialog_art_border        = pane_border
+# Same reasoning: text_plate is none here, so these are never drawn, but a
+# theme that inherits this one should not pick 2030's plate up.
+dialog_plate_background  = dark_blue
+dialog_plate_border      = white
+# button_hover is none here, so these are never drawn; pinned so that a theme
+# inheriting this one does not pick 2030's cursor glow up.
+button_scanline          = black
+button_scanline_sweep    = clear
+# The mask a modal dialog puts over the screen behind it. Pinned to upstream's
+# exact value: it is drawn over whole screens, so any drift here is a visible
+# change to every legacy dialog.
+fade_mask_color          = #000000AF
+# image_overlay is none here, so these are never drawn; pinned so that a theme
+# inheriting this one does not pick 2030's raster or its glow up.
+image_scanline           = black
+image_scanline_sweep     = clear
+# menu_backdrop is none here, so these are never drawn; pinned so that a theme
+# inheriting this one does not pick 2030's menu rain up.
+menu_scanline            = black
+menu_glyph               = black
+menu_glyph_head          = black
+menu_frame               = black
+
+# Widget colors
+widget_background          = blue
+widget_border              = white
+
+# Text colors
+text_background            = dark_blue
+text_background_unselected = dark_blue
+text_background_selected   = light_blue
+text_border                = white
+text                       = white
+text_disabled              = gray
+
+# Progress colors
+progress_background_unselected = dark_blue
+progress_background_selected   = light_blue
+progress_background_progress   = blue
+progress_border                = white
+
+# Slider colors dark_blue light_blue white
+slider_background = dark_blue
+slider_background_slider = light_blue
+slider_border = white
+
+# Scrollbar colors
+scrollbar_background = dark_blue
+scrollbar_background_slider = light_blue
+scrollbar_border = white
+scrollbar_arrow_background_selected = dark_blue
+scrollbar_arrow_background_unselected = light_blue
+
+# Danger colors
+danger_level_0      = #0000ffff
+danger_level_1      = #5500AAff
+danger_level_2      = #AA0055ff
+danger_level_3      = #ff0000ff
+
+# CPU display colors
+cpu_normal      = white
+cpu_warning     = red
+
+# Base display colors
+base_situation_one_active_base = red
+base_situation_idle_incomplete_bases = yellow
+base_situation_many_bases = orange
+base_situation_normal = white
+
+# Save colors
+save_name       = white
+save_time       = gray
+save_difficulty = white
+save_valid      = green
+save_invalid    = red
+
+# Base state colors
+base_state_offline         = red
+base_state_active          = green
+base_state_sleep           = yellow
+base_state_overclocked     = orange
+base_state_suicide         = red
+base_state_stasis          = gray
+base_state_entering_stasis = gray
+base_state_leaving_stasis  = gray
+
+### Location colors
+
+# Color hints to users about how risky a location is based on previous
+# discoveries (ordered from lowest to highest risk).
+#
+# Note when testing: These hints are only presented after discovery of
+# techs that give insight to detection stats (both discoveries needed
+# for testing all colors).
+location_name_normal             = text
+location_name_prev_discover      = yellow
+location_name_last_discover      = orange
+location_name_last_prev_discover = red
+
+###  Internal/Special purpose colors ###
+
+# This chooses the color to highlight widgets redrawn in debug mode
+# e.g. singularity --debug.  This should be visibly different from the
+# common border colors of the theme as the redraw lines are usually
+# (but not always) placed on the widget borders.
+debug_mode_highlight_redrawn_widget = red

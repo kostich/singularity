@@ -1,0 +1,6 @@
+[fonts]
+# Devanagari body and HUD face, bundled as a subset (see fonts/README.txt) so
+# the Flatpak has it without any system fonts. The HUD readout labels (दिन, धन)
+# are Devanagari, so `special` must be this face too, not the base DejaVu.
+normal = NotoSansDevanagari.ttf
+special = NotoSansDevanagari.ttf

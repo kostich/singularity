@@ -1,0 +1,7 @@
+[fonts]
+# Simplified Chinese body and HUD face, bundled as a subset (see
+# fonts/README.txt) so the Flatpak has it without any system fonts. The HUD
+# readout label (天) is Chinese, so `special` must be this face too, not the
+# base DejaVu.
+normal = NotoSansCJK-SC.ttf
+special = NotoSansMonoCJK-SC.ttf

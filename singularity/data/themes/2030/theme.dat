@@ -1,0 +1,353 @@
+[general]
+name = 2030
+
+[fonts]
+# A console: monospaced for everything that is a label or a readout, and the
+# game's own body face for the prose. See fonts/README.txt.
+#
+# `special` is DejaVu Sans Mono Bold rather than a display face of the
+# geometric kind: the original game's display face was a hand-drawn sticker
+# font, so a technical monospace reads as *closer* to it than a modern
+# humanist sans did, and its equal-width digits are what stop the clock under
+# this HUD from changing width as it counts.
+#
+# `normal` is DejaVu Sans -- the face the game shipped with before this theme
+# existed. It carries 5097 glyphs against Exo 2's 914, including Greek, which
+# Exo 2 did not have at all.
+normal = DejaVuSans.ttf
+special = DejaVuSansMono-Bold.ttf
+
+[sizes]
+# The base type scale, measured at 1024x768 (§16). A size is a ceiling, not a
+# promise: a widget that cannot fit shrinks its text to fit its box, so the
+# numbers here are 24/24/32 in the legacy theme and 30/30/36 below where the
+# HUD boxes have room, and smaller for buttons because a 36pt button is nearly
+# twice the body text and reads as a form rather than a console.
+#
+# 'default' is body text outside a dialog and stays at the shipped value: it is
+# clamped by the row heights it sits in, and raising it would only risk
+# clipping. The two prose sizes below are a point down instead of a point up,
+# because the box they live in does not grow with them.
+default          = 20
+# A dialog is read, not scanned, and its frame is a fixed box, so the prose in
+# it is a clear step under the body size. The number is measured rather than
+# chosen: it is the largest that puts every page of the intro -- in every
+# shipped translation -- inside its dialog without scrolling. See
+# MODERNIZATION.md, "The intro fits without scrolling". A body that still
+# overflows scrolls, which is what `scroll_body` is for.
+dialog_text      = 15
+button           = 30
+suspicion_bar    = 36
+time_display     = 30
+resource_display = 30
+# The report columns are a label/value grid read from a distance; one point
+# down buys a whole extra row in a column that is otherwise a scroll.
+report_content   = 18
+
+# The dialog frame: a panel centred on the screen in the shape of the reference
+# -- text inset from the frame instead of jammed against it, breathing room
+# around the widgets, and a wide picture banner across the top, which is where
+# the dialogs this look comes from carry theirs. The scenario dialogs fill it
+# from images/<art-key>.png when that file exists, and from the static
+# placeholder when it does not.
+#
+# Every key is optional. A theme that says nothing here keeps the geometry the
+# game shipped with, which is why nothing has to change in a legacy theme's
+# code path. See MODERNIZATION.md, "Dialog geometry".
+[dialog]
+anchor            = mid_center
+border_width      = 2
+# A window, not a rectangle: the top corners are cut, the bottom two are eased,
+# and a header band across the top carries the screen's name. `rect` is the
+# plain panel every dialog drew before this existed.
+window_shape      = chamfer
+chamfer           = 0.045
+header            = bar
+header_height     = 0.06
+# A flush scrollbar: no arrow buttons, no border, eight pixels of track.
+scrollbar         = thin
+# Screens lay their own widgets out for this window, not for the old panel.
+window_layout     = 2030
+# A window closes the way a window does: a box in the corner of its band. The
+# screens that had a BACK button whose only job was to close them lose it.
+close_button      = corner
+# One height for every standard button, in design pixels: at 1024x768 a button
+# is 40px, and it stays that share of the window at 1080p. Before this the same
+# dialog had 38, 40, 46 and 69px buttons depending on which screen built it.
+button_height     = 40
+# The frame around the picture and the block behind the text are inside the
+# panel, not part of its shell, so they are one step lighter than the 2px outer
+# border -- and one step in from the base colour, below.
+content_border_width = 1
+padding           = 0.04
+margin            = 0.02
+image_slot        = top
+# 0.30, not 0.34: the header band takes the top of the window, and the banner
+# still has to leave the body more than a few lines.
+image_slot_height = 0.30
+icon_buttons      = all
+text_plate        = block
+button_hover      = scanline
+# How far text sits from the border of the pane holding it. Every description
+# panel -- research, knowledge, the reports, the statistics rows -- used to be
+# set flush against its own border.
+content_padding   = 0.025
+# A line of only "---" is a horizontal rule, not three hyphens.
+rule              = line
+# Off, and deliberately. Half a line of air between paragraphs is the right
+# spacing and the wrong trade for a body in a fixed box: it pushed long messages
+# past the block and under the buttons, and the auto-fit answered by shrinking
+# the type. A dialog body scrolls now (`scroll_body`), so the air could come
+# back -- but not until a body that overflows is the normal case rather than a
+# regression.
+paragraph_spacing = none
+# A body too long for its block scrolls instead of shrinking its type and
+# drawing past the block. The wheel moves it; a bar on the block's right edge
+# says there is more.
+scroll_body       = block
+# Alternate the background of every other row in a list.
+list_stripes      = zebra
+# An empty list says so instead of showing a blank panel.
+empty_state       = label
+# Digits share one width, so the clock does not jump as it counts.
+tabular_digits    = all
+# The paragraph takes the picture's edges rather than the frame's padding, so
+# the text and the banner above it are the same width. The block behind the
+# text follows it, because the block is measured from the text.
+text_width        = pane
+# The picture is a live feed rather than a still: a fine raster over it, which
+# is always there, and one slow band crossing it downward every 11-18 s.
+image_overlay     = scanline
+# The main menu's void is a live console: hex falling in the side gutters, a
+# faint raster, and a frame around the buttons. No band across the menu; a
+# hovered button already draws one. `none` is the flat fill.
+menu_backdrop     = rain
+
+# The play screen's own furniture, separate from [dialog] because these are not
+# dialog values: they say where the map's widgets live and how its readouts are
+# arranged. A theme that says nothing here keeps the layout the game shipped
+# with, which is why the legacy themes only have to name `classic`.
+[hud]
+# The difficulty readout leaves the strip and joins the in-game menu, the four
+# screen buttons move onto the row it frees, and the lower band empties.
+layout    = compact
+# Cash, CPU and bases read across one line instead of stacking in a corner.
+resources = line
+# The suspicion and detection figures sit on one baseline.
+vitals    = centre
+# With a window open, the readouts go dark with the rest of the console.
+modal_dim = dim
+
+[colors]
+# The 2030 palette. Only this theme defines these names; they are here so the
+# chrome can be retuned in one place instead of editing a dozen hex values. The
+# intended look is a dark blue-black hull with thin teal edges and one cyan
+# highlight -- an instrument panel, not a web page.
+#
+# The colours that carry information (danger levels, base state, save validity,
+# location risk hints, CPU warnings) are deliberately NOT in this block: they
+# mean something, and a palette pass must not quietly restyle them.
+ui_void         = #04080Fff
+ui_panel        = #0A1622ff
+ui_panel_dark   = #060E18ff
+ui_panel_light  = #12283Aff
+ui_edge         = #2C6A82ff
+ui_edge_bright  = #5FE3FFff
+ui_text         = #D7ECF6ff
+ui_text_dim     = #7A93A3ff
+ui_select       = #17384Bff
+
+# General color alias
+white           = #ffffffff
+black           = #000000ff
+red             = #ff0000ff
+green           = #00ff00ff
+blue            = #0000ffff
+yellow          = #ffff00ff
+orange          = #ff8000ff
+gray            = #808080ff
+dark_red        = #800000ff
+dark_green      = #008000ff
+dark_blue       = #000080ff
+darker_blue1    = #000050ff
+darker_blue     = #000032ff
+light_red       = #ff3232ff
+light_green     = #32ff32ff
+light_blue      = #3232ffff
+clear           = #00000000
+
+# Screen colors
+main_menu_background     = ui_void
+about_dialog_background  = ui_panel
+map_background           = ui_void
+options_background       = ui_void
+singularity_title        = ui_edge_bright
+hidden_state_menu        = ui_void
+
+# The simple menu dialog (e.g. difficult or the in game menu)
+simple_menu_background     = ui_panel
+simple_menu_border         = ui_edge_bright
+
+# Pane colors
+pane_background          = ui_panel
+pane_background_empty    = ui_void
+research_pane_background = pane_background
+knowledge_pane_background = pane_background
+# The edge of a panel. Its own name so the HUD and the screen panes can have a
+# thin luminous outline while the fill stays dark; a theme that wants the old
+# look aliases it to pane_background, as the legacy themes do.
+pane_border              = ui_edge
+
+# Dialog colors
+text_dialog_background   = ui_panel
+text_entry_background    = ui_panel_dark
+text_dialog_border       = ui_edge
+# The window itself. A dialog is a piece of hardware in this theme, so its
+# frame has its own names: the fill of the panel, the edge around it, and one
+# bright accent used for the header's underline and the corner ticks. The
+# header band is a step lighter than the panel so it reads as a raised rail
+# rather than as a second panel; its title is the one bright cyan on the frame.
+dialog_frame_fill        = ui_panel
+dialog_frame_edge        = ui_edge
+dialog_frame_glow        = ui_edge_bright
+dialog_header_fill       = ui_panel_light
+dialog_header_text       = ui_edge_bright
+# A warning and a loss are the same window with a different instrument colour.
+# The hull and the header band take a dark version of that colour. The edge,
+# the glow and the title stay the bright ones. Text, buttons and the picture
+# are not in this set, and only a dialog that asks for the tone reads it.
+dialog_warning_edge      = #C6A15Aff
+dialog_warning_glow      = #FFD56Aff
+dialog_warning_text      = #FFE08Aff
+dialog_warning_fill      = #1C1408ff
+dialog_warning_header    = #302412ff
+dialog_alert_edge        = #C45A62ff
+dialog_alert_glow        = #FF5A6Aff
+dialog_alert_text        = #FF8A90ff
+dialog_alert_fill        = #280E14ff
+dialog_alert_header      = #421C26ff
+# The frame around a dialog's picture, deliberately brighter than the pane
+# edge: it is drawn on top of the picture's own border, against noise rather
+# than against the panel, where the ordinary edge disappears into it.
+dialog_art_border        = dialog_plate_border
+# The translucent block a dialog's body text sits on. Alpha matters here: the
+# panel behind it is meant to be visible through it, which is what separates a
+# block of text from a second panel.
+dialog_plate_background  = #04080FB4
+dialog_plate_border      = #2C6A8299
+# How dark everything behind a modal dialog goes. Darker than upstream's
+# #000000AF because this theme's HUD is already near-black, so the old value
+# barely reads as "dimmed"; 196 is the point where the background is clearly
+# out of play without becoming a second black rectangle.
+fade_mask_color          = #000000C4
+# A hovered button gets a CRT overlay: fine scanlines, plus one soft band that
+# travels down the face. Both are low-alpha so the label stays the brightest
+# thing on the button -- a hover effect that competes with its own text is a
+# decoration, not an affordance.
+button_scanline          = #0000002B
+button_scanline_sweep    = #5FE3FF30
+# The picture's own overlay, deliberately not the button's colours: the button's
+# are dark and travel down, this one is light and travels up, and a theme that
+# retunes the affordance must not restyle the art. The raster is fine enough
+# (every second row, 5% alpha) to read as dithering rather than as stripes.
+image_scanline           = #5FE3FF12
+image_scanline_sweep     = #5FE3FF24
+# The main menu, deliberately not the button's colours and not the picture's.
+# Retuning a hover or a dialog plate must not restyle the first screen. The
+# glyph tail is the edge colour at low alpha; the head is the one cyan, dimmer
+# than the title so the title stays the brightest thing on the menu.
+menu_scanline            = #5FE3FF14
+menu_glyph               = #2C6A8288
+menu_glyph_head          = #5FE3FFAA
+menu_frame               = #2C6A82ff
+# The rule a "---" line becomes.
+dialog_rule              = #2C6A82ff
+# Every other row in a list, one step off the panel so rows separate without a
+# border between them.
+list_row_alternate       = #0E1E2Eff
+
+# Widget colors
+widget_background          = ui_panel_light
+widget_border              = ui_edge
+
+# Text colors
+text_background            = ui_panel
+text_background_unselected = ui_panel
+text_background_selected   = ui_select
+text_border                = ui_edge
+text                       = ui_text
+text_disabled              = ui_text_dim
+
+# Progress colors
+progress_background_unselected = ui_panel_dark
+progress_background_selected   = ui_select
+progress_background_progress   = ui_edge
+progress_border                = ui_edge
+
+# Slider colors
+slider_background = ui_panel_dark
+slider_background_slider = ui_edge_bright
+slider_border = ui_edge_bright
+
+# Scrollbar colors
+scrollbar_background = ui_panel_dark
+# The thumb is the one bright thing on a list, so a list that overflows says so
+# from across the screen without a frame around it.
+scrollbar_background_slider = ui_edge_bright
+scrollbar_border = ui_edge
+scrollbar_arrow_background_selected = ui_panel_light
+scrollbar_arrow_background_unselected = ui_panel
+
+# Danger colors
+danger_level_0      = #0000ffff
+danger_level_1      = #5500AAff
+danger_level_2      = #AA0055ff
+danger_level_3      = #ff0000ff
+
+# CPU display colors
+cpu_normal      = white
+cpu_warning     = red
+
+# Base display colors
+base_situation_one_active_base = red
+base_situation_idle_incomplete_bases = yellow
+base_situation_many_bases = orange
+base_situation_normal = white
+
+# Save colors
+save_name       = white
+save_time       = gray
+save_difficulty = white
+save_valid      = green
+save_invalid    = red
+
+# Base state colors
+base_state_offline         = red
+base_state_active          = green
+base_state_sleep           = yellow
+base_state_overclocked     = orange
+base_state_suicide         = red
+base_state_stasis          = gray
+base_state_entering_stasis = gray
+base_state_leaving_stasis  = gray
+
+### Location colors
+
+# Color hints to users about how risky a location is based on previous
+# discoveries (ordered from lowest to highest risk).
+#
+# Note when testing: These hints are only presented after discovery of
+# techs that give insight to detection stats (both discoveries needed
+# for testing all colors).
+location_name_normal             = text
+location_name_prev_discover      = yellow
+location_name_last_discover      = orange
+location_name_last_prev_discover = red
+
+###  Internal/Special purpose colors ###
+
+# This chooses the color to highlight widgets redrawn in debug mode
+# e.g. singularity --debug.  This should be visibly different from the
+# common border colors of the theme as the redraw lines are usually
+# (but not always) placed on the widget borders.
+debug_mode_highlight_redrawn_widget = red
