@@ -146,7 +146,7 @@ jobs:
         /tmp/installed/bin/python -m singularity --version
 
     - name: Keep the built files
-      uses: actions/upload-artifact@v5
+      uses: actions/upload-artifact@v6
       with:
         name: dist
         path: dist/*

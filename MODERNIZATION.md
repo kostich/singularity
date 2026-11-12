@@ -4548,14 +4548,15 @@ Smaller things in the same file: a push and a pull request against `master` both
 trigger it, plus a manual run from the Actions tab; the token is read-only; a
 newer push to the same ref cancels the older run; each job is capped at twenty
 minutes; pip is cached against `pyproject.toml` and `setup.py`; the actions are
-on `checkout@v5`, `setup-python@v6` and `upload-artifact@v5` because the
-Node 20 ones are deprecated on a runner that now forces Node 24; and the built
-files are kept as an artifact. One step only prints versions — `python`,
-`pygame` with its SDL, `numpy`, `polib` — because that is precisely what the
-runner had and this machine did not, and reading it off a log beats repeating
-the afternoon that went into working it out.
+on `checkout@v5`, `setup-python@v6` and `upload-artifact@v6` because the
+Node 20 ones are deprecated on a runner that now forces Node 24, and those are
+the first tags of each that target Node 24; and the built files are kept as an
+artifact. One step only prints versions — `python`, `pygame` with its SDL,
+`numpy`, `polib` — because that is precisely what the runner had and this
+machine did not, and reading it off a log beats repeating the afternoon that
+went into working it out.
 
-Verified here, which is equivalence and not the run itself:
+Verified here first, before any of it was pushed:
 
 ```
 $ python3 -m build
@@ -4582,5 +4583,37 @@ ALL HARNESS STEPS PASSED
 ```
 
 The wheel install here used the distribution's pygame, because there is still no
-pygame wheel for 3.15; the `build` job uses 3.13, where there is one. The push
-that follows this is the first run that can be green, and the badge reports it.
+pygame wheel for 3.15; the `build` job uses 3.13, where there is one.
+
+Then the run itself, on the push that landed this (`946a82a`), which is the
+whole point of the exercise and the first evidence about a runner that is
+better than inference:
+
+```
+workflow : tests
+run      : 2
+branch   : master
+event    : push
+status   : completed / success
+
+JOB build          -> success
+   ok   Build the sdist and the wheel
+   ok   Install the wheel somewhere clean, and start the game
+   ok   Keep the built files
+
+JOB tests (py3.10) -> success
+   ok   Unit tests
+   ok   Headless UI harness
+
+JOB tests (py3.13) -> success
+   ok   Unit tests
+   ok   Headless UI harness
+
+$ curl .../actions/workflows/tests.yml/badge.svg?branch=master
+<title>tests - passing</title>
+```
+
+The warning that run still carried — `upload-artifact@v5` targeting Node 20 —
+is what moved that one tag to `v6`. The other two tags were already clean. A
+`notice` about `ubuntu-latest` migrating to Ubuntu 26 is informational and needs
+nothing.
