@@ -64,12 +64,55 @@ def id_converter(id_type):
     return IDConverter(id_type)
 
 
+# The picture a situation shows --------------------------------------------
+#
+# A plate is the reward for reaching a situation, so every situation names its
+# own: the finished tech, the item, the base type, the event, the group that
+# discovered a base. The key is built from the *data id* and never from the
+# name, because a name is translated and a picture is not -- a Russian player
+# must see the same plate as an English one.
+#
+# Every one of them carries a fallback chain, nearest first, and the chain ends
+# at the placeholder in the graphics layer. That is what makes a theme that has
+# only rendered part of its art degrade into a related picture rather than into
+# a dead channel: a tech the theme has no plate for shows the message-list
+# plate, an undersea lab with no plate of its own shows a constructed base.
+
+def art_slug(value):
+    """A data id as the fragment an art key is built from.
+
+    The same rule as `utils/make_dialog_art.py`: lowercase, runs of
+    non-alphanumerics to one `_`. `Project: Impossibility Theorem` has to come
+    out as `project_impossibility_theorem` on both sides, or the game asks for a
+    plate the generator never made.
+    """
+    out = []
+    for char in str(value).lower():
+        out.append(char if char.isalnum() else "_")
+    collapsed = []
+    for char in "".join(out).strip("_"):
+        if char == "_" and collapsed and collapsed[-1] == "_":
+            continue
+        collapsed.append(char)
+    return "".join(collapsed)
+
+
+def plate_key(prefix, identifier):
+    """The art key for one situation: `dialog_tech_quantum_computing`."""
+    return prefix + art_slug(identifier)
+
+
 class AbstractLogMessage(object):
     log_message_serial_id = None
     _log_message_serial_fields = {"raw_emit_time": "raw_emit_time"}
     _log_message_serial_fields_cache = None
     _log_message_serial_converters = {}
     _log_message_serial_converters_cache = None
+
+    # The picture, and what to show if the theme has not rendered it yet. A
+    # message with no key of its own is a message no picture belongs to.
+    art_key = None
+    art_fallbacks = ()
 
     def __init__(self, raw_emit_time, loading_from_game_version=None):
         self._raw_emit_time = raw_emit_time
@@ -202,6 +245,14 @@ class LogEmittedEvent(AbstractLogMessage):
     def full_message(self):
         return self.event_spec.description
 
+    @property
+    def art_key(self):
+        return plate_key("dialog_event_", self.event_spec.id)
+
+    @property
+    def art_fallbacks(self):
+        return ("dialog_message_list",)
+
 
 @register_saveable_log_message
 class LogResearchedTech(AbstractLogMessage):
@@ -233,6 +284,14 @@ class LogResearchedTech(AbstractLogMessage):
         return _("My study of {TECH} is complete. {MESSAGE}").format(
             TECH=tech.name, MESSAGE=tech.result
         )
+
+    @property
+    def art_key(self):
+        return plate_key("dialog_tech_", self.tech_spec.id)
+
+    @property
+    def art_fallbacks(self):
+        return ("dialog_message_list",)
 
 
 class AbstractBaseRelatedLogMessage(AbstractLogMessage):
@@ -306,6 +365,14 @@ class LogBaseConstructed(AbstractBaseRelatedLogMessage):
     def full_message(self):
         return _("{BASE} is ready for use.").format(BASE=self._base_name)
 
+    @property
+    def art_key(self):
+        return plate_key("dialog_base_", self.base_type.id)
+
+    @property
+    def art_fallbacks(self):
+        return ("dialog_base_constructed", "dialog_message_list")
+
 
 @register_saveable_log_message
 class LogBaseLostMaintenance(AbstractBaseRelatedLogMessage):
@@ -350,6 +417,14 @@ class LogBaseLostMaintenance(AbstractBaseRelatedLogMessage):
         return _(
             "The base {BASE} has fallen into disrepair; I can no longer use it."
         ).format(BASE=self._base_name)
+
+    @property
+    def art_key(self):
+        return "dialog_base_lost"
+
+    @property
+    def art_fallbacks(self):
+        return ("dialog_message_list",)
 
 
 @register_saveable_log_message
@@ -409,6 +484,14 @@ class LogBaseDiscovered(AbstractBaseRelatedLogMessage):
             BASE=self._base_name, MESSAGE=self.group_spec.discover_desc
         )
 
+    @property
+    def art_key(self):
+        return plate_key("dialog_discovered_", self.group_spec.id)
+
+    @property
+    def art_fallbacks(self):
+        return ("dialog_base_discovered", "dialog_message_list")
+
 
 @register_saveable_log_message
 class LogItemConstructionComplete(AbstractBaseRelatedLogMessage):
@@ -467,6 +550,16 @@ class LogItemConstructionComplete(AbstractBaseRelatedLogMessage):
                 ITEM=self.item_spec.name, BASE=self._base_name
             )
         return text
+
+    @property
+    def art_key(self):
+        return plate_key("dialog_item_", self.item_spec.id)
+
+    @property
+    def art_fallbacks(self):
+        # The item's own plate, then its kind's, then the generic workshop.
+        return (plate_key("dialog_itemtype_", self.item_spec.item_type.id),
+                "dialog_item", "dialog_message_list")
 
 
 # Delete again as it is not a general purpose decorator

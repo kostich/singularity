@@ -18,8 +18,6 @@
 
 # This file contains the tech class.
 
-from __future__ import absolute_import
-
 from singularity.code import buyable, effect, g
 from singularity.code.stats import stat
 from singularity.code.spec import SpecDataField, spec_field_effect

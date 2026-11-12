@@ -1,0 +1,6 @@
+[build-system]
+# Metadata lives in setup.py so that singularity.__version__ stays the single
+# source of truth; the supported Python range is declared there as
+# python_requires.  setuptools>=77 is needed for the SPDX license expression.
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"

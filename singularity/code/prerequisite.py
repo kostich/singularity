@@ -18,8 +18,6 @@
 
 # This file contains the Prequisite class.
 
-from __future__ import absolute_import
-
 from singularity.code import g
 
 

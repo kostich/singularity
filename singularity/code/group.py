@@ -19,8 +19,6 @@
 
 # This file contains the group class, a group of person which can suspect the singularity.
 
-from __future__ import absolute_import
-
 from singularity.code import g
 from singularity.code.spec import GenericSpec, SpecDataField
 

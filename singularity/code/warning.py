@@ -21,6 +21,7 @@
 from singularity.code import g
 
 from singularity.code.buyable import cpu, labor
+from singularity.code.logmessage import plate_key
 
 warnings = {}
 
@@ -61,6 +62,17 @@ class Warning(object):
     def full_message_color(self):
         return "text"
 
+
+    # Each warning is its own situation -- a full processor pool is not the same
+    # event as a maintenance shortfall -- so each names its own plate, and falls
+    # back to the generic beacon if the theme has not rendered it.
+    @property
+    def art_key(self):
+        return plate_key("dialog_warning_", self.id)
+
+    @property
+    def art_fallbacks(self):
+        return ("dialog_warning", "dialog_message_list")
 
 def refresh_warnings():
     curr_warnings = []

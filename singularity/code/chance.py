@@ -18,8 +18,6 @@
 
 # This file contains all chance functions.
 
-from __future__ import absolute_import
-
 from singularity.code import g
 import random
 import numpy as np

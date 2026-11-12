@@ -18,8 +18,6 @@
 
 # This file contains the Location class.
 
-from __future__ import absolute_import
-
 from singularity.code import g, prerequisite, base
 from singularity.code.spec import (
     GenericSpec,

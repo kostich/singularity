@@ -18,8 +18,6 @@
 
 # This file contains the event class.
 
-from __future__ import absolute_import
-
 from singularity.code import g, effect
 from singularity.code.spec import GenericSpec, SpecDataField, spec_field_effect
 

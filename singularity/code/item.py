@@ -18,8 +18,6 @@
 
 # This file contains the item class.
 
-from __future__ import absolute_import
-
 from singularity.code import g, buyable
 from singularity.code.stats import stat
 from singularity.code.spec import (

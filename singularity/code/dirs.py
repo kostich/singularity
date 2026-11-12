@@ -21,8 +21,6 @@
 # Assumes that all platforms that have HOME and XDG_CONFIG_HOME defined have them
 # defined properly.
 
-from __future__ import absolute_import
-
 import os
 import sys
 import errno

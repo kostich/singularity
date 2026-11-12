@@ -18,8 +18,6 @@
 
 # This file contains the effect class.
 
-from __future__ import absolute_import
-
 from singularity.code import g, mixer
 
 

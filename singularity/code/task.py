@@ -18,8 +18,6 @@
 
 # This file contains the Task class.
 
-from __future__ import absolute_import
-
 from singularity.code import g, prerequisite, tech
 
 
