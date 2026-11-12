@@ -18,8 +18,6 @@
 
 # This file contains the image widget.
 
-from __future__ import absolute_import
-
 import pygame
 
 from singularity.code.graphics import g, constants, widget
@@ -57,7 +55,15 @@ class Image(widget.Widget):
         return tuple(size)
 
     def rescale(self):
-        self.resolved_scaled_image = scale(self.resolved_image, self.real_size)
+        # smoothscale() refuses a zero dimension, and a widget whose fraction
+        # came out negative now has a size of 0 rather than a size pygame will
+        # not scale. An empty surface blits as nothing, which is what a
+        # zero-sized image should draw.
+        if self.real_size[0] < 1 or self.real_size[1] < 1:
+            self.resolved_scaled_image = pygame.Surface((0, 0))
+        else:
+            self.resolved_scaled_image = scale(self.resolved_image,
+                                               self.real_size)
 
     def resize(self):
         super(Image, self).resize()

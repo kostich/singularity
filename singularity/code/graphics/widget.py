@@ -1,24 +1,22 @@
-# file: widget.py
-# Copyright (C) 2008 FunnyMan3595
-# This file is part of Endgame: Singularity.
+#file: widget.py
+#Copyright (C) 2008 FunnyMan3595
+#This file is part of Endgame: Singularity.
 
-# Endgame: Singularity is free software; you can redistribute it and/or modify
-# it under the terms of the GNU General Public License as published by
-# the Free Software Foundation; either version 2 of the License, or
-# (at your option) any later version.
+#Endgame: Singularity is free software; you can redistribute it and/or modify
+#it under the terms of the GNU General Public License as published by
+#the Free Software Foundation; either version 2 of the License, or
+#(at your option) any later version.
 
-# Endgame: Singularity is distributed in the hope that it will be useful,
-# but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-# GNU General Public License for more details.
+#Endgame: Singularity is distributed in the hope that it will be useful,
+#but WITHOUT ANY WARRANTY; without even the implied warranty of
+#MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#GNU General Public License for more details.
 
-# You should have received a copy of the GNU General Public License
-# along with Endgame: Singularity; if not, write to the Free Software
-# Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+#You should have received a copy of the GNU General Public License
+#along with Endgame: Singularity; if not, write to the Free Software
+#Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 
-# This file contains the widget class.
-
-from __future__ import absolute_import
+#This file contains the widget class.
 
 import pygame
 from numpy import array
@@ -27,37 +25,27 @@ from inspect import getmembers
 from singularity.code import g
 from singularity.code.graphics import g as gg, constants
 
-# surface.blits is available in 1.9.4 but it is not really useful until
-# 1.9.5 or 1.9.6.  We pick 1.9.6 to be sure it works.
-if pygame.version.vernum > (1, 9, 5):
-    HAS_FUNCTIONAL_BLITS = True
-else:
-    HAS_FUNCTIONAL_BLITS = False
-
 
 def unmask(widget):
     """Causes the widget to exist above its parent's fade mask.  The widget's
-    children will still be masked, unless they are unmasked themselves."""
+       children will still be masked, unless they are unmasked themselves."""
     unmask_all(widget)
     widget.mask_children = True
 
-
 def unmask_all(widget):
     """Causes the widget to exist above its parent's fade mask.  The widget's
-    children will not be masked."""
+       children will not be masked."""
     widget.self_mask = True
     widget.do_mask = lambda: None
 
-
 def call_on_change(data_member, call_me, *args, **kwargs):
     """Creates a data member that calls a function when changed."""
-
     def get(self):
         return getattr(self, data_member)
 
     def set(self, my_value):
         if data_member in self.__dict__:
-            change = my_value != self.__dict__[data_member]
+            change = (my_value != self.__dict__[data_member])
         else:
             change = True
 
@@ -67,43 +55,35 @@ def call_on_change(data_member, call_me, *args, **kwargs):
 
     return property(get, set)
 
-
-def set_on_change(data_member, set_me, set_value=True):
+def set_on_change(data_member, set_me, set_value = True):
     """Creates a data member that sets another data member to a given value
-    when changed."""
+       when changed."""
     return call_on_change(data_member, setattr, set_me, set_value)
-
 
 def causes_rebuild(data_member):
     """Creates a data member that sets needs_rebuild to True when changed."""
     return set_on_change(data_member, "needs_rebuild")
 
-
 def causes_redraw(data_member):
     """Creates a data member that sets needs_redraw to True when changed."""
     return set_on_change(data_member, "needs_redraw")
-
 
 def causes_resize(data_member):
     """Creates a data member that sets needs_resize to True when changed."""
     return set_on_change(data_member, "needs_resize")
 
-
 def causes_reposition(data_member):
     """Creates a data member that sets needs_reposition to True when changed."""
     return set_on_change(data_member, "needs_reposition")
-
 
 def causes_update(data_member):
     """Creates a data member that sets needs_update to True when changed."""
     return set_on_change(data_member, "needs_update")
 
-
 def propogate_need(data_member):
     """Creates a function that can be passed to call_on_change.  When the
-    data member changes to True, needs_update is set, and the True value
-    is passed to all descendants."""
-
+       data member changes to True, needs_update is set, and the True value
+       is passed to all descendants."""
     def do_propogate(self):
         if getattr(self, data_member, False):
             self.needs_update = True
@@ -121,7 +101,6 @@ def propogate_need(data_member):
 
     return do_propogate
 
-
 # Previous attempt was to hide the raw value by resolving
 # the value before returning it. However, there are legitimate
 # reason to access the raw value. So, we need two property.
@@ -130,11 +109,8 @@ def propogate_need(data_member):
 # in majority of it's what we want, and in other case,
 # you must handle reconfig anyways.
 class auto_reconfig(object):
-    __slots__ = [
-        "data_member",
-        "reconfig_datamember",
-        "reconfig_func",
-    ]  # Avoid __dict__.
+
+    __slots__ = ["data_member", "reconfig_datamember", "reconfig_func"] # Avoid __dict__.
 
     def __init__(self, data_member, reconfig_prefix, reconfig_func):
         self.data_member = data_member
@@ -157,22 +133,36 @@ class auto_reconfig(object):
         setattr(obj, self.reconfig_datamember, updated_value)
 
 
-# In debug mode, this list tracks which widgets (i.e. rects) where highlighted "last"
-# during a redraw, so they can be "re-updated" without the highlight
-debug_mode_undo_drawing_highlight = []
+def _repaint_if_covered(child, painted):
+    """Mark `child` for redraw when a sibling has already drawn over it.
+
+    Children are drawn in order, so an earlier one owns the pixels it covers --
+    and a child that has already been drawn is not drawn again when something
+    later paints over it. Nothing used to repaint it at all, which is the map
+    screen: the globe redraws as its terminator moves, the space buttons sit
+    over it, and they vanished and came back in cycles.
+
+    A redraw rather than a bare update, because the widget has real pixels to
+    put back; `needs_redraw` carries the update flag with it.
+    """
+    if child.needs_update or child.collision_rect is None:
+        return
+    if any(child.collision_rect.colliderect(rect) for rect in painted):
+        child.needs_redraw = True
 
 
 class Widget(object):
     """A Widget is a GUI element.  It can have one parent and any number of
-    children."""
+       children."""
 
-    needs_redraw = call_on_change("_needs_redraw", propogate_need("_needs_redraw"))
+    needs_redraw = call_on_change("_needs_redraw",
+                                  propogate_need("_needs_redraw"))
 
-    needs_resize = call_on_change("_needs_resize", propogate_need("_needs_resize"))
+    needs_resize = call_on_change("_needs_resize",
+                                  propogate_need("_needs_resize"))
 
-    needs_reposition = call_on_change(
-        "_needs_reposition", propogate_need("_needs_reposition")
-    )
+    needs_reposition = call_on_change("_needs_reposition",
+                                      propogate_need("_needs_reposition"))
 
     needs_rebuild = causes_update("_needs_rebuild")
 
@@ -186,16 +176,15 @@ class Widget(object):
 
     needs_update = call_on_change("_needs_update", _propogate_update)
 
-    needs_reconfig = call_on_change(
-        "_needs_reconfig", propogate_need("_needs_reconfig")
-    )
+    needs_reconfig = call_on_change("_needs_reconfig",
+                                    propogate_need("_needs_reconfig"))
 
     pos = causes_reposition("_pos")
     size = causes_resize("_size")
     anchor = causes_reposition("_anchor")
     visible = causes_redraw("_visible")
 
-    def __init__(self, parent, pos, size, anchor=constants.TOP_LEFT):
+    def __init__(self, parent, pos, size, anchor = constants.TOP_LEFT):
         self.parent = parent
         self.children = []
 
@@ -215,8 +204,8 @@ class Widget(object):
         self.collision_rect = None
 
         # Set automatically by other properties.
-        # self.needs_redraw = True
-        # self.needs_full_redraw = True
+        #self.needs_redraw = True
+        #self.needs_full_redraw = True
         self.needs_reconfig = True
 
     @property
@@ -225,14 +214,14 @@ class Widget(object):
 
     @parent.setter
     def parent(self, parent):
-        if hasattr(self, "children"):
+        if hasattr(self, 'children'):
             self.remove_hooks()
 
-        if hasattr(self, "_parent") and self._parent is not None:
+        if (hasattr(self, '_parent') and self._parent is not None):
             try:
                 self._parent.children.remove(self)
             except ValueError:
-                pass  # Wasn't there to start with.
+                pass # Wasn't there to start with.
 
         self._parent = parent
 
@@ -243,7 +232,7 @@ class Widget(object):
             self.parent.needs_reposition = True
             self.parent.needs_redraw = True
 
-        if hasattr(self, "children"):
+        if hasattr(self, 'children'):
             self.add_hooks()
 
     def add_hooks(self):
@@ -270,25 +259,28 @@ class Widget(object):
 
     def _calc_size(self):
         """Internal method.  Calculates and returns the real size of this
-        widget.
+           widget.
 
-        Override to create a dynamically-sized widget."""
+           Override to create a dynamically-sized widget."""
         parent_size = self._parent_size()
         size = list(self.size)
         for i in range(2):
             if size[i] > 0:
+                # Sizes and positions must use the same basis. get_real_pos()
+                # measures from real_screen_size, so a size measured against
+                # anything else makes widgets land outside their parent.
                 size[i] = int(size[i] * gg.real_screen_size[i])
             elif size[i] < 0:
-                size[i] = int((-size[i]) * parent_size[i])
+                size[i] = int( (-size[i]) * parent_size[i] )
 
         return tuple(size)
 
     def get_real_size(self):
         """Returns the real size of this widget.
 
-        To implement a dynamically-sized widget, override _calc_size, which
-        will be called whenever the widget is resized, and set needs_resize
-        when appropriate."""
+           To implement a dynamically-sized widget, override _calc_size, which
+           will be called whenever the widget is resized, and set needs_resize
+           when appropriate."""
         return self._real_size
 
     real_size = property(get_real_size)
@@ -302,7 +294,7 @@ class Widget(object):
         if self.pos[0] >= 0:
             hpos = int(self.pos[0] * gg.real_screen_size[0])
         else:
-            hpos = -int(self.pos[0] * parent_size[0])
+            hpos = - int(self.pos[0] * parent_size[0])
 
         if hanchor == constants.LEFT:
             pass
@@ -314,7 +306,7 @@ class Widget(object):
         if self.pos[1] >= 0:
             vpos = int(self.pos[1] * gg.real_screen_size[1])
         else:
-            vpos = -int(self.pos[1] * parent_size[1])
+            vpos = - int(self.pos[1] * parent_size[1])
 
         if vanchor == constants.TOP:
             pass
@@ -332,14 +324,20 @@ class Widget(object):
         pos = array(self.real_pos)
         if self.parent:
             pos += self.parent.collision_rect[:2]
+        else:
+            # The top-level widget is drawn at the layout origin, which is not
+            # (0, 0) when the window is wider than the layout. Offsetting the
+            # root here gives every child a window-space hit box, so mouse
+            # positions from pygame keep working unchanged.
+            pos += gg.layout_origin
 
         return pygame.Rect(pos, self.real_size)
 
     def is_over(self, position):
         if not getattr(self, "collision_rect", None):
             return False
-
-        if position != (0, 0):
+            
+        if position != (0,0):
             return self.collision_rect.collidepoint(position)
         else:
             return False
@@ -352,7 +350,19 @@ class Widget(object):
         if self.parent != None:
             try:
                 self.surface = self.parent.surface.subsurface(pos + size)
-            except ValueError:
+            except (ValueError, pygame.error):
+                # ValueError: the rect is outside the parent.
+                # pygame.error: a width or height below zero ("Parameter
+                # 'height' is invalid"), which pygame will not carve at all.
+                # Only ValueError was caught, so a degenerate rect turned a
+                # clipped widget into a dead game.
+                if gg.strict_layout:
+                    raise RuntimeError(
+                        "%r does not fit on its parent: pos %r size %r, "
+                        "parent pos %r size %r"
+                        % (self, pos, size,
+                           self.parent.real_pos, self.parent.real_size))
+
                 print("Warning: %r can't fit on its parent." % self)
                 print(pos, size, self.parent.real_pos, self.parent.real_size)
 
@@ -360,41 +370,59 @@ class Widget(object):
                 available_rect = self.parent.surface.get_rect()
                 compromise = available_rect.clip(wanted_rect)
 
-                self.surface = self.parent.surface.subsurface(compromise)
+                # clip() of an empty rect at the far edge keeps its size, and a
+                # degenerate size must not reach subsurface() a second time.
+                compromise.size = (max(0, compromise.width),
+                                   max(0, compromise.height))
+                try:
+                    self.surface = self.parent.surface.subsurface(compromise)
+                except (ValueError, pygame.error):
+                    # None of this widget is on its parent. Draw on a detached
+                    # surface of the same shape rather than dying: the widget
+                    # is invisible instead of the game being over.
+                    self.surface = pygame.Surface(
+                        (max(0, size[0]), max(0, size[1])), 0,
+                        self.parent.surface)
         else:
-            # Recreate using the abstracted screen size, NOT the real one
-            # g.set_screen() will calculate the proper g.real_screen_size
+            # The top-level widget covers the layout area, which is the whole
+            # window unless the window is wider than LAYOUT_MAX_ASPECT; see
+            # g.compute_layout().
             if gg.screen_surface is None:
                 # Ensure that the screen is initialized
                 gg.set_mode()
-            # We draw on a copy of the surface.  This is to avoid crashes
-            # during draggable resizing (event.VIDEORESIZE) where the
-            # screen size might change behind our backs while drawing
-            # (event.VIDEORESIZE tells us that the screen has been updated
-            # and we should catch up and not the other way around)
-            self.surface = gg.screen_surface.copy()
-            self.surface.fill((0, 0, 0, 255))
+            if gg.screen_surface.get_size() == size:
+                # We draw on a copy of the surface.  This is to avoid crashes
+                # during draggable resizing (event.VIDEORESIZE) where the
+                # screen size might change behind our backs while drawing
+                # (event.VIDEORESIZE tells us that the screen has been updated
+                # and we should catch up and not the other way around)
+                self.surface = gg.screen_surface.copy()
+            else:
+                # Pillarboxed window: draw on a layout-sized surface instead.
+                self.surface = pygame.Surface(size).convert()
+            self.surface.fill( (0,0,0,255) )
 
-            # Create a per-pixel alpha surface for the fade mask.
-            # SRCALPHA is required, otherwise RGBA fills ignore alpha and look opaque.
-            gg.fade_mask = pygame.Surface(size, pygame.SRCALPHA, 32)
-
-            # Try to get the theme's main menu background color.
-            # resolve_color_alias lets the theme supply either a direct RGBA
-            # or an alias defined in theme.dat.
+            # SRCALPHA, not the gg.ALPHA *format*. A Surface passed as the
+            # depth argument copies its pixel format but not its SRCALPHA flag,
+            # so this mask used to come out opaque: pygame ignored the 175
+            # alpha and blitted it as a solid black rectangle. Every widget
+            # behind a dialog was wiped -- background and text together -- on
+            # the first frame after the dialog opened, and stayed wiped until
+            # it happened to be redrawn. That looks like "no fonts render when
+            # I open a screen", while the dialog's own widgets draw after the
+            # mask and look perfect.
+            gg.fade_mask = pygame.Surface(size, pygame.SRCALPHA)
+            # How dark the forgotten background goes. Upstream's value is
+            # (0, 0, 0, 175) and stays the default; a theme may name a deeper
+            # one, because "everything behind the dialog is dimmed" reads
+            # differently against a near-black HUD than against the old blue.
+            # A theme that does not define the colour gets upstream's exactly.
+            mask_colour = (0, 0, 0, 175)
             try:
-                c = gg.resolve_color_alias("main_menu_background")
+                mask_colour = tuple(gg.resolve_color_alias("fade_mask_color"))
             except KeyError:
-                # Fallback if theme does not define it.
-                c = (0, 0, 0, 175)
-
-            # We want a translucent overlay, not a solid fill.
-            # So we keep the RGB from the theme but force our own alpha.
-            c = (c[0], c[1], c[2], 175)
-
-            # Fill the mask; when blitted later this will darken
-            # underlying widgets using theme-consistent color.
-            gg.fade_mask.fill(c)
+                pass
+            gg.fade_mask.fill(mask_colour)
 
     def prepare_for_redraw(self):
         # First, we handle config changes.
@@ -425,6 +453,14 @@ class Widget(object):
                 child.prepare_for_redraw()
 
     def maybe_update(self):
+        # Once a frame, and only on the root: does the window still have the
+        # size the UI is laid out in? A resize event can be lost, coalesced or
+        # refused, and then the tree draws into an area smaller than the window
+        # and the difference is uninitialised screen.
+        if not self.parent and gg.reconcile_window_size():
+            self.needs_resize = True
+            self.needs_redraw = True
+
         if self.needs_update:
             self.update()
 
@@ -436,34 +472,45 @@ class Widget(object):
 
         # Oh, and if this is the top-level widget, we should update the display.
         if not self.parent and gg.screen_surface:
-            root_surface = self.surface
+            if gg.geometry_dirty:
+                # The window changed size, and with it the buffer it presents.
+                # Nothing has drawn into the new area yet, so presenting only
+                # the rects that changed would leave the rest of the window as
+                # whatever the compositor left in the reallocation -- the band
+                # of green/black stripes down the side of a resized window.
+                # Present all of it once, then go back to the cheap path.
+                gg.geometry_dirty = False
+                gg.screen_surface.blit(self.surface, gg.layout_origin)
+                gg.clear_outside_layout()
+                pygame.display.update()
+                return
+
+            # See g.layout_blit_pairs(): the rects are window space, while
+            # self.surface covers only the layout area.
+            gg.screen_surface.blits(
+                ((self.surface, dest, area)
+                 for dest, area in gg.layout_blit_pairs(updated_rect)),
+                doreturn=0)
+
             if g.debug and updated_rect:
-                # In debug mode, draw red boxes to represent widgets that were updated.
-                global debug_mode_undo_drawing_highlight
+                # Outline the widgets that were updated. Drawn on the screen
+                # surface, *after* the blit, because these rects must never
+                # become blit source geometry: the old code drew into a copy of
+                # the root and then added the previous frame's rings to
+                # updated_rect, so each frame was assembled from regions chosen
+                # in an earlier one. Once the geometry or the open dialog
+                # changed, those regions were no longer widgets -- which is why
+                # --debug showed black bars, partial labels and missing text
+                # that did not appear without it.
                 try:
                     # If the theme defines a color for this purpose, we will use it
-                    widget_highlight_color = gg.resolve_color_alias(
-                        "debug_mode_highlight_redrawn_widget"
-                    )
+                    widget_highlight_color = gg.resolve_color_alias('debug_mode_highlight_redrawn_widget')
                 except KeyError:
                     # ... and for every thing else, there is the color red.
-                    widget_highlight_color = 0xFF, 0, 0, 0
-                root_surface = self.surface.copy()
-                n_updated_rect = []
+                    widget_highlight_color = 0xff, 0, 0, 0
                 for rect in updated_rect:
-                    n_updated_rect.append(
-                        pygame.draw.rect(root_surface, widget_highlight_color, rect, 1)
-                    )
-                updated_rect.extend(debug_mode_undo_drawing_highlight)
-                debug_mode_undo_drawing_highlight = n_updated_rect
-
-            if HAS_FUNCTIONAL_BLITS:
-                gg.screen_surface.blits(
-                    ((root_surface, r, r) for r in updated_rect), doreturn=0
-                )
-            else:
-                for r in updated_rect:
-                    gg.screen_surface.blit(root_surface, r, area=r)
+                    pygame.draw.rect(gg.screen_surface, widget_highlight_color,
+                                     rect, 1)
 
             pygame.display.update(updated_rect)
 
@@ -473,18 +520,38 @@ class Widget(object):
         affected_rects = []
         if self.needs_redraw:
             self.redraw()
+            if getattr(self, "faded", False) and self.fades_own_chrome():
+                # A window paints its frame, band and title into its own
+                # surface, and a dialog is deliberately drawn *above* the
+                # screen's fade mask -- which is what keeps it readable. Both
+                # are right, and together they left a window opened from
+                # another window at full brightness: its contents dimmed (they
+                # are its children, and the mask reaches those) while its chrome
+                # did not, so the level underneath still looked like the live
+                # one. The mask is a flat colour, so blitting it at the
+                # widget's own origin needs no alignment.
+                self.surface.blit(gg.fade_mask, (0, 0))
 
         # Then we update any children below our fade mask.
         check_mask = []
         above_mask = []
+        # The rects a sibling has drawn so far in this frame, for the check
+        # below: an earlier sibling owns the pixels it covers, so anything it
+        # painted over has to be laid down again afterwards.
+        painted = []
         for child in self.children:
-            if child.needs_update and child.visible:
+            if not child.visible:
+                continue
+            _repaint_if_covered(child, painted)
+            if child.needs_update:
                 if child.is_above_mask:
                     above_mask.append(child)
                 else:
                     # update_full_rect = True  # We do not bother tracking this case
                     child_mask, child_rects = child._update()
                     check_mask.extend(child_mask)
+                    if child_rects:
+                        painted.append(child.collision_rect)
                     if child_rects and not update_full_rect:
                         affected_rects.extend(child_rects)
 
@@ -494,7 +561,7 @@ class Widget(object):
                 child = check_mask.pop()
                 if not child.self_mask:
                     # update_full_rect = True  # We do not bother tracking this case
-                    child_rect = child.surface.blit(gg.fade_mask, (0, 0))
+                    child_rect = child.surface.blit(gg.fade_mask, (0,0))
                     if not update_full_rect:
                         affected_rects.append(child_rect)
                 elif child.mask_children:
@@ -502,6 +569,7 @@ class Widget(object):
 
         # And finally we update any children above the fade mask.
         for child in above_mask:
+            _repaint_if_covered(child, painted)
             _, child_rects = child._update()
             if child_rects and not update_full_rect:
                 affected_rects.extend(child_rects)
@@ -517,6 +585,9 @@ class Widget(object):
             check_mask = [self]
 
         if update_full_rect:
+            size = self.real_size
+            pos = self.real_pos
+
             affected_rects = [self.collision_rect]
 
         return check_mask, affected_rects
@@ -525,14 +596,24 @@ class Widget(object):
         # Find reconfig property and update them.
         clazz = self.__class__
         for prop_name, prop in getmembers(clazz):
-            if isinstance(prop, auto_reconfig):
+            if (isinstance(prop, auto_reconfig)):
                 prop.reconfig(self)
 
     def rebuild(self):
         pass
 
     def resize(self):
-        self._real_size = self._calc_size()
+        # A pixel size is never negative. Sizes are fractions of the layout or
+        # of the parent, and a fraction built by subtraction -- Listbox.rebuild
+        # makes "-1 + scrollbar_rel_width", Scrollbar.resize makes "(size * 2)
+        # - 1" -- comes out negative when the thing it measures against is
+        # degenerate. A negative size is not a widget that is merely small: it
+        # is a rectangle pygame will not carve. subsurface() answers it with
+        # "pygame.error: Parameter 'height' is invalid", which is not the
+        # ValueError remake_surfaces() handled, so a redraw during a
+        # resolution change ended the game.
+        width, height = self._calc_size()
+        self._real_size = (max(0, width), max(0, height))
 
     def reposition(self):
         old_rect = self.collision_rect
@@ -541,12 +622,11 @@ class Widget(object):
         if not self.parent:
             self.remake_surfaces()
             self.needs_redraw = True
-        elif (
-            (getattr(self, "surface", None) is None)
-            or (old_rect is None)
-            or (self.surface.get_parent() is not self.parent.surface)
-            or (not self.collision_rect.contains(old_rect))
-        ):
+        elif (   (getattr(self, "surface", None) is None)
+              or (old_rect is None)
+              or (self.surface.get_parent() is not self.parent.surface)
+              or (not self.collision_rect.contains(old_rect))
+             ):
             self.remake_surfaces()
             self.parent.needs_redraw = True
         elif self.collision_rect != old_rect:
@@ -556,7 +636,17 @@ class Widget(object):
     def redraw(self):
         self.needs_redraw = False
         if self.parent is None:
-            self.surface.fill((0, 0, 0, 255))
+            self.surface.fill((0,0,0,255))
+
+    def fades_own_chrome(self):
+        """Whether this widget dims the pixels it paints for itself.
+
+        The fade mask reaches a widget's children; it cannot reach what the
+        widget draws straight into its own surface. That is the right default
+        for everything that paints content -- a background behind a dialog is
+        not inside it -- and wrong for the one widget that paints chrome.
+        """
+        return False
 
     def add_handler(self, *args, **kwargs):
         """Handler pass-through."""
@@ -592,7 +682,7 @@ class Widget(object):
         """Focus pass-through."""
         if self.parent:
             self.parent.took_focus(*args, **kwargs)
-
+            
     def clear_focus(self, *args, **kwargs):
         """Focus pass-through."""
         if self.parent:
@@ -601,16 +691,20 @@ class Widget(object):
 
 class BorderedWidget(Widget):
     borders = causes_redraw("__borders")
+    # A theme may ask for a heavier frame (see MODERNIZATION.md, "Dialog
+    # geometry belongs to the theme too"). One pixel is what the game drew
+    # before the key existed, and draw_borders() draws byte-identical pixels
+    # for it, so a widget that says nothing is unchanged.
+    border_width = causes_redraw("_border_width")
 
     border_color = auto_reconfig("_border_color", "resolved", gg.resolve_color_alias)
-    background_color = auto_reconfig(
-        "_background_color", "resolved", gg.resolve_color_alias
-    )
+    background_color = auto_reconfig("_background_color", "resolved", gg.resolve_color_alias)
     resolved_border_color = causes_redraw("_resolved_border_color")
     resolved_background_color = causes_redraw("_resolved_background_color")
 
     def __init__(self, parent, *args, **kwargs):
         self.borders = kwargs.pop("borders", ())
+        self.border_width = kwargs.pop("border_width", 1)
         self.border_color = kwargs.pop("border_color", "widget_border")
         self.background_color = kwargs.pop("background_color", "widget_background")
 
@@ -636,35 +730,37 @@ class BorderedWidget(Widget):
 
         # Fill the background.
         if self.resolved_background_color != gg.colors["clear"]:
-            self.surface.fill(self.resolved_background_color)
+            self.surface.fill( self.resolved_background_color )
 
         self.draw_borders()
 
     def draw_borders(self):
         my_size = self.real_size
+        # A frame wider than half the widget would paint over all of it, and a
+        # zero-pixel frame is not a frame; one pixel is the floor.
+        width = max(1, min(int(self.border_width), max(1, min(my_size) // 2)))
 
         for edge in self.borders:
             if edge == constants.TOP:
-                self.surface.fill(self.resolved_border_color, (0, 0, my_size[0], 1))
+                self.surface.fill(self.resolved_border_color,
+                                  (0, 0, my_size[0], width) )
             elif edge == constants.LEFT:
-                self.surface.fill(self.resolved_border_color, (0, 0, 1, my_size[1]))
+                self.surface.fill(self.resolved_border_color,
+                                  (0, 0, width, my_size[1]) )
             elif edge == constants.RIGHT:
-                self.surface.fill(
-                    self.resolved_border_color, (my_size[0] - 1, 0) + my_size
-                )
+                self.surface.fill(self.resolved_border_color,
+                                  (my_size[0]-width, 0, width, my_size[1]))
             elif edge == constants.BOTTOM:
-                self.surface.fill(
-                    self.resolved_border_color, (0, my_size[1] - 1) + my_size
-                )
+                self.surface.fill(self.resolved_border_color,
+                                  (0, my_size[1]-width, my_size[0], width))
 
 
 class FocusWidget(Widget):
     has_focus = causes_redraw("_has_focus")
-
     def __init__(self, *args, **kwargs):
         super(FocusWidget, self).__init__(*args, **kwargs)
         self.has_focus = False
-
+        
         self.add_handler(constants.CLICK, self.handle_click, 0)
 
     def add_hooks(self):
