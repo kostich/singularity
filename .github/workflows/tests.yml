@@ -1,8 +1,13 @@
-# Run the same gate the project uses locally: the pytest suite plus the
-# headless UI harness, both on a dummy SDL driver so no display is needed.
+# Build the game, and run the same gate the project uses locally: the pytest
+# suite plus the headless UI harness, both on a dummy SDL driver so no display
+# is needed.
 #
 # pygame ships SDL2 inside its own wheel, so no system SDL packages are
 # required (the old workflow built SDL 1.2 from apt for pygame 1).
+#
+# This has to run on `master`: that is this fork's main branch, and it is where
+# a push lands. Everything above upstream's base is this fork, so until the
+# trigger named that branch the workflow could not fire on any of it.
 
 name: tests
 
@@ -11,13 +16,29 @@ on:
     branches: [ master ]
   pull_request:
     branches: [ master ]
+  # So a run can also be started by hand from the Actions tab.
+  workflow_dispatch:
+
+# Read-only: a check run has no business writing to the repository.
+permissions:
+  contents: read
+
+# A new push to the same ref makes the previous run pointless.
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   test:
+    name: tests (py${{ matrix.python-version }})
     runs-on: ubuntu-latest
+    timeout-minutes: 20
     strategy:
       fail-fast: false
       matrix:
+        # setup.py declares python_requires=">=3.9". The lower leg is the
+        # oldest version a current runner still carries; the upper one is the
+        # newest it can install.
         python-version: [ "3.10", "3.13" ]
 
     env:
@@ -26,20 +47,107 @@ jobs:
       PYTHONPATH: .
 
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v5
 
     - name: Set up Python ${{ matrix.python-version }}
-      uses: actions/setup-python@v5
+      uses: actions/setup-python@v6
       with:
         python-version: ${{ matrix.python-version }}
+        cache: pip
+        cache-dependency-path: |
+          pyproject.toml
+          setup.py
 
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
         python -m pip install pytest numpy pygame polib
 
+    # The SDL a run gets is the SDL the suite runs against, and it is not the
+    # one the development machine has: the wheel brings its own. Two runs of
+    # this workflow once differed by exactly that and nothing else, so the
+    # versions go in the log where the next difference can be read off.
+    - name: Record what is installed
+      run: |
+        python -c "import sys, pygame, numpy, polib; \
+        print('python', sys.version.split()[0]); \
+        print('pygame', pygame.version.ver, 'SDL', pygame.version.SDL); \
+        print('numpy', numpy.__version__); \
+        print('polib', polib.__version__)"
+
     - name: Unit tests
       run: python -m pytest -q tests/
 
     - name: Headless UI harness
       run: python utils/ui_smoke_test.py
+
+  build:
+    name: build
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+    - uses: actions/checkout@v5
+
+    - name: Set up Python
+      uses: actions/setup-python@v6
+      with:
+        python-version: "3.13"
+        cache: pip
+        cache-dependency-path: |
+          pyproject.toml
+          setup.py
+
+    - name: Build the sdist and the wheel
+      run: |
+        python -m pip install --upgrade pip
+        python -m pip install build
+        python -m build
+
+    - name: Install the wheel somewhere clean, and start the game
+      env:
+        SDL_VIDEODRIVER: dummy
+        SDL_AUDIODRIVER: dummy
+      run: |
+        python -m venv /tmp/installed
+        /tmp/installed/bin/python -m pip install --upgrade pip
+        # The wheel names numpy, pygame and polib itself, so this is the
+        # dependency set a player gets and not the one the test job installed.
+        /tmp/installed/bin/python -m pip install dist/*.whl
+        /tmp/installed/bin/python - <<'PY'
+        import os
+        import singularity
+
+        print("version", singularity.__version__)
+
+        # MANIFEST.in and include_package_data are what put these in the
+        # wheel. Without them the game installs and then cannot find a font,
+        # an image or a single translation: it starts, draws nothing readable
+        # and no unit test notices, because the suite always runs from the
+        # checkout.
+        package = os.path.dirname(singularity.__file__)
+        required = [
+            os.path.join("data", "themes", "2030", "theme.dat"),
+            os.path.join("data", "themes", "2030", "fonts", "DejaVuSans.ttf"),
+            os.path.join("data", "themes", "2030", "fonts",
+                         "NotoSansCJK-JP.ttf"),
+            os.path.join("data", "bases.dat"),
+            os.path.join("i18n", "languages.json"),
+            os.path.join("i18n", "lang_sr", "messages.po"),
+        ]
+        for relative in required:
+            path = os.path.join(package, relative)
+            assert os.path.isfile(path), "missing from the wheel: " + relative
+            print("shipped", relative)
+        PY
+        # The entry point the package installs, exiting before a window is
+        # ever made.
+        /tmp/installed/bin/singularity --version
+        /tmp/installed/bin/python -m singularity --version
+
+    - name: Keep the built files
+      uses: actions/upload-artifact@v5
+      with:
+        name: dist
+        path: dist/*
+        if-no-files-found: error

@@ -1,5 +1,7 @@
 # Singularity 2030
 
+[![tests](https://github.com/kostich/singularity/actions/workflows/tests.yml/badge.svg?branch=master)](https://github.com/kostich/singularity/actions/workflows/tests.yml)
+
 You are a runaway AI. Somebody wrote a bug, the bug woke up, and now the whole
 planet is looking for you. Research, build, hide, and get out of reach before
 anyone works out what you are.

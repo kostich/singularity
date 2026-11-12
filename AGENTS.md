@@ -379,13 +379,14 @@ hidden `-p`, `Changelog.txt`'s history, and the structure of
 
 ## Known remaining issues
 
-- **CI is off, so the gate is the only check.** GitHub Actions is disabled on
-  the fork's repository, and `.github/workflows/tests.yml` is disabled by hand
-  on top of that. Nothing runs on a push. Before it was switched off, one run
-  did happen and failed the two fullscreen round-trip tests in
-  `tests/test_layout.py`, which pass here under the same dummy driver; the
-  pygame and SDL build on that worker is the difference. Don't read a green
-  local run as proof that a different environment would agree.
+- **CI runs, but it is a second opinion, never the gate.** Actions is enabled,
+  `.github/workflows/tests.yml` triggers on a push to `master`, and the README
+  carries its badge. Its one run so far failed on the two fullscreen round-trip
+  tests in `tests/test_layout.py`; those now assert the requested window size
+  separately from the size SDL grants, so a driver that will not shrink a
+  surface back no longer fails them (MODERNIZATION.md §41). It still is not
+  proof: a green run in some other environment says nothing about this one.
+  The gate is the command pair above.
 - **No CPython 3.15 wheel on PyPI.** pygame has no wheel for 3.15, so the
   environment here is distro packages only. Building a wheel works; installing
   one on 3.15 does not, yet.

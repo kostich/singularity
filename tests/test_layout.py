@@ -48,6 +48,11 @@ def _restore_globals():
     gg.geometry_dirty = False
 
 
+def _surface_size():
+    """The size of the surface the game is actually drawing into."""
+    return tuple(gg.screen_surface.get_size())
+
+
 @pytest.mark.parametrize("size", IDENTITY_SIZES)
 def test_layout_uses_the_whole_window_at_or_below_16_9(size):
     # This is the regression guard: none of these may change behaviour.
@@ -270,8 +275,14 @@ def test_a_degenerate_report_never_reaches_the_layout():
 
 def test_fullscreen_round_trip_restores_the_chosen_window():
     # The size the SDL dummy driver really reports, so that set_mode() can
-    # honour a fullscreen request. It clamps fullscreen to this; the assertions
-    # are about our arithmetic, not about SDL's clamping.
+    # honour a fullscreen request. It clamps fullscreen to this.
+    #
+    # What this tree asks SDL for is its own arithmetic and is asserted exactly.
+    # What came back is a video driver's answer, and drivers disagree: the dummy
+    # driver on some SDL builds keeps the desktop-sized surface when fullscreen
+    # is switched off, which is exactly where this test failed on a CI runner
+    # while passing here. So the request is asserted before set_mode() replaces
+    # it, and the result is checked against the surface, not against the request.
     gg.desktop_size = (1024, 768)
     gg.set_screen_size((800, 600))
     gg.set_mode()
@@ -294,20 +305,24 @@ def test_fullscreen_round_trip_restores_the_chosen_window():
     assert not gg.restart_needed()
 
     gg.set_screen_size(fs=False)
+    # Coming back must ask for the chosen window, not the desktop size, which
+    # looks exactly like fullscreen and made the toggle unusable.
+    assert gg._requested_window_size == (800, 600)
     gg.set_mode()
     assert not gg.fullscreen
-    # Coming back must be the chosen window, not the desktop size, which looks
-    # exactly like fullscreen and made the toggle unusable.
-    assert gg.window_size == (800, 600)
+    assert gg.window_size == _surface_size()
+    assert not gg.restart_needed()
 
     # Toggling repeatedly must not drift.
     for _ in range(3):
         gg.set_screen_size(fs=True)
         gg.set_mode()
         gg.set_screen_size(fs=False)
+        assert gg._requested_window_size == (800, 600)
         gg.set_mode()
-    assert gg.window_size == (800, 600)
     assert gg.screen_size == (800, 600)
+    assert gg.windowed_size == (800, 600)
+    assert gg.window_size == _surface_size()
     assert not gg.restart_needed()
 
 
@@ -324,8 +339,12 @@ def test_resolution_changed_while_fullscreen_is_remembered():
 
     gg.set_screen_size(fs=False)
     assert gg.restart_needed()
+    # The window to come back to is the chosen resolution, not the desktop.
+    assert gg._requested_window_size == (2560, 1370)
     gg.set_mode()
-    assert gg.window_size == (2560, 1370)
+    assert not gg.fullscreen
+    assert gg.window_size == _surface_size()
+    assert not gg.restart_needed()
 
 
 def test_set_screen_size_records_a_32_9_fullscreen_request():

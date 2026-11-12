@@ -435,7 +435,12 @@ dependency, reproduced at `ee14b33`, not something this work introduced.
   do not exist on `ubuntu-latest` — and a second job pinned Python 3.8 and
   built SDL 1.2 from apt for pygame 1. Replaced by `tests.yml`: Python 3.10 and
   3.13, pip-installed `pytest numpy pygame polib`, and exactly the local gate
-  under the dummy SDL drivers.
+  under the dummy SDL drivers. It is triggered by a push to `master` (this
+  fork's main branch, and the only branch), by a pull request against it, and
+  by hand from the Actions tab; read-only token, one run per ref with the older
+  one cancelled. A second job builds the sdist and the wheel, installs the wheel
+  into an empty virtualenv and checks that the game's data and translations
+  actually shipped before starting it. See §41.
 - **`.gitignore`** ignored every dotfile and whitelisted only
   `.travis.yml`/`.codecov.yml`, which silently swallowed new files under
   `.github/`; it now whitelists `.github/`. `.codecov.yml` is deleted: the old
@@ -680,10 +685,13 @@ proved identical before and after.
 
 ## 14. Known gaps
 
-- **CI has not been run on GitHub from here.** The workflow mirrors commands
-  that pass locally and its YAML parses, but a runner may still differ (locale
-  availability, wheel availability). It is verified by equivalence, not by a
-  green badge.
+- **CI has run once, and failed; that is now fixed (§41).** One run is the only
+  evidence there is about a runner, so it belongs here rather than under
+  "done": both matrix jobs failed in `tests/test_layout.py`, and both failures
+  were the same claim, the window coming back as the desktop size after a
+  fullscreen round trip. Those two tests now assert what this tree asks SDL for
+  separately from what SDL grants, so they pass under either behaviour. The
+  first push after §41 is the proof, and the README badge reports it.
 - **No PyPI wheel for CPython 3.15 exists**, so the development and gate
   environment uses distribution packages (`python3-pygame`, `python3-numpy`,
   `python3-polib`, `python3-pytest`). Building a wheel works and was checked;
@@ -4053,18 +4061,31 @@ cannot reach `singularity/singularity`; add it as `upstream` if it is needed.
 commits are its base and everything above `99729e8` is this fork's.
 
 GitHub Actions is enabled on the repository, and `.github/workflows/tests.yml`
-runs the same two commands as the gate, on Python 3.10 and 3.13. It is a second
-opinion, not the authority: the gate on the development machine runs the same
-suite on 3.15, which is newer than anything the workflow can install today. A CI
-failure and a local pass are both possible, and the earlier run is why that is
-worth saying out loud: both matrix jobs failed on the two fullscreen round-trip
-cases in `tests/test_layout.py`, with the running window coming back as the
-desktop size instead of the chosen one, `(1024, 768)` where the test wanted
-`(800, 600)` and `(3440, 1440)` where it wanted `(2560, 1370)`. Both pass locally
-under the same `SDL_VIDEODRIVER=dummy`, and the test sets `gg.desktop_size`
-itself, so what differs is the pygame and SDL build on that worker rather than
-this tree's arithmetic. It is left as an open question rather than closed by
-loosening an assertion.
+is its only workflow. It triggers on a push to `master` and on a pull request
+against it, and it does two jobs: the same two commands as the local gate on
+Python 3.10 and 3.13, and a build that makes the sdist and the wheel, installs
+the wheel into an empty virtualenv, checks that the game's data and translations
+are really inside it, and starts the game from it. §41 has the detail.
+
+One run happened before any of that, and it failed. Both matrix jobs failed on
+the two fullscreen round-trip cases in `tests/test_layout.py`, with the running
+window coming back as the desktop size instead of the chosen one: `(1024, 768)`
+where the test wanted `(800, 600)`, and `(3440, 1440)` where it wanted
+`(2560, 1370)`. Both pass here under the same `SDL_VIDEODRIVER=dummy`, and the
+test sets `gg.desktop_size` itself. The worker's SDL is the difference: the
+`pygame` wheel from PyPI carries its own SDL, the distribution package here
+links the system one, and what that SDL does not do is shrink the surface back
+when fullscreen is switched off. That was measured rather than argued: one
+pygame version against SDL 2.28.4 (the wheel) and SDL 2.32.74 (the distribution
+package) fails the two tests on the first and passes them on the second. The
+tests now assert the request before `set_mode()` replaces it and check the
+result against the surface, so an arithmetic bug still fails and a driver that
+will not shrink no longer does.
+
+CI is a second opinion, not the authority: the gate here runs the same suite on
+3.15, which the workflow cannot install because pygame has no wheel for it. A
+red badge with a green local run means the environments differ, and the run page
+says where.
 
 ## 39. The hard fork: our name, our store page, our icon, our sandbox
 
@@ -4449,3 +4470,117 @@ $ curl -sS -o /dev/null -w '%{http_code}\n' \
       https://raw.githubusercontent.com/kostich/singularity/master/flatpak/screenshots/main-menu.png
 200
 ```
+
+## 41. The pipeline builds the game, and says so
+
+Three things were wrong here, and only the last one was about the test code.
+
+**Nothing was reporting.** The workflow existed and Actions was enabled, but
+there was no badge, so the state of the pipeline was only visible to someone
+who went and looked at the Actions tab. `README.md` now carries the badge under
+the title. It names `master` explicitly rather than inheriting the repository's
+default branch, because that is the branch the workflow triggers on and a badge
+with `?branch=` left off can quietly show nothing.
+
+**It never built anything.** The job only ran the suite, so a wheel that installs
+and then cannot find its own data was a failure nothing would catch: the suite
+always runs from the checkout, where every file is there. The new `build` job
+runs `python -m build`, installs the wheel into an empty virtualenv, and asserts
+that `data/themes/2030/fonts/NotoSansCJK-JP.ttf`, `data/bases.dat`,
+`i18n/languages.json` and `i18n/lang_sr/messages.po` are really inside it before
+starting the game through the installed entry point. That check has teeth:
+`MANIFEST.in` and `include_package_data` are the only things putting those files
+in the wheel, and a wheel without them installs cleanly and draws nothing.
+
+**The one run that did happen failed, and both failures were the tests measuring
+SDL instead of this tree.** The two numbers from that log are:
+
+```
+(1024, 768)   where the test wanted (800, 600)
+(3440, 1440)  where the test wanted (2560, 1370)
+```
+
+Both are the same claim: after a fullscreen round trip the window had the
+desktop size. `test_set_screen_size_keeps_4_3_and_16_9_identity` makes that kind
+of assertion without ever entering fullscreen, and it passed on that worker, so
+creating a windowed window is honoured there. What is not honoured is shrinking
+the surface back when fullscreen is switched off. So the two tests no longer
+conflate the two things. Before `set_mode()` they assert `_requested_window_size`,
+which is this tree's arithmetic; after it they assert that `window_size` equals
+the surface SDL actually built.
+
+That split is not a loosening, and it is checked three ways rather than argued.
+
+The runner's condition turned out to be reproducible here. `pygame` is 2.6.1 on
+both sides; what differs is the SDL it was built against. The wheel from PyPI
+carries SDL 2.28.4, the Fedora package links SDL 2.32.74. Installing the wheel
+in a 3.12 virtualenv, which is the closest thing to that worker available on
+this machine, and running the *old* tests against it gives:
+
+```
+E       assert (1024, 768) == (800, 600)
+E         At index 0 diff: 1024 != 800
+E       assert (3440, 1440) == (2560, 1370)
+E         At index 0 diff: 3440 != 2560
+FAILED tests/test_layout.py::test_fullscreen_round_trip_restores_the_chosen_window
+FAILED tests/test_layout.py::test_resolution_changed_while_fullscreen_is_remembered
+2 failed, 56 passed in 0.15s
+```
+
+Those are the two numbers from the GitHub log, character for character. With the
+rewritten tests on that same SDL 2.28.4:
+
+```
+$ SDL_VIDEODRIVER=dummy SDL_AUDIODRIVER=dummy PYTHONPATH=. \
+      /tmp/ci312/bin/python -m pytest -q tests/
+940 passed, 1 xpassed in 59.50s
+
+$ ... /tmp/ci312/bin/python utils/ui_smoke_test.py
+ALL HARNESS STEPS PASSED
+```
+
+And the guard still bites: with `compute_window_size()` broken to return the
+desktop for a windowed request, both tests fail again with the numbers above, on
+either SDL. So nothing else in the suite is sensitive to that SDL difference
+either: 940 tests, both environments.
+
+Smaller things in the same file: a push and a pull request against `master` both
+trigger it, plus a manual run from the Actions tab; the token is read-only; a
+newer push to the same ref cancels the older run; each job is capped at twenty
+minutes; pip is cached against `pyproject.toml` and `setup.py`; the actions are
+on `checkout@v5`, `setup-python@v6` and `upload-artifact@v5` because the
+Node 20 ones are deprecated on a runner that now forces Node 24; and the built
+files are kept as an artifact. One step only prints versions — `python`,
+`pygame` with its SDL, `numpy`, `polib` — because that is precisely what the
+runner had and this machine did not, and reading it off a log beats repeating
+the afternoon that went into working it out.
+
+Verified here, which is equivalence and not the run itself:
+
+```
+$ python3 -m build
+Successfully built singularity_2030-1.0.tar.gz and singularity_2030-1.0-py3-none-any.whl
+
+$ # the six data paths, read back out of the wheel
+OK   data/themes/2030/theme.dat
+OK   data/themes/2030/fonts/DejaVuSans.ttf
+OK   data/themes/2030/fonts/NotoSansCJK-JP.ttf
+OK   data/bases.dat
+OK   i18n/languages.json
+OK   i18n/lang_sr/messages.po
+
+$ /tmp/installed/bin/singularity --version
+Singularity 2030 1.00 (commit: N/A)
+
+$ SDL_VIDEODRIVER=dummy SDL_AUDIODRIVER=dummy PYTHONPATH=. \
+      python3 -m pytest -q tests/
+940 passed, 1 xpassed in 80.10s (0:01:20)
+
+$ SDL_VIDEODRIVER=dummy SDL_AUDIODRIVER=dummy PYTHONPATH=. \
+      python3 utils/ui_smoke_test.py
+ALL HARNESS STEPS PASSED
+```
+
+The wheel install here used the distribution's pygame, because there is still no
+pygame wheel for 3.15; the `build` job uses 3.13, where there is one. The push
+that follows this is the first run that can be green, and the badge reports it.
