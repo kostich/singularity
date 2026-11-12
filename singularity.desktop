@@ -1,7 +1,7 @@
 [Desktop Entry]
 Version=1.0
 Type=Application
-Name=Endgame: Singularity
+Name=Singularity 2030
 Comment=Simulation of true AI
 Comment[de]=Simulation einer echten KI
 Icon=singularity
@@ -9,3 +9,4 @@ Exec=singularity
 Terminal=false
 StartupNotify=false
 Categories=Game;Simulation;
+Keywords=singularity;singularity2030;2030;ai;simulation;strategy;

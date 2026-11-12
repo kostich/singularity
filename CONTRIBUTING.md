@@ -1,4 +1,4 @@
-# Contributing to Endgame: Singularity
+# Contributing to Singularity 2030
 
 We welcome contributions for everything - including this possibly
 incomplete document.  :)
@@ -43,12 +43,21 @@ licenses or the project goals.
 
 ## Running the test suite
 
-The test suite can be run by using setting `PYTHONPATH` and running
-"py.test".  As an example, if you have "py.test" in PATH as
-`py.test-3` (for the Python3 version) and use the bash shell on Linux,
-then you can run the test suite via the following command:
+The test suite needs the source tree on `sys.path`, so set `PYTHONPATH` and
+run pytest through the interpreter. From the repository root:
 
-    PYTHONPATH=. py.test-3 -v
+    SDL_VIDEODRIVER=dummy SDL_AUDIODRIVER=dummy PYTHONPATH=. \
+        python3 -m pytest -q tests/
+
+The dummy SDL drivers are not required, but they let the suite run on a
+machine with no display. There is also a headless render test of the real
+screens, which is part of the project gate:
+
+    SDL_VIDEODRIVER=dummy SDL_AUDIODRIVER=dummy PYTHONPATH=. \
+        python3 utils/ui_smoke_test.py
+
+See AGENTS.md for the full gate and MODERNIZATION.md for what has been
+changed in this fork.
 
 ## Translations
 
@@ -80,8 +89,8 @@ favourite po-file editor to start translating.
 
 ### Testing a translation
 
-The singularity game will automatically use your translations once you
-have saved them in the relevant po-files.  To verify or review the
+The game will automatically use your translations once you have saved them
+in the relevant po-files.  To verify or review the
 translations, please:
 
  * Start the game from the git checkout (see the README for
@@ -100,5 +109,6 @@ endgame strings.
 
 ### Submitting a new translation or a translation update
 
-Please submit it as a pull request against the master branch via
-https://github.com/singularity/singularity/pulls.
+Please open it as a pull request against `master` in
+https://github.com/kostich/singularity. If it is a bug report or an idea
+rather than a translation, the issue tracker is the same repository.

@@ -1,9 +1,8 @@
-Data files used in Singularity
-==============================
+Data files used in Singularity 2030
+===================================
 
-The Singularity game uses an INI based file format for data files of
-game data.  The following directory and file layout is useful to
-remember:
+The game uses an INI based file format for data files of game data.
+The following directory and file layout is useful to remember:
 
  * ``data/X.dat`` contains data about a particular data set
    (e.g. ``data/bases.dat`` describes all types of bases)
@@ -70,7 +69,7 @@ the translator to map it back to the concrete item ID and field name.
 The special ``_list`` suffix
 ----------------------------
 
-The Singularity game special cases all fields that end with ``_list``.
+The game special cases all fields that end with ``_list``.
 These read as pipe-separated (i.e. ``|``) lists versions of the field
 (after removing ``_list``).  A very common usage is when item has more
 than one prerequisites.  Prerequisites are normally written in the field

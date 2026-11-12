@@ -3,8 +3,8 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to singularity's documentation!
-=======================================
+Singularity 2030 documentation
+==============================
 
 .. toctree::
    :maxdepth: 2

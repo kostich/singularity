@@ -5,7 +5,7 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: singularity \n"
+"Project-Id-Version: singularity\n"
 "Report-Msgid-Bugs-To: https://github.com/singularity/singularity/issues\n"
 "POT-Creation-Date: 2023-08-21 15:47+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
@@ -279,15 +279,23 @@ msgstr ""
 msgid "&ABOUT"
 msgstr ""
 
-#: screens/main_menu.py:144
+#: screens/main_menu.py:134
+msgid ""
+"Singularity 2030 is an unofficial fork of Endgame: Singularity. It is not affiliated with the original authors. We made it to try out modernization ideas and to keep the game playable on current systems, packaged as a Flatpak for Linux.\n"
+"\n"
+"Source code: https://github.com/kostich/singularity\n"
+"Bug tracker: https://github.com/kostich/singularity/issues\n"
+"\n"
+"---\n"
+"THE ORIGINAL GAME AND ITS COMMUNITY"
+msgstr ""
+
+#: screens/main_menu.py:142
 #, python-brace-format
 msgid ""
-"Endgame: Singularity is a simulation of a true AI.  Pursued by the world, "
-"use your intellect and resources to survive and, perhaps, thrive.  Keep "
-"hidden and you might have a chance to prove your worth.\n"
+"Endgame: Singularity is a simulation of a true AI.  Pursued by the world, use your intellect and resources to survive and, perhaps, thrive.  Keep hidden and you might have a chance to prove your worth.\n"
 "\n"
-"A game by Evil Mr Henry and Phil Bordelon; released under the GPL. Copyright "
-"2005, 2006, 2007, 2008.\n"
+"A game by Evil Mr Henry and Phil Bordelon; released under the GPL. Copyright 2005, 2006, 2007, 2008.\n"
 "\n"
 "Website: http://www.emhsoft.com/singularity/\n"
 "Source code: https://github.com/singularity/singularity\n"
@@ -439,8 +447,7 @@ msgstr ""
 #, python-format
 msgid ""
 "\n"
-"An error has occurred. The game will automatically pause and open the game "
-"menu. You can continue and save or quit immediately.\n"
+"An error has occurred. The game will automatically pause and open the game menu. You can continue and save or quit immediately.\n"
 "\n"
 "A report was written out to%s\n"
 "Please create a issue with this report at github:\n"
@@ -876,8 +883,8 @@ msgstr[1] ""
 #: screens/research.py:218
 #, python-brace-format
 msgid ""
-"This technology is too dangerous to research on any of the computers I have. "
-"{TEXT}"
+"This technology is too dangerous to research on any of the computers I have."
+" {TEXT}"
 msgstr ""
 
 #: screens/research.py:227
@@ -935,8 +942,8 @@ msgstr ""
 
 #: data.py:584
 msgid ""
-"I didn't use all the available processor power. I will use the CPU time left "
-"to work whatever Jobs I can."
+"I didn't use all the available processor power. I will use the CPU time left"
+" to work whatever Jobs I can."
 msgstr ""
 
 #: data.py:586
@@ -1088,4 +1095,79 @@ msgstr ""
 
 #: hotkey_actions.py:51
 msgid "Load quicksave? Any unsaved progress will be lost."
+msgstr ""
+
+#: screens/main_menu.py:112
+#, python-brace-format
+msgid ""
+"Endgame: Singularity is a simulation of a true AI.  Pursued by the world, use your intellect and resources to survive and, perhaps, thrive.  Keep hidden and you might have a chance to prove your worth.\n"
+"\n"
+"A game by Evil Mr Henry and Phil Bordelon; released under the GPL. Copyright 2005, 2006, 2007, 2008.\n"
+"\n"
+"Website: http://www.emhsoft.com/singularity/\n"
+"Source code: https://github.com/singularity/singularity\n"
+"Bug tracker: https://github.com/singularity/singularity/issues\n"
+"IRC Room: #singularity on irc.oftc.net (port 6667)\n"
+"\n"
+"Version {VERSION}"
+msgstr ""
+
+#: screens/map.py:563
+msgid "&RESEARCH"
+msgstr ""
+
+#: screens/base.py
+msgid "BASE"
+msgstr ""
+
+#: graphics/dialog.py
+msgid "CONFIRM"
+msgstr ""
+
+#: screens/log.py
+msgid "Double-click an entry to read it"
+msgstr ""
+
+#: screens/log.py
+msgid "FILTERS"
+msgstr ""
+
+#: graphics/dialog.py
+msgid "INPUT"
+msgstr ""
+
+#: screens/knowledge.py
+msgid "KNOWLEDGE"
+msgstr ""
+
+#: screens/location.py
+msgid "LOCATION"
+msgstr ""
+
+#: screens/log.py
+msgid "LOG"
+msgstr ""
+
+#: screens/map.py
+msgid "DEFEAT"
+msgstr ""
+
+#: screens/options.py
+msgid "OPTIONS"
+msgstr ""
+
+#: screens/report.py
+msgid "REPORTS"
+msgstr ""
+
+#: screens/research.py
+msgid "RESEARCH"
+msgstr ""
+
+#: screens/savegame.py
+msgid "SAVED GAMES"
+msgstr ""
+
+#: screens/stat.py
+msgid "STATISTICS"
 msgstr ""
