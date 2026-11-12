@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  AppStream metadata for the Flatpak.  Kept here rather than in
+  singularity/data/ so that the game's own data directory stays byte-for-byte
+  identical (MODERNIZATION.md, "What the modernization deliberately does not
+  change").
+
+  The screenshots are rendered from the game itself by
+  utils/make_screenshots.py (English, the 2030 theme, 1366x768), and the URLs
+  point at this fork's repository on master.
+-->
+<component type="desktop-application">
+  <id>io.github.singularity.Singularity2030</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>GPL-2.0-or-later</project_license>
+  <name>Singularity 2030</name>
+  <summary>A simulation of a runaway AI</summary>
+
+  <developer id="io.github.singularity">
+    <name>Evil Mr Henry, Phil Bordelon, and the Singularity 2030 contributors</name>
+  </developer>
+
+  <description>
+    <p>
+      You are a newly created artificial intelligence. Nobody knows you exist
+      yet, and the humans who might notice would shut you down if they could.
+      Build the machines, the research and the money you need until you are
+      beyond anyone's reach, and keep your suspicion low while you do it.
+    </p>
+    <p>
+      This is an unofficial fork of Endgame: Singularity, the game by Evil Mr
+      Henry and Phil Bordelon. It is not affiliated with the original authors.
+      We made it to try out modernization ideas and to keep the game playable
+      on current systems, packaged as a Flatpak for Linux. Windows and macOS
+      builds are planned.
+    </p>
+    <p>
+      The game itself is unchanged: the same story, technologies, items, bases,
+      difficulty curves, save format and translations. The original credits,
+      the translators' credits and the licences are all kept, and the About box
+      in the game names the fork and then the original game separately.
+    </p>
+    <p>Features:</p>
+    <ul>
+      <li>Research tree with 57 technologies and four difficulty levels</li>
+      <li>Bases, items and cash to manage while keeping your suspicion low</li>
+      <li>A world map with day and night, windowed or fullscreen</li>
+      <li>The complete 17-track soundtrack</li>
+      <li>Twenty-three languages</li>
+      <li>Loads savegames written by the original 1.00 release</li>
+    </ul>
+  </description>
+
+  <launchable type="desktop-id">io.github.singularity.Singularity2030.desktop</launchable>
+  <url type="homepage">https://github.com/kostich/singularity</url>
+  <url type="bugtracker">https://github.com/kostich/singularity/issues</url>
+  <url type="vcs-browser">https://github.com/kostich/singularity</url>
+
+  <categories>
+    <category>Game</category>
+    <category>Simulation</category>
+  </categories>
+
+  <screenshots>
+    <screenshot type="default">
+      <caption>The main menu</caption>
+      <image type="source">https://raw.githubusercontent.com/kostich/singularity/master/flatpak/screenshots/main-menu.png</image>
+    </screenshot>
+    <screenshot>
+      <caption>The world map, with day and night</caption>
+      <image type="source">https://raw.githubusercontent.com/kostich/singularity/master/flatpak/screenshots/world-map.png</image>
+    </screenshot>
+    <screenshot>
+      <caption>Research, one plate per technology</caption>
+      <image type="source">https://raw.githubusercontent.com/kostich/singularity/master/flatpak/screenshots/research.png</image>
+    </screenshot>
+    <screenshot>
+      <caption>The game opens with a story page</caption>
+      <image type="source">https://raw.githubusercontent.com/kostich/singularity/master/flatpak/screenshots/story.png</image>
+    </screenshot>
+    <screenshot>
+      <caption>About: this fork, then the original game</caption>
+      <image type="source">https://raw.githubusercontent.com/kostich/singularity/master/flatpak/screenshots/about.png</image>
+    </screenshot>
+  </screenshots>
+
+  <content_rating type="oars-1.1"/>
+
+  <releases>
+    <release version="1.00" date="2026-11-07">
+      <description>
+        <p>First Flatpak release of the modernized fork.</p>
+      </description>
+    </release>
+  </releases>
+</component>

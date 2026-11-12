@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 # file: singularity.py
 # Copyright (C) 2005 Evil Mr Henry, Phil Bordelon, Brian Reid, MestreLion

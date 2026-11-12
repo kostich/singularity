@@ -3,6 +3,7 @@ include Changelog.txt
 include TODO
 include LICENSE*
 include README.md
+include MODERNIZATION.md
 
 recursive-include singularity/data *
 recursive-include singularity/i18n *

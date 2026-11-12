@@ -1,0 +1,127 @@
+# Singularity 2030 - Flatpak manifest
+#
+# Build and install system-wide with ./rebuild-flatpak.sh from the repo root.
+#
+# Runtime: org.freedesktop.Platform 25.08, the current stable freedesktop
+# branch.  It carries Python 3.13, so the same package runs on every
+# distribution with a working Flatpak 1.x, independent of the distro's own
+# Python, pygame or NumPy.  The runtime does *not* ship SDL2_ttf, SDL2_image or
+# NumPy, and the game needs all three (SDL2_ttf for every label, SDL2_image for
+# the PNG/JPEG map backgrounds) — see python3-modules.json, which installs the
+# official pygame and NumPy manylinux wheels plus the polib sdist.
+id: io.github.singularity.Singularity2030
+runtime: org.freedesktop.Platform
+runtime-version: '25.08'
+sdk: org.freedesktop.Sdk
+command: singularity
+
+finish-args:
+  # Wayland first, X11 through XWayland for anything older.
+  - --socket=wayland
+  - --socket=fallback-x11
+  # SDL talks to the compositor while resizing; shared memory keeps that cheap.
+  - --share=ipc
+  # The 17-track soundtrack and the click sound. Flatpak has no playback-only
+  # audio socket: this one also permits recording, which is why GNOME Software
+  # says "probably safe" and names the microphone. Nothing here records; the
+  # only way to drop that line is to ship the game silent. No GPU access is
+  # asked for: pygame draws plain software surfaces.
+  - --socket=pulseaudio
+
+cleanup:
+  - /include
+  - /lib/pkgconfig
+  - /share/man
+
+modules:
+  - python3-modules.json
+
+  - name: singularity-2030
+    buildsystem: simple
+    build-commands:
+      - |
+        set -eu
+        # The game finds its data relative to the package directory
+        # (code/dirs.py: root_dir = dirname(__file__)/..), so installing the
+        # package tree keeps data/, themes/, i18n/ and music/ next to the code.
+        # /app is read-only at runtime; dirs.py already falls back to the XDG
+        # directories for the writable ones (prefs, saves, log, .mo cache).
+        # The SDK's Python is configured for /usr, so sysconfig reports a
+        # read-only path; derive the /app site-packages the way pip's --prefix
+        # does instead.
+        PYVER="$(python3 -c 'import sys; print("%d.%d" % sys.version_info[:2])')"
+        SITE="$FLATPAK_DEST/lib/python$PYVER/site-packages"
+        echo "Installing the game into $SITE"
+        install -d "$SITE"
+        cp -a singularity "$SITE/"
+        find "$SITE/singularity" -name __pycache__ -type d -prune -exec rm -rf {} +
+        find "$SITE/singularity" -name '*.pyc' -delete
+
+        # The soundtrack.  mixer.py walks music/ recursively and groups tracks
+        # by their first-level folder, and the screens ask for the classes
+        # "music", "win" (effect.py, player.py) and "lose" (map.py).  Those are
+        # the directories *inside* singularity-music/, so the submodule layout
+        # is preserved exactly as checked out: music/singularity-music/music/,
+        # .../lose/, .../win/ — flattening it would leave the game silent.
+        MUSIC_SRC=singularity/music/singularity-music
+        if [ -d singularity-music ]; then
+            # Flathub builds fetch the soundtrack as its own git source (see
+            # the commented-out source at the bottom of this file).
+            MUSIC_SRC=singularity-music
+        fi
+        if [ -d "$MUSIC_SRC" ]; then
+            install -d "$SITE/singularity/music"
+            cp -a "$MUSIC_SRC" "$SITE/singularity/music/"
+            cp -a singularity/music/README.txt "$SITE/singularity/music/"
+            echo "Soundtrack: $(find "$SITE/singularity/music" -name '*.ogg' | wc -l) tracks"
+        else
+            echo "WARNING: no soundtrack found, the game will run silently" >&2
+        fi
+
+        install -Dm755 flatpak/launcher.sh "$FLATPAK_DEST/bin/singularity"
+        install -Dm644 "flatpak/$FLATPAK_ID.desktop" \
+            "$FLATPAK_DEST/share/applications/$FLATPAK_ID.desktop"
+        install -Dm644 "flatpak/$FLATPAK_ID.metainfo.xml" \
+            "$FLATPAK_DEST/share/metainfo/$FLATPAK_ID.metainfo.xml"
+        # Every size in flatpak/icons/, which utils/make_app_icon.py renders
+        # natively -- the 128 and 256 used to be upscales of the 32.
+        for size in 16 24 32 48 64 128 256 512; do
+            install -Dm644 "flatpak/icons/$size.png" \
+                "$FLATPAK_DEST/share/icons/hicolor/${size}x${size}/apps/$FLATPAK_ID.png"
+        done
+        # GPL-2+ for the code, CC-BY-SA 3.0 for the images and the soundtrack.
+        for license in LICENSE.txt LICENSE.gpl.txt LICENSE.CC-BY-SA-3.txt LICENSE.cc0.txt; do
+            install -Dm644 "$license" "$FLATPAK_DEST/share/licenses/$FLATPAK_ID/$license"
+        done
+    sources:
+      # The whole checkout, including the music submodule's working tree.
+      # Excluded: VCS and build output, and the developer-only trees.
+      - type: dir
+        path: ..
+        skip:
+          - .git
+          - .github
+          - build
+          - docs
+          # Store-page pictures: AppStream fetches them from the repository,
+          # the sandbox never reads them, and they are a megabyte of source.
+          - flatpak/screenshots
+          - tests
+          - utils
+          - '**/__pycache__'
+          - '*.pyc'
+          - singularity/i18n/locale
+          - singularity/log
+          - singularity/saves
+      #
+      # For a Flathub submission the source above becomes type: git pinned to a
+      # tag/commit, and the soundtrack is added as its own source, because a
+      # submodule is not part of a git archive and .gitattributes export-ignores
+      # singularity/music.  The uncommented block is what the build commands
+      # above already look for:
+      #
+      # - type: git
+      #   url: https://github.com/singularity/singularity-music.git
+      #   commit: 025e2696638bcc3bf7690679c3a17c0b46823bbe
+      #   dest: singularity-music
+

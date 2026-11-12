@@ -813,7 +813,7 @@ OTHER CHANGES:
   change all clock usage to the new, uses-almost-no-CPU clock code. (Phil)
 
 v0.22 (released 2005.10.05):
-  [To read about the save file compatibility policy, please see README.txt.]
+  [To read about the save file compatibility policy, please see README.md.]
   NOTE: Save files from versions 0.21 and above should work.  Save files from
   versions 0.20 and before will not work.
 

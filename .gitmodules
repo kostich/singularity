@@ -7,9 +7,3 @@
 [submodule "singularity/music/singularity-music"]
 	path = singularity/music/singularity-music
 	url = git@github.com:singularity/singularity-music.git
-[submodule "release/windows"]
-	path = release/windows
-	url = git@github.com:singularity/singularity-windows.git
-[submodule "release/osx"]
-	path = release/osx
-	url = git@github.com:singularity/singularity-osx.git
